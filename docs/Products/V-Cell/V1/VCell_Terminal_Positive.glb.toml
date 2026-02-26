@@ -1,26 +1,57 @@
-# V-Cell Positive Terminal — Aluminum post
-# Cylinder shape, red color indicator
-# Diameter: 8mm, Height: 3mm
+# V-Cell — Terminal Positive (Al 1100-H14, high conductivity)
+# 25mm × 18mm × 3mm plate + raised bus-bar contact pad + bolt hole
+# Patent ref: US20120171568A1, US20130115493A1
 
 [asset]
-mesh = "assets/meshes/cylinder.glb"
-scene = "Scene0"
+mesh = "meshes/VCell_TerminalPositive.glb"
 
 [transform]
-position = [0.13, 0.0135, 0.0]
+position = [0.1425, 0.012, 0.020]
 rotation = [0.0, 0.0, 0.0, 1.0]
-scale = [0.008, 0.003, 0.008]
+scale = [1.0, 1.0, 1.0]
 
 [properties]
-color = [0.9, 0.2, 0.15, 1.0]
+name = "VCell_Terminal_Positive"
+class_name = "Part"
+color = [0.88, 0.89, 0.90, 1.0]
 transparency = 0.0
-anchored = true
-can_collide = true
 cast_shadow = true
-reflectance = 0.5
+can_collide = true
+anchored = false
 
 [metadata]
 class_name = "Part"
 archivable = true
-created = "2025-02-25T00:00:00Z"
-last_modified = "2026-02-25T23:43:00Z"
+created = "2026-02-26T00:00:00Z"
+last_modified = "2026-02-26T00:00:00Z"
+
+[material]
+name = "Aluminum 1100-H14 (OFHC equivalent)"
+young_modulus = 69000000000.0
+poisson_ratio = 0.33
+yield_strength = 103000000.0
+ultimate_strength = 124000000.0
+fracture_toughness = 18000000.0
+hardness = 32.0
+thermal_conductivity = 222.0
+specific_heat = 904.0
+thermal_expansion = 0.0000236
+melting_point = 916.0
+density = 2710.0
+friction_static = 0.61
+friction_kinetic = 0.47
+restitution = 0.6
+
+[material.custom]
+electrical_conductivity = 34500000.0
+polarity = "positive"
+contact_type = "spring_loaded_bus_bar"
+role = "terminal_positive"
+
+[electrochemical]
+open_circuit_voltage = 0.0
+state_of_charge = 1.0
+capacity_ah = 0.0
+internal_resistance = 0.0000005
+cycle_count = 0
+coulombic_efficiency = 1.0

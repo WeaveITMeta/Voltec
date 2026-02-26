@@ -1,73 +1,69 @@
-# V-Cell Cathode — Sulfur@VACNT composite
-# Sulfur infiltrated into vertically-aligned carbon nanotube forest
-# AdvancedPart — 150μm thick (0.00015 m)
+# V-Cell — Cathode (S@VACNT on Al hexagonal lattice)
+# 296mm × 96mm × 0.30mm (200μm S/VACNT + 100μm Al hex lattice)
+# Patent ref: US9929432B2, US20100273062A1
 
 [asset]
-mesh = "assets/meshes/block.glb"
-scene = "Scene0"
+mesh = "meshes/VCell_Cathode.glb"
 
 [transform]
-position = [0.0, 0.00175, 0.0]
+position = [0.0, 0.009, 0.0]
 rotation = [0.0, 0.0, 0.0, 1.0]
-scale = [0.27, 0.00015, 0.085]
+scale = [1.0, 1.0, 1.0]
 
 [properties]
-color = [0.15, 0.15, 0.15, 1.0]
+name = "VCell_Cathode_SulfurVACNT"
+class_name = "AdvancedPart"
+color = [0.05, 0.05, 0.05, 1.0]
 transparency = 0.0
-anchored = true
-can_collide = false
 cast_shadow = true
-reflectance = 0.05
+can_collide = false
+anchored = false
 
 [metadata]
 class_name = "AdvancedPart"
 archivable = true
-created = "2025-02-25T00:00:00Z"
-last_modified = "2026-02-25T23:43:00Z"
+created = "2026-02-26T00:00:00Z"
+last_modified = "2026-02-26T00:00:00Z"
 
 [material]
-name = "Sulfur@VACNT Cathode"
-young_modulus = 50000000000.0
-poisson_ratio = 0.24
-yield_strength = 25000000.0
-ultimate_strength = 35000000.0
-fracture_toughness = 2000000.0
-hardness = 40.0
-thermal_conductivity = 15.0
-specific_heat = 705.0
-thermal_expansion = 0.00001
-melting_point = 388.36
-density = 1075.0
-friction_static = 0.3
-friction_kinetic = 0.2
+name = "Sulfur@VACNT on Al Hex Lattice"
+young_modulus = 5000000000.0
+poisson_ratio = 0.28
+yield_strength = 50000000.0
+ultimate_strength = 120000000.0
+fracture_toughness = 800000.0
+hardness = 2.0
+thermal_conductivity = 0.27
+specific_heat = 700.0
+thermal_expansion = 0.000064
+melting_point = 386.15
+density = 2070.0
+friction_static = 0.30
+friction_kinetic = 0.22
 restitution = 0.3
 
 [material.custom]
-sulfur_capacity_mah_g = 1672.0
-volume_expansion = 0.80
-sulfur_loading_wt_pct = 70.0
-cnt_height_um = 200.0
+sulfur_loading_mg_cm2 = 8.0
+sulfur_utilization_pct = 95.0
+cnt_diameter_nm = 10.0
+cnt_height_um = 150.0
+cnt_areal_density = 1.0e11
+theoretical_capacity_mah_g = 1672.0
 role = "cathode"
 
 [thermodynamic]
 temperature = 298.15
 pressure = 101325.0
-volume = 0.0
+volume = 0.0000085
 internal_energy = 0.0
 entropy = 0.0
 enthalpy = 0.0
-moles = 1.0
+moles = 0.055
 
 [electrochemical]
-voltage = 2.23
-terminal_voltage = 2.23
-capacity_ah = 0.0
-soc = 1.0
-current = 0.0
-internal_resistance = 0.0
-ionic_conductivity = 0.0
+open_circuit_voltage = -0.48
+state_of_charge = 1.0
+capacity_ah = 202.5
+internal_resistance = 0.0003
 cycle_count = 0
-c_rate = 0.0
-capacity_retention = 1.0
-heat_generation = 0.0
-dendrite_risk = 0.0
+coulombic_efficiency = 0.998

@@ -1,36 +1,36 @@
-# V-Cell Thermal Pad — Aluminum Nitride (AlN)
-# High thermal conductivity ceramic (170 W/m·K)
-# AdvancedPart — heat spreader between cell stack and housing
+# V-Cell — Thermal Pad (AlN ceramic, 170 W/(m·K))
+# 300mm × 100mm × 0.2mm, electrical isolation + thermal conduction
+# Patent ref: US20090068548A1
 
 [asset]
-mesh = "assets/meshes/block.glb"
-scene = "Scene0"
+mesh = "meshes/VCell_ThermalPad.glb"
 
 [transform]
-position = [0.0, -0.005, 0.0]
+position = [0.0, -0.001, 0.0]
 rotation = [0.0, 0.0, 0.0, 1.0]
-scale = [0.285, 0.0005, 0.09]
+scale = [1.0, 1.0, 1.0]
 
 [properties]
-color = [0.85, 0.85, 0.80, 1.0]
+name = "VCell_ThermalPad_AlN"
+class_name = "Part"
+color = [0.92, 0.90, 0.85, 1.0]
 transparency = 0.0
-anchored = true
+cast_shadow = false
 can_collide = false
-cast_shadow = true
-reflectance = 0.1
+anchored = false
 
 [metadata]
-class_name = "AdvancedPart"
+class_name = "Part"
 archivable = true
-created = "2025-02-25T00:00:00Z"
-last_modified = "2026-02-25T23:43:00Z"
+created = "2026-02-26T00:00:00Z"
+last_modified = "2026-02-26T00:00:00Z"
 
 [material]
-name = "Aluminum Nitride (AlN)"
+name = "Aluminum Nitride (AlN) Ceramic"
 young_modulus = 310000000000.0
 poisson_ratio = 0.24
 yield_strength = 300000000.0
-ultimate_strength = 350000000.0
+ultimate_strength = 400000000.0
 fracture_toughness = 3000000.0
 hardness = 1200.0
 thermal_conductivity = 170.0
@@ -38,18 +38,21 @@ specific_heat = 740.0
 thermal_expansion = 0.0000046
 melting_point = 2473.0
 density = 3260.0
-friction_static = 0.4
-friction_kinetic = 0.3
-restitution = 0.4
+friction_static = 0.25
+friction_kinetic = 0.18
+restitution = 0.5
 
 [material.custom]
-role = "thermal_management"
+dielectric_strength_kv_mm = 17.0
+volume_resistivity_ohm_cm = 1.0e13
+thickness_mm = 0.2
+role = "thermal_pad"
 
 [thermodynamic]
 temperature = 298.15
 pressure = 101325.0
-volume = 0.0
+volume = 0.0000006
 internal_energy = 0.0
 entropy = 0.0
 enthalpy = 0.0
-moles = 1.0
+moles = 0.0078

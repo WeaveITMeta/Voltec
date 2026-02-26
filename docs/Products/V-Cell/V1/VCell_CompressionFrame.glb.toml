@@ -1,0 +1,51 @@
+# V-Cell — Compression Frame (Al 6061-T6 end plates + 316L SS tie rods)
+# 310mm × 110mm × 20mm end plates, 4x M8 tie rods, alignment pins
+# Patent ref: US20130115493A1, US20120171568A1
+
+[asset]
+mesh = "meshes/VCell_CompressionFrame.glb"
+
+[transform]
+position = [0.0, 0.036, 0.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [1.0, 1.0, 1.0]
+
+[properties]
+name = "VCell_CompressionFrame"
+class_name = "Part"
+color = [0.82, 0.83, 0.85, 1.0]
+transparency = 0.0
+cast_shadow = true
+can_collide = true
+anchored = true
+
+[metadata]
+class_name = "Part"
+archivable = true
+created = "2026-02-26T00:00:00Z"
+last_modified = "2026-02-26T00:00:00Z"
+
+[material]
+name = "Aluminum 6061-T6 End Plates + 316L SS Tie Rods"
+young_modulus = 68900000000.0
+poisson_ratio = 0.33
+yield_strength = 276000000.0
+ultimate_strength = 310000000.0
+fracture_toughness = 29000000.0
+hardness = 95.0
+thermal_conductivity = 167.0
+specific_heat = 896.0
+thermal_expansion = 0.0000236
+melting_point = 855.0
+density = 2700.0
+friction_static = 0.61
+friction_kinetic = 0.47
+restitution = 0.6
+
+[material.custom]
+end_plate_thickness_mm = 20.0
+tie_rod_spec = "M8_316L_SS"
+tie_rod_count = 4.0
+preload_torque_nm = 25.0
+alignment_pins = 2.0
+role = "compression_frame"

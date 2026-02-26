@@ -1,33 +1,33 @@
-# V-Cell Housing — Al 6061-T6 prismatic shell
-# AdvancedPart with realism material properties
-# Actual dimensions: 300mm × 12mm × 100mm (0.3 × 0.012 × 0.1 m)
+# V-Cell — Housing (Al 6061-T6, prismatic hermetic shell)
+# 300mm × 100mm × 12mm, 0.5mm wall, laser-weld seam, vent groove, terminals
+# Patent ref: US20090068548A1
 
 [asset]
-mesh = "assets/meshes/block.glb"
-scene = "Scene0"
+mesh = "meshes/VCell_Housing.glb"
 
 [transform]
 position = [0.0, 0.006, 0.0]
 rotation = [0.0, 0.0, 0.0, 1.0]
-scale = [0.3, 0.012, 0.1]
+scale = [1.0, 1.0, 1.0]
 
 [properties]
-color = [0.75, 0.78, 0.80, 0.7]
-transparency = 0.3
-anchored = true
-can_collide = true
+name = "VCell_Housing"
+class_name = "AdvancedPart"
+color = [0.78, 0.78, 0.80, 0.70]
+transparency = 0.30
 cast_shadow = true
-reflectance = 0.5
+can_collide = true
+anchored = true
 
 [metadata]
 class_name = "AdvancedPart"
 archivable = true
-created = "2025-02-25T00:00:00Z"
-last_modified = "2026-02-25T23:43:00Z"
+created = "2026-02-26T00:00:00Z"
+last_modified = "2026-02-26T00:00:00Z"
 
 [material]
 name = "Aluminum 6061-T6"
-young_modulus = 68900003840.0
+young_modulus = 68900000000.0
 poisson_ratio = 0.33
 yield_strength = 276000000.0
 ultimate_strength = 310000000.0
@@ -44,13 +44,23 @@ restitution = 0.7
 
 [material.custom]
 electrical_conductivity = 25000000.0
+wall_thickness_mm = 0.5
+weld_type = "laser_hermetic"
 role = "housing"
 
 [thermodynamic]
 temperature = 298.15
 pressure = 101325.0
-volume = 0.0003
+volume = 0.000360
 internal_energy = 0.0
 entropy = 0.0
 enthalpy = 0.0
-moles = 1.0
+moles = 4.0
+
+[electrochemical]
+open_circuit_voltage = 0.0
+state_of_charge = 1.0
+capacity_ah = 0.0
+internal_resistance = 0.0
+cycle_count = 0
+coulombic_efficiency = 1.0

@@ -1,59 +1,60 @@
-# V-Cell Current Collector — Aluminum Hexagonal Lattice
-# 50μm hex cells, 5μm walls, 92% porosity
-# AdvancedPart — structural frame + thermal conduit + current collector
+# V-Cell — Al Hexagonal Lattice Substrate (standalone display mesh)
+# 150mm × 80mm × 0.1mm, 50μm hex cells, 92% porosity
+# Patent ref: US9929432B2
 
 [asset]
-mesh = "assets/meshes/block.glb"
-scene = "Scene0"
+mesh = "meshes/VCell_AlHexLattice.glb"
 
 [transform]
-position = [0.0, 0.0, 0.0]
+position = [0.0, 0.000, 0.0]
 rotation = [0.0, 0.0, 0.0, 1.0]
-scale = [0.27, 0.0002, 0.085]
+scale = [1.0, 1.0, 1.0]
 
 [properties]
-color = [0.80, 0.82, 0.85, 0.7]
-transparency = 0.5
-anchored = true
-can_collide = false
+name = "VCell_AlHexLattice"
+class_name = "AdvancedPart"
+color = [0.78, 0.80, 0.82, 1.0]
+transparency = 0.0
 cast_shadow = true
-reflectance = 0.4
+can_collide = false
+anchored = false
 
 [metadata]
 class_name = "AdvancedPart"
 archivable = true
-created = "2025-02-25T00:00:00Z"
-last_modified = "2026-02-25T23:43:00Z"
+created = "2026-02-26T00:00:00Z"
+last_modified = "2026-02-26T00:00:00Z"
 
 [material]
-name = "Al Hex Lattice (92% porosity)"
+name = "Aluminum Hexagonal Lattice (Al 6061, electrochemical etch)"
 young_modulus = 4200000000.0
 poisson_ratio = 0.33
 yield_strength = 16200000.0
 ultimate_strength = 22000000.0
-fracture_toughness = 2300000.0
-hardness = 7.6
+fracture_toughness = 5000000.0
+hardness = 40.0
 thermal_conductivity = 19.0
-specific_heat = 897.0
-thermal_expansion = 0.0000231
-melting_point = 933.47
+specific_heat = 896.0
+thermal_expansion = 0.0000236
+melting_point = 855.0
 density = 216.0
-friction_static = 0.5
-friction_kinetic = 0.35
-restitution = 0.5
+friction_static = 0.61
+friction_kinetic = 0.47
+restitution = 0.6
 
 [material.custom]
-hex_edge_length_m = 0.00005
-wall_thickness_m = 0.000005
-porosity = 0.92
-electrical_conductivity = 2900000.0
-role = "current_collector"
+porosity_pct = 92.0
+hex_cell_edge_um = 50.0
+wall_thickness_um = 5.0
+electrical_resistivity_ohm_m = 2.65e-8
+functions = "current_collector_structural_thermal_volume_buffer"
+role = "al_hex_lattice"
 
 [thermodynamic]
 temperature = 298.15
 pressure = 101325.0
-volume = 0.0
+volume = 0.0000012
 internal_energy = 0.0
 entropy = 0.0
 enthalpy = 0.0
-moles = 1.0
+moles = 0.012

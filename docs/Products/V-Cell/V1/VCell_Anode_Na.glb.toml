@@ -1,71 +1,67 @@
-# V-Cell Anode — Sodium Metal (99.9% Na)
-# AdvancedPart with electrochemical state
-# Thin foil layer: 50μm actual (0.00005 m)
+# V-Cell — Anode (Na metal on Al hexagonal lattice)
+# 296mm × 96mm × 0.15mm (50μm Na + 100μm Al hex lattice)
+# Patent ref: US9929432B2
 
 [asset]
-mesh = "assets/meshes/block.glb"
-scene = "Scene0"
+mesh = "meshes/VCell_Anode.glb"
 
 [transform]
-position = [0.0, -0.00175, 0.0]
+position = [0.0, 0.003, 0.0]
 rotation = [0.0, 0.0, 0.0, 1.0]
-scale = [0.27, 0.00005, 0.085]
+scale = [1.0, 1.0, 1.0]
 
 [properties]
-color = [0.85, 0.85, 0.75, 1.0]
+name = "VCell_Anode"
+class_name = "AdvancedPart"
+color = [0.85, 0.88, 0.90, 1.0]
 transparency = 0.0
-anchored = true
-can_collide = false
 cast_shadow = true
-reflectance = 0.6
+can_collide = true
+anchored = false
 
 [metadata]
 class_name = "AdvancedPart"
 archivable = true
-created = "2025-02-25T00:00:00Z"
-last_modified = "2026-02-25T23:43:00Z"
+created = "2026-02-26T00:00:00Z"
+last_modified = "2026-02-26T00:00:00Z"
 
 [material]
-name = "Sodium Metal (Na)"
+name = "Sodium Metal (99.9%) on Al Hex Lattice"
 young_modulus = 10000000000.0
-poisson_ratio = 0.29
-yield_strength = 300000.0
-ultimate_strength = 2000000.0
-fracture_toughness = 10000000.0
+poisson_ratio = 0.33
+yield_strength = 1400000.0
+ultimate_strength = 12000000.0
+fracture_toughness = 1000000.0
 hardness = 0.5
 thermal_conductivity = 142.0
-specific_heat = 1228.0
+specific_heat = 1230.0
 thermal_expansion = 0.000071
-melting_point = 370.95
-density = 971.0
-friction_static = 0.8
-friction_kinetic = 0.6
-restitution = 0.1
+melting_point = 370.87
+density = 968.0
+friction_static = 0.40
+friction_kinetic = 0.30
+restitution = 0.2
 
 [material.custom]
-electrical_conductivity = 21000000.0
-specific_capacity_mah_g = 1166.0
+areal_capacity_mah_cm2 = 5.8
+substrate = "Al_hex_lattice_100um_92pct_porosity"
+deposition = "thermal_evaporation_Ar"
+theoretical_capacity_mah_g = 1166.0
 role = "anode"
 
 [thermodynamic]
 temperature = 298.15
 pressure = 101325.0
-volume = 0.0
+volume = 0.00000426
 internal_energy = 0.0
 entropy = 0.0
 enthalpy = 0.0
-moles = 1.0
+moles = 0.18
 
 [electrochemical]
-voltage = 2.23
-terminal_voltage = 2.23
-capacity_ah = 0.0
-soc = 1.0
-current = 0.0
-internal_resistance = 0.0
-ionic_conductivity = 0.0
+open_circuit_voltage = -2.714
+state_of_charge = 1.0
+capacity_ah = 202.5
+internal_resistance = 0.0002
 cycle_count = 0
-c_rate = 0.0
-capacity_retention = 1.0
-heat_generation = 0.0
-dendrite_risk = 0.0
+coulombic_efficiency = 0.999
