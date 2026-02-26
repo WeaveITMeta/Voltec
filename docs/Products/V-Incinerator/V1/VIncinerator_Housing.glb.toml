@@ -1,0 +1,57 @@
+# V-Incinerator Housing — 316L Stainless Steel outer containment shell
+# 6.0m × 4.0m × 3.0m modular industrial enclosure
+# AdvancedPart with thermal realism
+
+[asset]
+mesh = "assets/meshes/products/V-Incinerator/VIncinerator_Housing.glb"
+scene = "Scene0"
+
+[transform]
+position = [0.0, 2.0, 0.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [6.0, 4.0, 3.0]
+
+[properties]
+color = [0.55, 0.56, 0.58, 0.85]
+transparency = 0.15
+anchored = true
+can_collide = true
+cast_shadow = true
+reflectance = 0.4
+
+[metadata]
+class_name = "AdvancedPart"
+archivable = true
+created = "2026-02-25T00:00:00Z"
+last_modified = "2026-02-25T17:00:00Z"
+
+[material]
+name = "316L Stainless Steel"
+young_modulus = 193000000000.0
+poisson_ratio = 0.27
+yield_strength = 170000000.0
+ultimate_strength = 485000000.0
+fracture_toughness = 112000000.0
+hardness = 217.0
+thermal_conductivity = 16.3
+specific_heat = 500.0
+thermal_expansion = 0.000016
+melting_point = 1673.0
+density = 8000.0
+friction_static = 0.6
+friction_kinetic = 0.42
+restitution = 0.5
+
+[material.custom]
+pren = 24.2
+corrosion_rate_mm_yr = 0.01
+role = "housing"
+
+[thermodynamic]
+temperature = 298.15
+pressure = 101325.0
+volume = 72.0
+internal_energy = 0.0
+entropy = 0.0
+enthalpy = 0.0
+moles = 1.0

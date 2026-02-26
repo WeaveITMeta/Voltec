@@ -1,0 +1,27 @@
+# Rust build artifacts
+target/
+Cargo.lock
+
+# Node / Bun
+node_modules/
+dist/
+.next/
+.svelte-kit/
+
+# Blender temp files
+*.blend1
+*.blend2
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+
+# Env
+.env
+.env.*
+!.env.example

@@ -1,0 +1,50 @@
+# V-Pump — Vacuum-Assist Module (316L SS + PTFE vanes)
+# Oil-free rotary vane vacuum pump for integrated priming
+
+[asset]
+mesh = "meshes/VPump_VacuumModule.glb"
+
+[transform]
+position = [1.2, -0.8, 0.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [0.5, 0.5, 0.6]
+
+[properties]
+name = "VPump_VacuumModule"
+class_name = "Part"
+color = [0.65, 0.67, 0.70, 1.0]
+transparency = 0.0
+cast_shadow = true
+can_collide = true
+anchored = true
+
+[metadata]
+class_name = "Part"
+archivable = true
+created = "2026-02-25T00:00:00Z"
+last_modified = "2026-02-25T00:00:00Z"
+
+[material]
+name = "316L Stainless Steel"
+young_modulus = 193000000000.0
+poisson_ratio = 0.30
+yield_strength = 170000000.0
+ultimate_strength = 485000000.0
+fracture_toughness = 100000000.0
+hardness = 217.0
+thermal_conductivity = 16.3
+specific_heat = 500.0
+thermal_expansion = 0.0000159
+melting_point = 1673.0
+density = 7990.0
+friction_static = 0.45
+friction_kinetic = 0.35
+restitution = 0.3
+
+[material.custom]
+ultimate_vacuum_pa = 2000.0
+pumping_speed_m3_h = 40.0
+motor_power_kw = 2.2
+vane_material = "PTFE_composite"
+design_life_hours = 50000.0
+role = "vacuum_module"

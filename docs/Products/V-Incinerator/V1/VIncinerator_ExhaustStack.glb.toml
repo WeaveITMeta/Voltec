@@ -1,0 +1,26 @@
+# V-Incinerator Exhaust Stack — 304 Stainless Steel
+# Clean gas discharge with continuous emissions monitoring (CEMS)
+# Part — visual only, no realism physics needed
+
+[asset]
+mesh = "assets/meshes/products/V-Incinerator/VIncinerator_ExhaustStack.glb"
+scene = "Scene0"
+
+[transform]
+position = [-2.0, 5.0, 0.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [0.6, 3.0, 0.6]
+
+[properties]
+color = [0.62, 0.63, 0.65, 1.0]
+transparency = 0.0
+anchored = true
+can_collide = true
+cast_shadow = true
+reflectance = 0.35
+
+[metadata]
+class_name = "Part"
+archivable = true
+created = "2026-02-25T00:00:00Z"
+last_modified = "2026-02-25T17:00:00Z"

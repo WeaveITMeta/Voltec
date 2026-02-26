@@ -1,0 +1,26 @@
+# V-Cell Status LED — Neon ball indicating cell health
+# Green = healthy, runtime script can change color based on SOC/dendrite risk
+# Diameter: 3mm
+
+[asset]
+mesh = "assets/meshes/ball.glb"
+scene = "Scene0"
+
+[transform]
+position = [0.10, 0.009, 0.04]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [0.003, 0.003, 0.003]
+
+[properties]
+color = [0.1, 0.95, 0.2, 1.0]
+transparency = 0.0
+anchored = true
+can_collide = false
+cast_shadow = false
+reflectance = 0.0
+
+[metadata]
+class_name = "Part"
+archivable = true
+created = "2025-02-25T00:00:00Z"
+last_modified = "2026-02-25T23:43:00Z"

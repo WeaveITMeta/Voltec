@@ -1,0 +1,63 @@
+# V-Pump — Impeller Assembly (UNS S32750 Super Duplex)
+# 3-stage axial-flow rotor, 7 blades + 11 guide vanes per stage
+
+[asset]
+mesh = "meshes/VPump_ImpellerAssembly.glb"
+
+[transform]
+position = [0.0, 0.0, 0.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [1.0, 1.0, 3.0]
+
+[properties]
+name = "VPump_ImpellerAssembly"
+class_name = "AdvancedPart"
+color = [0.72, 0.74, 0.76, 1.0]
+transparency = 0.0
+cast_shadow = true
+can_collide = true
+anchored = false
+
+[metadata]
+class_name = "AdvancedPart"
+archivable = true
+created = "2026-02-25T00:00:00Z"
+last_modified = "2026-02-25T00:00:00Z"
+
+[material]
+name = "UNS S32750 Super Duplex Stainless Steel"
+young_modulus = 200000000000.0
+poisson_ratio = 0.30
+yield_strength = 550000000.0
+ultimate_strength = 800000000.0
+fracture_toughness = 150000000.0
+hardness = 310.0
+thermal_conductivity = 17.0
+specific_heat = 480.0
+thermal_expansion = 0.000013
+melting_point = 1623.0
+density = 7800.0
+friction_static = 0.45
+friction_kinetic = 0.35
+restitution = 0.3
+
+[material.custom]
+pren = 40.0
+fatigue_limit_pa = 280000000.0
+shot_peen_residual_stress_pa = -400000000.0
+stages = 3.0
+blades_per_stage = 7.0
+guide_vanes_per_stage = 11.0
+rpm_rated = 1450.0
+tip_clearance_mm = 0.3
+replacement_interval_years = 150.0
+role = "impeller"
+
+[thermodynamic]
+temperature = 298.15
+pressure = 2500000.0
+volume = 0.8
+internal_energy = 0.0
+entropy = 0.0
+enthalpy = 0.0
+moles = 44400.0

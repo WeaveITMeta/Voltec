@@ -1,0 +1,58 @@
+# V-Incinerator Ash Collection Hopper — A36 Carbon Steel, refractory-lined
+# Vitrified slag collection: TCLP-inert, saleable as construction aggregate
+# AdvancedPart — high-temperature slag contact zone
+
+[asset]
+mesh = "assets/meshes/products/V-Incinerator/VIncinerator_AshHopper.glb"
+scene = "Scene0"
+
+[transform]
+position = [0.0, -0.5, 0.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [1.5, 1.0, 1.5]
+
+[properties]
+color = [0.40, 0.38, 0.35, 1.0]
+transparency = 0.0
+anchored = true
+can_collide = true
+cast_shadow = true
+reflectance = 0.15
+
+[metadata]
+class_name = "AdvancedPart"
+archivable = true
+created = "2026-02-25T00:00:00Z"
+last_modified = "2026-02-25T17:00:00Z"
+
+[material]
+name = "A36 Carbon Steel"
+young_modulus = 200000000000.0
+poisson_ratio = 0.26
+yield_strength = 250000000.0
+ultimate_strength = 400000000.0
+fracture_toughness = 50000000.0
+hardness = 119.0
+thermal_conductivity = 50.2
+specific_heat = 486.0
+thermal_expansion = 0.0000119
+melting_point = 1698.0
+density = 7850.0
+friction_static = 0.57
+friction_kinetic = 0.42
+restitution = 0.5
+
+[material.custom]
+refractory_lining_thickness_m = 0.05
+slag_output_temp_k = 1473.0
+slag_vitrification = "TCLP_inert"
+role = "ash_hopper"
+
+[thermodynamic]
+temperature = 298.15
+pressure = 101325.0
+volume = 2.25
+internal_energy = 0.0
+entropy = 0.0
+enthalpy = 0.0
+moles = 1.0

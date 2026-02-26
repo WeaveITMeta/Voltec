@@ -1,0 +1,26 @@
+# V-Cell Positive Terminal — Aluminum post
+# Cylinder shape, red color indicator
+# Diameter: 8mm, Height: 3mm
+
+[asset]
+mesh = "assets/meshes/cylinder.glb"
+scene = "Scene0"
+
+[transform]
+position = [0.13, 0.0135, 0.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [0.008, 0.003, 0.008]
+
+[properties]
+color = [0.9, 0.2, 0.15, 1.0]
+transparency = 0.0
+anchored = true
+can_collide = true
+cast_shadow = true
+reflectance = 0.5
+
+[metadata]
+class_name = "Part"
+archivable = true
+created = "2025-02-25T00:00:00Z"
+last_modified = "2026-02-25T23:43:00Z"

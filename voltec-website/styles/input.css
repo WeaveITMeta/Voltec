@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   VOLTEC HIGH-TECH THEME STYLES
+   Clean Industrial White + Blue Xenon Accents
+   ============================================ */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-voltec-white text-voltec-black;
+  }
+
+  ::selection {
+    @apply bg-voltec-blue text-white;
+  }
+}
+
+@layer components {
+  /* Xenon Glow Effect */
+  .xenon-glow {
+    @apply transition-all duration-300;
+    text-shadow: 0 0 5px transparent;
+  }
+  
+  .xenon-glow:hover {
+    text-shadow: 0 0 10px #00BFFF, 0 0 20px #00BFFF;
+  }
+
+  /* Button Styles */
+  .btn-primary {
+    @apply bg-voltec-blue text-white px-8 py-3 rounded-sm font-semibold uppercase tracking-wider;
+    @apply transition-all duration-300 ease-out;
+    @apply hover:bg-voltec-blue-light hover:shadow-[0_0_30px_rgba(0,191,255,0.5)];
+    @apply active:scale-95;
+  }
+
+  .btn-outline {
+    @apply border-2 border-voltec-blue text-voltec-blue px-8 py-3 rounded-sm font-semibold uppercase tracking-wider;
+    @apply transition-all duration-300 ease-out bg-transparent;
+    @apply hover:bg-voltec-blue hover:text-white hover:shadow-[0_0_30px_rgba(0,191,255,0.5)];
+    @apply active:scale-95;
+  }
+
+  /* Card Styles */
+  .card-tech {
+    @apply bg-white border border-voltec-gray-light p-6 rounded-sm;
+    @apply transition-all duration-300;
+    @apply hover:border-voltec-blue hover:shadow-[0_0_20px_rgba(0,191,255,0.2)];
+  }
+
+  /* Navigation Link */
+  .nav-link {
+    @apply relative text-voltec-white font-medium tracking-wide;
+    @apply transition-colors duration-300;
+    @apply hover:text-voltec-blue;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-voltec-blue;
+    @apply transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  /* Section Headers */
+  .section-title {
+    @apply text-4xl md:text-5xl font-display font-bold tracking-tight;
+    @apply bg-gradient-to-r from-voltec-black to-voltec-gray bg-clip-text;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-voltec-gray/70 max-w-2xl;
+  }
+
+  /* Grid Background */
+  .grid-bg {
+    @apply bg-grid-pattern bg-grid;
+  }
+
+  /* Scan Line Effect */
+  .scan-line::before {
+    content: '';
+    @apply absolute inset-0 pointer-events-none;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0, 191, 255, 0.03) 50%,
+      transparent 100%
+    );
+    height: 100px;
+    animation: scan-line 8s linear infinite;
+  }
+
+  /* Nano Particle Container */
+  .nano-container {
+    @apply relative overflow-hidden rounded-sm;
+    @apply border border-voltec-blue/30;
+    @apply bg-voltec-black;
+  }
+
+  /* Footer Link */
+  .footer-link {
+    @apply text-voltec-white/70 hover:text-voltec-blue transition-colors duration-300;
+  }
+
+  /* Social Icon */
+  .social-icon {
+    @apply w-10 h-10 flex items-center justify-center rounded-sm;
+    @apply border border-voltec-blue/30 text-voltec-blue;
+    @apply transition-all duration-300;
+    @apply hover:bg-voltec-blue hover:text-white hover:shadow-[0_0_15px_rgba(0,191,255,0.5)];
+  }
+}
+
+@layer utilities {
+  /* Text Gradient */
+  .text-gradient-blue {
+    @apply bg-gradient-to-r from-voltec-blue to-voltec-blue-light bg-clip-text text-transparent;
+  }
+
+  /* Glassmorphism */
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  /* Hide scrollbar */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

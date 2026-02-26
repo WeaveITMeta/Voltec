@@ -1,0 +1,59 @@
+# V-Pump — Bearing Cartridge (SiC/SiC Ceramic Journal)
+# Water-lubricated, no oil seals, 50-100 year replacement interval
+
+[asset]
+mesh = "meshes/VPump_BearingCartridge.glb"
+
+[transform]
+position = [0.0, 0.0, -1.8]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [0.4, 0.4, 0.3]
+
+[properties]
+name = "VPump_BearingCartridge"
+class_name = "AdvancedPart"
+color = [0.20, 0.22, 0.25, 1.0]
+transparency = 0.0
+cast_shadow = true
+can_collide = true
+anchored = true
+
+[metadata]
+class_name = "AdvancedPart"
+archivable = true
+created = "2026-02-25T00:00:00Z"
+last_modified = "2026-02-25T00:00:00Z"
+
+[material]
+name = "SiC/SiC Ceramic Journal Bearing"
+young_modulus = 410000000000.0
+poisson_ratio = 0.14
+yield_strength = 550000000.0
+ultimate_strength = 3900000000.0
+fracture_toughness = 4500000.0
+hardness = 2800.0
+thermal_conductivity = 120.0
+specific_heat = 680.0
+thermal_expansion = 0.000004
+melting_point = 2730.0
+density = 3210.0
+friction_static = 0.05
+friction_kinetic = 0.03
+restitution = 0.5
+
+[material.custom]
+lubrication = "process_water"
+pv_limit_mpa_m_s = 100.0
+wear_rate_mm3_per_nm = 1.0e-8
+replacement_interval_years = 75.0
+groove_count = 6.0
+role = "bearing"
+
+[thermodynamic]
+temperature = 308.15
+pressure = 2500000.0
+volume = 0.005
+internal_energy = 0.0
+entropy = 0.0
+enthalpy = 0.0
+moles = 277.5

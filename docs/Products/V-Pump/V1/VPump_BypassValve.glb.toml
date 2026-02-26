@@ -1,0 +1,51 @@
+# V-Pump — Bypass Valve (Duplex Steel + Stellite 6 Seats)
+# Automatic butterfly valve for zero-downtime relay chain bypass
+
+[asset]
+mesh = "meshes/VPump_BypassValve.glb"
+
+[transform]
+position = [0.0, 1.8, 0.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [2.0, 0.5, 3.0]
+
+[properties]
+name = "VPump_BypassValve"
+class_name = "Part"
+color = [0.60, 0.62, 0.65, 1.0]
+transparency = 0.0
+cast_shadow = true
+can_collide = true
+anchored = true
+
+[metadata]
+class_name = "Part"
+archivable = true
+created = "2026-02-25T00:00:00Z"
+last_modified = "2026-02-25T00:00:00Z"
+
+[material]
+name = "Duplex Steel + Stellite 6 Seats"
+young_modulus = 200000000000.0
+poisson_ratio = 0.30
+yield_strength = 450000000.0
+ultimate_strength = 620000000.0
+fracture_toughness = 150000000.0
+hardness = 290.0
+thermal_conductivity = 19.0
+specific_heat = 500.0
+thermal_expansion = 0.000013
+melting_point = 1673.0
+density = 7800.0
+friction_static = 0.40
+friction_kinetic = 0.30
+restitution = 0.3
+
+[material.custom]
+valve_type = "butterfly"
+seat_material = "Stellite_6"
+seat_hardness_hv = 450.0
+actuation = "spring_return_hydraulic"
+fail_position = "open"
+bore_diameter_mm = 1160.0
+role = "bypass_valve"

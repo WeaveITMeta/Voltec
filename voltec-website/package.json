@@ -1,0 +1,12 @@
+{
+  "name": "voltec-website-tailwind",
+  "version": "1.0.0",
+  "description": "TailwindCSS configuration for Voltec Website",
+  "scripts": {
+    "css:build": "tailwindcss -i ./styles/input.css -o ./styles/tailwind.css --minify",
+    "css:watch": "tailwindcss -i ./styles/input.css -o ./styles/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

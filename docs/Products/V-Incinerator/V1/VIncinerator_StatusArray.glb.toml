@@ -1,0 +1,26 @@
+# V-Incinerator Status Array — LED indicator panel
+# Xenon blue = running, green = emissions compliant, red = alarm
+# Part — visual indicator
+
+[asset]
+mesh = "assets/meshes/products/V-Incinerator/VIncinerator_StatusArray.glb"
+scene = "Scene0"
+
+[transform]
+position = [2.8, 2.5, 1.2]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [0.1, 0.1, 0.1]
+
+[properties]
+color = [0.0, 0.75, 1.0, 1.0]
+transparency = 0.0
+anchored = true
+can_collide = false
+cast_shadow = false
+reflectance = 0.0
+
+[metadata]
+class_name = "Part"
+archivable = true
+created = "2026-02-25T00:00:00Z"
+last_modified = "2026-02-25T17:00:00Z"

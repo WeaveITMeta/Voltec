@@ -1,0 +1,51 @@
+# V-Pump — Flange Adapter (A694 F60 Duplex Forging)
+# Modular conical reducer, DN2000 → DN1200 example configuration
+
+[asset]
+mesh = "meshes/VPump_FlangeAdapter.glb"
+
+[transform]
+position = [0.0, 0.0, -2.5]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [2.8, 2.8, 0.5]
+
+[properties]
+name = "VPump_FlangeAdapter"
+class_name = "Part"
+color = [0.62, 0.64, 0.67, 1.0]
+transparency = 0.0
+cast_shadow = true
+can_collide = true
+anchored = true
+
+[metadata]
+class_name = "Part"
+archivable = true
+created = "2026-02-25T00:00:00Z"
+last_modified = "2026-02-25T00:00:00Z"
+
+[material]
+name = "A694 F60 Duplex Forging"
+young_modulus = 200000000000.0
+poisson_ratio = 0.30
+yield_strength = 450000000.0
+ultimate_strength = 620000000.0
+fracture_toughness = 120000000.0
+hardness = 260.0
+thermal_conductivity = 17.0
+specific_heat = 480.0
+thermal_expansion = 0.000013
+melting_point = 1623.0
+density = 7800.0
+friction_static = 0.45
+friction_kinetic = 0.35
+restitution = 0.3
+
+[material.custom]
+bolt_pattern = "ASME_B16_47_Series_B"
+bolt_count = 24.0
+gasket_type = "spiral_wound_316L_graphite"
+large_end_dn = 2000.0
+small_end_dn = 1200.0
+stiffener_ribs = 8.0
+role = "flange_adapter"

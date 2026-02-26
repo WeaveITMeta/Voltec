@@ -1,0 +1,60 @@
+# V-Incinerator Primary Combustion Chamber — Inconel 718 superalloy
+# Secondary burn: 1,100°C min, 2-second dwell, O₂-enriched
+# AdvancedPart — complete organic destruction zone
+
+[asset]
+mesh = "assets/meshes/products/V-Incinerator/VIncinerator_CombustionChamber.glb"
+scene = "Scene0"
+
+[transform]
+position = [0.0, 2.0, 0.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [1.8, 3.6, 1.8]
+
+[properties]
+color = [0.65, 0.60, 0.55, 1.0]
+transparency = 0.0
+anchored = true
+can_collide = true
+cast_shadow = true
+reflectance = 0.35
+
+[metadata]
+class_name = "AdvancedPart"
+archivable = true
+created = "2026-02-25T00:00:00Z"
+last_modified = "2026-02-25T17:00:00Z"
+
+[material]
+name = "Inconel 718 (Ni-Cr Superalloy)"
+young_modulus = 200000000000.0
+poisson_ratio = 0.30
+yield_strength = 1035000000.0
+ultimate_strength = 1240000000.0
+fracture_toughness = 96000000.0
+hardness = 388.0
+thermal_conductivity = 11.4
+specific_heat = 435.0
+thermal_expansion = 0.000013
+melting_point = 1609.0
+density = 8190.0
+friction_static = 0.6
+friction_kinetic = 0.45
+restitution = 0.4
+
+[material.custom]
+creep_rupture_100kh_mpa = 620.0
+oxidation_limit_k = 1255.0
+wall_thickness_m = 0.025
+refractory_thickness_m = 0.1
+dwell_time_s = 2.0
+role = "combustion_chamber"
+
+[thermodynamic]
+temperature = 298.15
+pressure = 121590.0
+volume = 9.16
+internal_energy = 0.0
+entropy = 0.0
+enthalpy = 0.0
+moles = 1.0

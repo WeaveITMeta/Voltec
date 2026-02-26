@@ -1,0 +1,26 @@
+# V-Incinerator Control Module — FR4 PCB + V-OS embedded
+# V-Mind AI combustion control, CEMS integration, HMI panel
+# Part — electronics enclosure
+
+[asset]
+mesh = "assets/meshes/products/V-Incinerator/VIncinerator_ControlModule.glb"
+scene = "Scene0"
+
+[transform]
+position = [2.8, 1.5, 1.2]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [0.4, 0.6, 0.3]
+
+[properties]
+color = [0.05, 0.30, 0.15, 1.0]
+transparency = 0.0
+anchored = true
+can_collide = true
+cast_shadow = true
+reflectance = 0.1
+
+[metadata]
+class_name = "Part"
+archivable = true
+created = "2026-02-25T00:00:00Z"
+last_modified = "2026-02-25T17:00:00Z"

@@ -1,0 +1,62 @@
+# V-Incinerator Heat Exchanger — Copper-Nickel C71500 tube bundle
+# Shell-and-tube counter-flow: exhaust → steam (540°C, 10 MPa)
+# AdvancedPart — thermal energy recovery for turbine generation
+
+[asset]
+mesh = "assets/meshes/products/V-Incinerator/VIncinerator_HeatExchanger.glb"
+scene = "Scene0"
+
+[transform]
+position = [0.0, 3.2, 0.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [1.2, 3.0, 1.2]
+
+[properties]
+color = [0.85, 0.65, 0.50, 1.0]
+transparency = 0.0
+anchored = true
+can_collide = true
+cast_shadow = true
+reflectance = 0.35
+
+[metadata]
+class_name = "AdvancedPart"
+archivable = true
+created = "2026-02-25T00:00:00Z"
+last_modified = "2026-02-25T17:00:00Z"
+
+[material]
+name = "Copper-Nickel C71500 (70Cu-30Ni)"
+young_modulus = 150000000000.0
+poisson_ratio = 0.34
+yield_strength = 170000000.0
+ultimate_strength = 420000000.0
+fracture_toughness = 65000000.0
+hardness = 120.0
+thermal_conductivity = 29.0
+specific_heat = 380.0
+thermal_expansion = 0.0000162
+melting_point = 1443.0
+density = 8950.0
+friction_static = 0.5
+friction_kinetic = 0.4
+restitution = 0.35
+
+[material.custom]
+tube_count = 240
+tube_od_m = 0.0254
+tube_wall_m = 0.0021
+thermal_duty_mw = 4.5
+steam_output_mw = 3.8
+steam_temp_k = 813.15
+steam_pressure_mpa = 10.0
+role = "heat_exchanger"
+
+[thermodynamic]
+temperature = 298.15
+pressure = 101325.0
+volume = 3.39
+internal_energy = 0.0
+entropy = 0.0
+enthalpy = 0.0
+moles = 1.0

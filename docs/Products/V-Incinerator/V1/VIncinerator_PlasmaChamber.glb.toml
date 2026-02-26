@@ -1,0 +1,60 @@
+# V-Incinerator Plasma Chamber — Tungsten-lined gasification vessel
+# 3 × 500 kW DC plasma torches, 5,000–7,000°C core
+# AdvancedPart — primary waste destruction zone
+
+[asset]
+mesh = "assets/meshes/products/V-Incinerator/VIncinerator_PlasmaChamber.glb"
+scene = "Scene0"
+
+[transform]
+position = [0.0, 0.75, 0.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [1.2, 1.5, 1.2]
+
+[properties]
+color = [0.42, 0.40, 0.38, 1.0]
+transparency = 0.0
+anchored = true
+can_collide = true
+cast_shadow = true
+reflectance = 0.3
+
+[metadata]
+class_name = "AdvancedPart"
+archivable = true
+created = "2026-02-25T00:00:00Z"
+last_modified = "2026-02-25T17:00:00Z"
+
+[material]
+name = "Tungsten (W)"
+young_modulus = 411000000000.0
+poisson_ratio = 0.28
+yield_strength = 750000000.0
+ultimate_strength = 980000000.0
+fracture_toughness = 20000000.0
+hardness = 3430.0
+thermal_conductivity = 173.0
+specific_heat = 132.0
+thermal_expansion = 0.0000045
+melting_point = 3695.0
+density = 19300.0
+friction_static = 0.5
+friction_kinetic = 0.4
+restitution = 0.3
+
+[material.custom]
+liner_thickness_m = 0.003
+plasma_erosion_rate_mm_per_1000h = 0.1
+torch_power_kw = 1500.0
+torch_count = 3
+operating_temp_max_k = 7773.0
+role = "plasma_chamber"
+
+[thermodynamic]
+temperature = 298.15
+pressure = 101325.0
+volume = 1.696
+internal_energy = 0.0
+entropy = 0.0
+enthalpy = 0.0
+moles = 1.0

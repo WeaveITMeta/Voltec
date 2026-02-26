@@ -1,0 +1,26 @@
+# V-Incinerator Waste Feed System — AR400 Abrasion-Resistant Steel
+# Ram-fed conveyor with double airlock, accepts unsorted MSW
+# Part — mechanical component, no realism physics
+
+[asset]
+mesh = "assets/meshes/products/V-Incinerator/VIncinerator_WasteFeed.glb"
+scene = "Scene0"
+
+[transform]
+position = [-2.5, 0.75, 0.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [1.5, 0.8, 1.0]
+
+[properties]
+color = [0.35, 0.33, 0.30, 1.0]
+transparency = 0.0
+anchored = true
+can_collide = true
+cast_shadow = true
+reflectance = 0.2
+
+[metadata]
+class_name = "Part"
+archivable = true
+created = "2026-02-25T00:00:00Z"
+last_modified = "2026-02-25T17:00:00Z"
