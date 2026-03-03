@@ -71,11 +71,13 @@ def join_objects(objs):
     return bpy.context.active_object
 
 def create_geometry(mat_na, mat_al):
+    # --- Position offset (inside housing, top of interior stack) ---
+    Y_OFF = 0.0045  # Y offset inside housing
     base_z = 0.0
 
     # --- Al hex lattice substrate ---
     al_base = add_box("al_lattice", L, W, AL_T,
-                      loc=(0, 0, base_z + AL_T/2))
+                      loc=(0, Y_OFF + AL_T/2, base_z + AL_T/2))
 
     # --- Honeycomb texture: punch rows of hexagonal cutouts ---
     # Represent hex cells as closely-packed cylinders removed from the slab
@@ -92,7 +94,7 @@ def create_geometry(mat_na, mat_al):
             if abs(cx) < L/2 - 0.01 and abs(cy) < W/2 - 0.01:
                 c = add_box(f"hc_{row}_{col}",
                             HEX_R * 1.2, HEX_R * 1.2, AL_T * 2,
-                            loc=(cx, cy, base_z + AL_T/2))
+                            loc=(cx, Y_OFF + cy, base_z + AL_T/2))
                 cutters.append(c)
     for c in cutters:
         bool_op(al_base, c, "DIFFERENCE")
@@ -100,12 +102,12 @@ def create_geometry(mat_na, mat_al):
 
     # --- Sodium metal layer on top of lattice ---
     na_layer = add_box("na_layer", L - 0.002, W - 0.002, NA_T,
-                       loc=(0, 0, base_z + AL_T + NA_T/2))
+                       loc=(0, Y_OFF, base_z + AL_T + NA_T/2))
     na_layer.data.materials.append(mat_na)
 
     # --- Current collector tab (positive lead, Al) ---
     tab = add_box("anode_tab", TAB_L, TAB_W, TAB_T,
-                  loc=(L/2 - TAB_L/2, 0, base_z + AL_T/2))
+                  loc=(L/2 - TAB_L/2, Y_OFF, base_z + AL_T/2))
     tab.data.materials.append(mat_al)
 
     # --- Join all into single mesh ---

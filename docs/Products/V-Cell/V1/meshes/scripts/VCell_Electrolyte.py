@@ -47,8 +47,11 @@ def add_box(name, sx, sy, sz, loc=(0,0,0)):
     return obj
 
 def create_geometry(mat):
+    # --- Position offset (inside housing, middle of interior stack) ---
+    Y_OFF = 0.003  # Y offset inside housing
+    
     # --- Main electrolyte slab ---
-    slab = add_box("elyte_slab", L, W, T, loc=(0, 0, 0))
+    slab = add_box("elyte_slab", L, W, T, loc=(0, Y_OFF, 0))
 
     # --- Edge bead (tape-cast edge is slightly thicker) ---
     # Add thin strips along all 4 edges representing edge bead
@@ -59,7 +62,7 @@ def create_geometry(mat):
         (L/2,  0,  EDGE_C, W),         # +X edge
         (-L/2, 0,  EDGE_C, W),         # -X edge
     ]):
-        bead = add_box(f"bead_{i}", bsx, bsy, bead_t, loc=(bx, by, 0))
+        bead = add_box(f"bead_{i}", bsx, bsy, bead_t, loc=(bx, Y_OFF + by, 0))
         mod = slab.modifiers.new("BoolBead", "BOOLEAN")
         mod.operation = "UNION"
         mod.object    = bead

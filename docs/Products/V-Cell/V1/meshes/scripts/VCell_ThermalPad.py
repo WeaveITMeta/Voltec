@@ -57,8 +57,11 @@ def bool_op(target, cutter, operation="DIFFERENCE"):
     bpy.data.objects.remove(cutter, do_unlink=True)
 
 def create_geometry(mat):
+    # --- Position offset (inside housing, bottom of interior stack) ---
+    Y_OFF = -0.004  # Y offset inside housing
+    
     # --- Main AlN slab ---
-    slab = add_box("aln_slab", L, W, T, loc=(0, 0, 0))
+    slab = add_box("aln_slab", L, W, T, loc=(0, Y_OFF, 0))
 
     # --- Registration notches on each long edge (2 per side) ---
     for sign in [+1, -1]:
@@ -66,7 +69,7 @@ def create_geometry(mat):
             notch = add_box(
                 f"notch_{sign}_{offset}",
                 NOTCH_W, NOTCH_D * 2, T * 2,
-                loc=(offset, sign * (W/2), 0))
+                loc=(offset, Y_OFF + sign * (W/2), 0))
             bool_op(slab, notch, "DIFFERENCE")
 
     slab.name = OBJ_NAME

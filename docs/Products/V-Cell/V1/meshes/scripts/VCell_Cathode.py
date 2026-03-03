@@ -74,11 +74,13 @@ def join_objects(objs):
     return bpy.context.active_object
 
 def create_geometry(mat_al, mat_cnt, mat_s):
+    # --- Position offset (inside housing, lower-middle of interior stack) ---
+    Y_OFF = 0.0015  # Y offset inside housing
     base_z = 0.0
 
     # --- Al hex lattice substrate ---
     al_base = add_box("al_lattice_c", L, W, AL_T,
-                      loc=(0, 0, base_z + AL_T/2))
+                      loc=(0, Y_OFF + AL_T/2, base_z + AL_T/2))
     # Honeycomb cutouts (same pattern as anode)
     HEX_R  = 0.008
     HEX_SP = HEX_R * 2.1
@@ -91,13 +93,13 @@ def create_geometry(mat_al, mat_cnt, mat_s):
             if abs(cx) < L/2 - 0.01 and abs(cy) < W/2 - 0.01:
                 c = add_box(f"hc_c_{row}_{col}",
                             HEX_R * 1.1, HEX_R * 1.1, AL_T * 2,
-                            loc=(cx, cy, base_z + AL_T/2))
+                            loc=(cx, Y_OFF + cy, base_z + AL_T/2))
                 bool_op(al_base, c, "DIFFERENCE")
     al_base.data.materials.append(mat_al)
 
     # --- VACNT forest layer (dark carbon slab with surface texture) ---
     cnt_layer = add_box("vacnt_layer", L - 0.002, W - 0.002, VACNT_T,
-                        loc=(0, 0, base_z + AL_T + VACNT_T/2))
+                        loc=(0, Y_OFF, base_z + AL_T + VACNT_T/2))
     # Texture: small raised posts representing CNT bundle tops
     POST_R = 0.005
     POST_H = VACNT_T * 0.3
