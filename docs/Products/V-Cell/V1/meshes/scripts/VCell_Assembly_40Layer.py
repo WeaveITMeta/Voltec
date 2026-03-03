@@ -26,6 +26,9 @@ NUM_LAYERS = 40
 SINGLE_CYCLE_HEIGHT = ANODE_T + ELECTROLYTE_T + CATHODE_T
 TOTAL_STACK_HEIGHT = NUM_LAYERS * SINGLE_CYCLE_HEIGHT + THERMAL_PAD_T
 
+# Visual scale multiplier (1:1 = actual size, no scaling)
+VISUAL_SCALE = 1.0  # 1:1 scaling - actual dimensions
+
 # --- PBR Materials ---
 def make_material(name, color, metal, rough):
     mat = bpy.data.materials.new(name=name)
@@ -64,36 +67,36 @@ def join_objects(objs):
     return bpy.context.active_object
 
 def create_geometry(mat_na, mat_al, mat_elyte, mat_cnt, mat_s, mat_aln):
-    # --- Center stack at Y=0 ---
-    stack_bottom = -TOTAL_STACK_HEIGHT / 2
+    # --- Center stack at Y=0, scaled for visibility ---
+    stack_bottom = -TOTAL_STACK_HEIGHT / 2 * VISUAL_SCALE
     
     all_layers = []
     
     # --- Thermal pad (bottom) ---
-    tp_y = stack_bottom + THERMAL_PAD_T / 2
-    tp = add_box("thermal_pad", L_LAYER, W_LAYER, THERMAL_PAD_T, loc=(0, tp_y, 0))
+    tp_y = stack_bottom + THERMAL_PAD_T / 2 * VISUAL_SCALE
+    tp = add_box("thermal_pad", L_LAYER, W_LAYER, THERMAL_PAD_T * VISUAL_SCALE, loc=(0, tp_y, 0))
     tp.data.materials.append(mat_aln)
     all_layers.append(tp)
     
     # --- 40 electrochemical layers ---
     for layer_idx in range(NUM_LAYERS):
-        layer_bottom = stack_bottom + THERMAL_PAD_T + layer_idx * SINGLE_CYCLE_HEIGHT
+        layer_bottom = stack_bottom + THERMAL_PAD_T * VISUAL_SCALE + layer_idx * SINGLE_CYCLE_HEIGHT * VISUAL_SCALE
         
         # Anode
-        anode_y = layer_bottom + ANODE_T / 2
-        anode = add_box(f"anode_{layer_idx}", L_LAYER, W_LAYER, ANODE_T, loc=(0, anode_y, 0))
+        anode_y = layer_bottom + ANODE_T / 2 * VISUAL_SCALE
+        anode = add_box(f"anode_{layer_idx}", L_LAYER, W_LAYER, ANODE_T * VISUAL_SCALE, loc=(0, anode_y, 0))
         anode.data.materials.append(mat_na)
         all_layers.append(anode)
         
         # Electrolyte
-        elyte_y = layer_bottom + ANODE_T + ELECTROLYTE_T / 2
-        elyte = add_box(f"electrolyte_{layer_idx}", L_LAYER, W_LAYER, ELECTROLYTE_T, loc=(0, elyte_y, 0))
+        elyte_y = layer_bottom + ANODE_T * VISUAL_SCALE + ELECTROLYTE_T / 2 * VISUAL_SCALE
+        elyte = add_box(f"electrolyte_{layer_idx}", L_LAYER, W_LAYER, ELECTROLYTE_T * VISUAL_SCALE, loc=(0, elyte_y, 0))
         elyte.data.materials.append(mat_elyte)
         all_layers.append(elyte)
         
         # Cathode
-        cathode_y = layer_bottom + ANODE_T + ELECTROLYTE_T + CATHODE_T / 2
-        cathode = add_box(f"cathode_{layer_idx}", L_LAYER, W_LAYER, CATHODE_T, loc=(0, cathode_y, 0))
+        cathode_y = layer_bottom + ANODE_T * VISUAL_SCALE + ELECTROLYTE_T * VISUAL_SCALE + CATHODE_T / 2 * VISUAL_SCALE
+        cathode = add_box(f"cathode_{layer_idx}", L_LAYER, W_LAYER, CATHODE_T * VISUAL_SCALE, loc=(0, cathode_y, 0))
         cathode.data.materials.append(mat_s)
         all_layers.append(cathode)
     
