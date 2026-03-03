@@ -91,30 +91,35 @@ def join_objects(objs):
     return bpy.context.active_object
 
 def create_geometry(mat_bezel, mat_lens, mat_pcb, mat_pad):
+    # --- Position offset (corner of housing top surface) ---
+    X_OFF = 0.130   # X offset to corner
+    Z_OFF = -0.030  # Z offset to side
+    Y_OFF = 0.006   # Y offset (recessed into housing)
+    
     # --- PCB substrate ---
-    pcb = add_box("led_pcb", PCB_L, PCB_W, PCB_T, loc=(0, 0, 0))
+    pcb = add_box("led_pcb", PCB_L, PCB_W, PCB_T, loc=(X_OFF, Y_OFF, Z_OFF))
     pcb.data.materials.append(mat_pcb)
 
     # --- Bezel ring (cylinder with hollow center) ---
     bezel_outer = add_cylinder("bezel_outer", BEZEL_R, BEZEL_T,
-                               loc=(0, 0, PCB_T/2 + BEZEL_T/2))
+                               loc=(X_OFF, Y_OFF + PCB_T/2 + BEZEL_T/2, Z_OFF))
     inner_cut = add_cylinder("bezel_inner_cut", LENS_R + 0.0002, BEZEL_T * 2,
-                             loc=(0, 0, PCB_T/2 + BEZEL_T/2))
+                             loc=(X_OFF, Y_OFF + PCB_T/2 + BEZEL_T/2, Z_OFF))
     bool_op(bezel_outer, inner_cut, "DIFFERENCE")
     bezel_outer.data.materials.append(mat_bezel)
 
     # --- Dome lens (half sphere clipped to flat base) ---
-    dome = add_sphere("lens_dome", LENS_R, loc=(0, 0, PCB_T/2 + LENS_H/2))
+    dome = add_sphere("lens_dome", LENS_R, loc=(X_OFF, Y_OFF + PCB_T/2 + LENS_H/2, Z_OFF))
     # Clip lower hemisphere
     clip = add_box("lens_clip", LENS_R * 3, LENS_R * 3, LENS_H,
-                   loc=(0, 0, PCB_T/2 - LENS_H/2))
+                   loc=(X_OFF, Y_OFF + PCB_T/2 - LENS_H/2, Z_OFF))
     bool_op(dome, clip, "DIFFERENCE")
     dome.data.materials.append(mat_lens)
 
     # --- 2 solder pads on PCB surface ---
     for sign in [-1, +1]:
         pad = add_cylinder(f"solder_pad_{sign}", PAD_R, PAD_T,
-                           loc=(sign * 0.003, 0, PCB_T/2 + PAD_T/2))
+                           loc=(X_OFF + sign * 0.003, Y_OFF + PCB_T/2 + PAD_T/2, Z_OFF))
         pad.data.materials.append(mat_pad)
 
     all_objs = [pcb, bezel_outer, dome] + [
