@@ -67,41 +67,41 @@ def join_objects(objs):
     return bpy.context.active_object
 
 def create_geometry(mat_na, mat_al, mat_elyte, mat_cnt, mat_s, mat_aln):
-    # --- Center stack at Y=0, scaled for visibility ---
-    stack_bottom = -TOTAL_STACK_HEIGHT / 2 * VISUAL_SCALE
+    # --- Center stack at Y=0 ---
+    stack_bottom = -TOTAL_STACK_HEIGHT / 2
     
-    all_layers = []
+    all_components = []
     
-    # --- Thermal pad (bottom) ---
-    tp_y = stack_bottom + THERMAL_PAD_T / 2 * VISUAL_SCALE
-    tp = add_box("thermal_pad", L_LAYER, W_LAYER, THERMAL_PAD_T * VISUAL_SCALE, loc=(0, tp_y, 0))
+    # --- Thermal pad (bottom, single instance) ---
+    tp_y = stack_bottom + THERMAL_PAD_T / 2
+    tp = add_box("thermal_pad", L_LAYER, W_LAYER, THERMAL_PAD_T, loc=(0, tp_y, 0))
     tp.data.materials.append(mat_aln)
-    all_layers.append(tp)
+    all_components.append(tp)
     
-    # --- 40 electrochemical layers ---
-    for layer_idx in range(NUM_LAYERS):
-        layer_bottom = stack_bottom + THERMAL_PAD_T * VISUAL_SCALE + layer_idx * SINGLE_CYCLE_HEIGHT * VISUAL_SCALE
+    # --- 40 repeated cycles of Anode-Electrolyte-Cathode ---
+    for cycle_idx in range(NUM_LAYERS):
+        cycle_bottom = stack_bottom + THERMAL_PAD_T + cycle_idx * SINGLE_CYCLE_HEIGHT
         
-        # Anode
-        anode_y = layer_bottom + ANODE_T / 2 * VISUAL_SCALE
-        anode = add_box(f"anode_{layer_idx}", L_LAYER, W_LAYER, ANODE_T * VISUAL_SCALE, loc=(0, anode_y, 0))
+        # Anode (layer 1 of cycle)
+        anode_y = cycle_bottom + ANODE_T / 2
+        anode = add_box(f"anode_{cycle_idx}", L_LAYER, W_LAYER, ANODE_T, loc=(0, anode_y, 0))
         anode.data.materials.append(mat_na)
-        all_layers.append(anode)
+        all_components.append(anode)
         
-        # Electrolyte
-        elyte_y = layer_bottom + ANODE_T * VISUAL_SCALE + ELECTROLYTE_T / 2 * VISUAL_SCALE
-        elyte = add_box(f"electrolyte_{layer_idx}", L_LAYER, W_LAYER, ELECTROLYTE_T * VISUAL_SCALE, loc=(0, elyte_y, 0))
+        # Electrolyte (layer 2 of cycle)
+        elyte_y = cycle_bottom + ANODE_T + ELECTROLYTE_T / 2
+        elyte = add_box(f"electrolyte_{cycle_idx}", L_LAYER, W_LAYER, ELECTROLYTE_T, loc=(0, elyte_y, 0))
         elyte.data.materials.append(mat_elyte)
-        all_layers.append(elyte)
+        all_components.append(elyte)
         
-        # Cathode
-        cathode_y = layer_bottom + ANODE_T * VISUAL_SCALE + ELECTROLYTE_T * VISUAL_SCALE + CATHODE_T / 2 * VISUAL_SCALE
-        cathode = add_box(f"cathode_{layer_idx}", L_LAYER, W_LAYER, CATHODE_T * VISUAL_SCALE, loc=(0, cathode_y, 0))
+        # Cathode (layer 3 of cycle)
+        cathode_y = cycle_bottom + ANODE_T + ELECTROLYTE_T + CATHODE_T / 2
+        cathode = add_box(f"cathode_{cycle_idx}", L_LAYER, W_LAYER, CATHODE_T, loc=(0, cathode_y, 0))
         cathode.data.materials.append(mat_s)
-        all_layers.append(cathode)
+        all_components.append(cathode)
     
     # --- Join all into single mesh ---
-    assembled = join_objects(all_layers)
+    assembled = join_objects(all_components)
     assembled.name = OBJ_NAME
     return assembled
 
