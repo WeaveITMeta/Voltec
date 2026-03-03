@@ -1,6 +1,6 @@
 # V-Incinerator HEPA Filter Bank — Borosilicate Glass Fiber
 # ≥99.97% particulate capture at 0.3 μm MPPS
-# AdvancedPart — first stage of exhaust purification
+# Part — first stage of exhaust purification
 
 [asset]
 mesh = "assets/meshes/products/V-Incinerator/VIncinerator_HEPAFilter.glb"
@@ -20,7 +20,7 @@ cast_shadow = true
 reflectance = 0.1
 
 [metadata]
-class_name = "AdvancedPart"
+class_name = "Part"
 archivable = true
 created = "2026-02-25T00:00:00Z"
 last_modified = "2026-02-25T17:00:00Z"

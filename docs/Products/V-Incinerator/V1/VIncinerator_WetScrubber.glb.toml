@@ -1,6 +1,6 @@
 # V-Incinerator Wet Scrubber Column — Hastelloy C-276
 # NaOH counter-current spray: HCl >99.8%, SO₂ >97.5%, HF >99%
-# AdvancedPart — fourth stage of exhaust purification
+# Part — fourth stage of exhaust purification
 
 [asset]
 mesh = "assets/meshes/products/V-Incinerator/VIncinerator_WetScrubber.glb"
@@ -20,7 +20,7 @@ cast_shadow = true
 reflectance = 0.3
 
 [metadata]
-class_name = "AdvancedPart"
+class_name = "Part"
 archivable = true
 created = "2026-02-25T00:00:00Z"
 last_modified = "2026-02-25T17:00:00Z"

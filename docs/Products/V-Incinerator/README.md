@@ -32,16 +32,16 @@ EustressEngine Space Root (Universe1/spaces/Space1/)
 
 | File | Mesh | Class | Realism Sections |
 |------|------|-------|------------------|
-| `VIncinerator_Housing.glb.toml` | block.glb | AdvancedPart | material, thermodynamic |
-| `VIncinerator_PlasmaChamber.glb.toml` | cylinder.glb | AdvancedPart | material, thermodynamic |
-| `VIncinerator_CombustionChamber.glb.toml` | cylinder.glb | AdvancedPart | material, thermodynamic |
-| `VIncinerator_HeatExchanger.glb.toml` | block.glb | AdvancedPart | material, thermodynamic |
-| `VIncinerator_HEPAFilter.glb.toml` | block.glb | AdvancedPart | material, thermodynamic |
-| `VIncinerator_CatalyticConverter.glb.toml` | block.glb | AdvancedPart | material, thermodynamic |
-| `VIncinerator_CarbonBed.glb.toml` | block.glb | AdvancedPart | material, thermodynamic |
-| `VIncinerator_WetScrubber.glb.toml` | cylinder.glb | AdvancedPart | material, thermodynamic |
+| `VIncinerator_Housing.glb.toml` | block.glb | Part | material, thermodynamic |
+| `VIncinerator_PlasmaChamber.glb.toml` | cylinder.glb | Part | material, thermodynamic |
+| `VIncinerator_CombustionChamber.glb.toml` | cylinder.glb | Part | material, thermodynamic |
+| `VIncinerator_HeatExchanger.glb.toml` | block.glb | Part | material, thermodynamic |
+| `VIncinerator_HEPAFilter.glb.toml` | block.glb | Part | material, thermodynamic |
+| `VIncinerator_CatalyticConverter.glb.toml` | block.glb | Part | material, thermodynamic |
+| `VIncinerator_CarbonBed.glb.toml` | block.glb | Part | material, thermodynamic |
+| `VIncinerator_WetScrubber.glb.toml` | cylinder.glb | Part | material, thermodynamic |
 | `VIncinerator_ExhaustStack.glb.toml` | cylinder.glb | Part | — |
-| `VIncinerator_AshHopper.glb.toml` | block.glb | AdvancedPart | material, thermodynamic |
+| `VIncinerator_AshHopper.glb.toml` | block.glb | Part | material, thermodynamic |
 | `VIncinerator_WasteFeed.glb.toml` | block.glb | Part | — |
 | `VIncinerator_ControlModule.glb.toml` | block.glb | Part | — |
 | `VIncinerator_StatusArray.glb.toml` | ball.glb | Part | — |
@@ -78,21 +78,21 @@ let entity = spawn_instance(&mut commands, &asset_server, &space_root, toml_path
 
 ```
 V-Incinerator Assembly (6.0m × 4.0m × 3.0m)
-├── VIncinerator_Housing           — AdvancedPart, 316L Stainless Steel
+├── VIncinerator_Housing           — Part, 316L Stainless Steel
 │   │
 │   ├── PROCESS CORE (vertical stack, center)
-│   │   ├── VIncinerator_AshHopper             — AdvancedPart, A36 Carbon Steel
-│   │   ├── VIncinerator_PlasmaChamber         — AdvancedPart, Tungsten (W)
-│   │   ├── VIncinerator_CombustionChamber     — AdvancedPart, Inconel 718
-│   │   └── VIncinerator_HeatExchanger         — AdvancedPart, Cu-Ni C71500
+│   │   ├── VIncinerator_AshHopper             — Part, A36 Carbon Steel
+│   │   ├── VIncinerator_PlasmaChamber         — Part, Tungsten (W)
+│   │   ├── VIncinerator_CombustionChamber     — Part, Inconel 718
+│   │   └── VIncinerator_HeatExchanger         — Part, Cu-Ni C71500
 │   │
 │   ├── EXHAUST PURIFICATION TRAIN (right side)
-│   │   ├── VIncinerator_HEPAFilter            — AdvancedPart, Borosilicate Glass
-│   │   ├── VIncinerator_CatalyticConverter    — AdvancedPart, Inconel 625 + Pt-Pd
-│   │   └── VIncinerator_CarbonBed             — AdvancedPart, 304SS + GAC
+│   │   ├── VIncinerator_HEPAFilter            — Part, Borosilicate Glass
+│   │   ├── VIncinerator_CatalyticConverter    — Part, Inconel 625 + Pt-Pd
+│   │   └── VIncinerator_CarbonBed             — Part, 304SS + GAC
 │   │
 │   ├── WET SCRUBBER + EXHAUST (left side)
-│   │   ├── VIncinerator_WetScrubber           — AdvancedPart, Hastelloy C-276
+│   │   ├── VIncinerator_WetScrubber           — Part, Hastelloy C-276
 │   │   └── VIncinerator_ExhaustStack          — Part, 304 Stainless
 │   │
 │   ├── INTAKE

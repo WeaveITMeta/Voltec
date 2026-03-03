@@ -677,7 +677,7 @@ Based on this analysis, here is an honest timeline:
 
 ### Phase 5: Scale-Up (Months 24-36)
 - [ ] 40-layer full V-Cell (405 Wh target)
-- [ ] V-Fab pilot line: 100 cells/day
+- [ ] V-Man pilot line: 100 cells/day
 - [ ] Grid storage pilot deployment (1 MWh)
 
 ---

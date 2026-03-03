@@ -1,0 +1,63 @@
+# V-Man RoboticArm — Aluminum 7075-T6
+# 6-axis industrial arm, 20 kg payload, ±0.02 mm repeatability, EtherCAT (×4 instances in cell)
+
+[asset]
+mesh = "assets/meshes/products/V-Man/VMan_RoboticArm.glb"
+scene = "Scene0"
+
+[transform]
+position = [-0.6, 0.85, -3.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [1.0, 1.0, 1.0]
+
+[properties]
+color = [0.75, 0.78, 0.80, 1.0]
+transparency = 0.0
+anchored = true
+can_collide = true
+cast_shadow = true
+reflectance = 0.0
+
+[metadata]
+class_name = "AdvancedPart"
+archivable = true
+created = "2026-03-02T00:00:00Z"
+last_modified = "2026-03-02T00:00:00Z"
+
+[material]
+name = "Aluminum 7075-T6"
+young_modulus = 71.7e9
+poisson_ratio = 0.33
+yield_strength = 503.0e6
+ultimate_strength = 572.0e6
+fracture_toughness = 29.0e6
+hardness = 175.0
+thermal_conductivity = 130.0
+specific_heat = 960.0
+thermal_expansion = 23.6e-6
+melting_point = 750.0
+density = 2810.0
+friction_static = 0.47
+friction_kinetic = 0.35
+restitution = 0.30
+
+[material.custom]
+role = "robotic_arm_structure"
+axes = 6.0
+payload_kg = 20.0
+repeatability_mm = 0.02
+reach_mm = 1300.0
+max_tcp_speed_mm_per_s = 2000.0
+ip_rating = "IP67"
+mtbf_hours = 80000.0
+power_peak_w = 1200.0
+power_avg_w = 400.0
+
+[thermodynamic]
+temperature = 298.15
+pressure = 101325.0
+volume = 0.012
+internal_energy = 0.0
+entropy = 0.0
+enthalpy = 0.0
+moles = 1.0

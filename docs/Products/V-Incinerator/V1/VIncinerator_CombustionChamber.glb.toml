@@ -1,6 +1,6 @@
 # V-Incinerator Primary Combustion Chamber — Inconel 718 superalloy
 # Secondary burn: 1,100°C min, 2-second dwell, O₂-enriched
-# AdvancedPart — complete organic destruction zone
+# Part — complete organic destruction zone
 
 [asset]
 mesh = "assets/meshes/products/V-Incinerator/VIncinerator_CombustionChamber.glb"
@@ -20,7 +20,7 @@ cast_shadow = true
 reflectance = 0.35
 
 [metadata]
-class_name = "AdvancedPart"
+class_name = "Part"
 archivable = true
 created = "2026-02-25T00:00:00Z"
 last_modified = "2026-02-25T17:00:00Z"

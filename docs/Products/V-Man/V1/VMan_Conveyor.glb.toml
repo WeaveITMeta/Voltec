@@ -1,0 +1,63 @@
+# V-Man Conveyor — S355J2 Structural Steel
+# 10m precision belt/roller transport, variable speed, integrated part presence sensors
+
+[asset]
+mesh = "assets/meshes/products/V-Man/VMan_Conveyor.glb"
+scene = "Scene0"
+
+[transform]
+position = [0.0, 0.425, 0.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [1.0, 1.0, 1.0]
+
+[properties]
+color = [0.55, 0.56, 0.58, 1.0]
+transparency = 0.0
+anchored = true
+can_collide = true
+cast_shadow = true
+reflectance = 0.0
+
+[metadata]
+class_name = "AdvancedPart"
+archivable = true
+created = "2026-03-02T00:00:00Z"
+last_modified = "2026-03-02T00:00:00Z"
+
+[material]
+name = "S355J2 Structural Steel"
+young_modulus = 210.0e9
+poisson_ratio = 0.30
+yield_strength = 355.0e6
+ultimate_strength = 510.0e6
+fracture_toughness = 60.0e6
+hardness = 160.0
+thermal_conductivity = 50.0
+specific_heat = 480.0
+thermal_expansion = 12.0e-6
+melting_point = 1793.0
+density = 7850.0
+friction_static = 0.74
+friction_kinetic = 0.57
+restitution = 0.20
+
+[material.custom]
+role = "conveyor_frame"
+conveyor_length_m = 10.0
+conveyor_width_m = 0.60
+work_surface_height_m = 0.85
+speed_range_min_m_per_s = 0.01
+speed_range_max_m_per_s = 0.50
+position_accuracy_mm = 0.5
+max_part_weight_kg = 50.0
+belt_material = "antistatic PU"
+drive_power_kw = 0.75
+
+[thermodynamic]
+temperature = 298.15
+pressure = 101325.0
+volume = 0.30
+internal_energy = 0.0
+entropy = 0.0
+enthalpy = 0.0
+moles = 1.0

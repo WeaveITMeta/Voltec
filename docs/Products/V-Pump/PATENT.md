@@ -778,15 +778,15 @@ At IGBWP scale (660 units), the per-unit cost drops to $1.2M — total hardware 
 
 | Component | class_name | Domain State | Laws |
 |-----------|------------|-------------|------|
-| Pump Casing | AdvancedPart | ThermodynamicState | Thermodynamics |
-| Bore Liner | AdvancedPart | ThermodynamicState | Thermodynamics |
-| Impeller Assembly | AdvancedPart | FluidState + KineticState | Fluid Dynamics |
-| Drive Shaft | AdvancedPart | KineticState | Mechanics |
-| Bearing Cartridges | AdvancedPart | ThermodynamicState | Thermodynamics |
+| Pump Casing | Part | ThermodynamicState | Thermodynamics |
+| Bore Liner | Part | ThermodynamicState | Thermodynamics |
+| Impeller Assembly | Part | FluidState + KineticState | Fluid Dynamics |
+| Drive Shaft | Part | KineticState | Mechanics |
+| Bearing Cartridges | Part | ThermodynamicState | Thermodynamics |
 | Vacuum-Assist Module | Part | — | — |
 | Flange Adapters | Part | — | — |
 | Bypass Valve | Part | FluidState | Fluid Dynamics |
-| Motor (PMSM) | AdvancedPart | KineticState | Electrodynamics |
+| Motor (PMSM) | Part | KineticState | Electrodynamics |
 | Control Module | Part | — | — |
 | Status Array | Part | — | — |
 

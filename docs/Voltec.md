@@ -67,8 +67,8 @@ A solid-state energy cell with target 3x the energy density of current lithium-i
 | Product | What It Is | Strategic Purpose |
 |---------|-----------|------------------|
 | **V-OS** | Industrial operating system | Every Voltec device runs V-OS. Third-party devs build on it. The Android of industrial systems. |
-| **V-Mind** | AI/ML engine | Predictive maintenance, energy optimization, autonomous control. Gets smarter with every connected node. |
-| **V-Fab** | Self-configuring robotic factory cells | Manufactures V-Cells internally first, then sold externally. Selling picks during the gold rush. |
+| **Vortex** | AI/ML engine | Predictive maintenance, energy optimization, autonomous control. Gets smarter with every connected node. |
+| **V-Man** | Self-configuring robotic factory cells | Manufactures V-Cells internally first, then sold externally. Selling picks during the gold rush. |
 | **V-Store** | Third-party module marketplace | Developers sell specialized V-OS modules. Voltec takes 20%. |
 
 ### Tier 3: Horizon (Ship in 3-5 years → Moonshot)
@@ -98,7 +98,7 @@ V-Store ecosystem grows (platform network effect)
             ↓
 More customers choose Voltec (switching costs rise)
             ↓
-Revenue funds V-Fab scale → lower manufacturing cost
+Revenue funds V-Man scale → lower manufacturing cost
             ↓
 V-Cell cost drops → cycle accelerates
             ↓
@@ -142,13 +142,13 @@ New markets open: Space, Defense, Data Centers
 Voltec owns the stack:
 
 1. **Raw Materials** → Alternative chemistries (sodium-sulfur, solid-state). No lithium/cobalt dependency.
-2. **Cell Fabrication** → V-Fab automated lines. Dry electrode process.
+2. **Cell Fabrication** → V-Man automated lines. Dry electrode process.
 3. **Pack Assembly** → In-house BMS, thermal management, housing.
 4. **Firmware & V-OS** → All software written internally.
 5. **Deployment** → Direct sales + certified integrator network.
 6. **Monitoring** → V-Mind telemetry on every deployed unit.
 
-**V-Fab units are used internally first**, then sold to partners — the same way Amazon built AWS for itself, then sold it to the world.
+**V-Man units are used internally first**, then sold to partners — the same way Amazon built AWS for itself, then sold it to the world.
 
 ---
 
@@ -161,7 +161,7 @@ Voltec owns the stack:
 | **Team V-Grid** | Software platform, networking | Single-threaded: grid uptime |
 | **Team V-Mind** | AI/ML, data pipeline | Single-threaded: prediction accuracy |
 | **Team V-OS** | Platform kernel, APIs, SDK | Single-threaded: developer experience |
-| **Team V-Fab** | Factory automation, robotics | Single-threaded: cost per cell |
+| **Team V-Man** | Factory automation, robotics | Single-threaded: cost per cell |
 | **Team V-Shield** | Space qualification, rad-hardening | Single-threaded: space readiness |
 | **Team Growth** | Sales, marketing, community | Single-threaded: customer acquisition |
 

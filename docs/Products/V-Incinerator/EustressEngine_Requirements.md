@@ -311,16 +311,16 @@ role = "ash_hopper"
 
 | File | Mesh Reference | Class | Realism Sections |
 |------|---------------|-------|------------------|
-| `VIncinerator_Housing.glb.toml` | `block.glb` | AdvancedPart | material, thermodynamic |
-| `VIncinerator_PlasmaChamber.glb.toml` | `cylinder.glb` | AdvancedPart | material, thermodynamic |
-| `VIncinerator_CombustionChamber.glb.toml` | `cylinder.glb` | AdvancedPart | material, thermodynamic |
-| `VIncinerator_HeatExchanger.glb.toml` | `block.glb` | AdvancedPart | material, thermodynamic |
-| `VIncinerator_HEPAFilter.glb.toml` | `block.glb` | AdvancedPart | material, thermodynamic |
-| `VIncinerator_CatalyticConverter.glb.toml` | `block.glb` | AdvancedPart | material, thermodynamic |
-| `VIncinerator_CarbonBed.glb.toml` | `block.glb` | AdvancedPart | material, thermodynamic |
-| `VIncinerator_WetScrubber.glb.toml` | `cylinder.glb` | AdvancedPart | material, thermodynamic |
+| `VIncinerator_Housing.glb.toml` | `block.glb` | Part | material, thermodynamic |
+| `VIncinerator_PlasmaChamber.glb.toml` | `cylinder.glb` | Part | material, thermodynamic |
+| `VIncinerator_CombustionChamber.glb.toml` | `cylinder.glb` | Part | material, thermodynamic |
+| `VIncinerator_HeatExchanger.glb.toml` | `block.glb` | Part | material, thermodynamic |
+| `VIncinerator_HEPAFilter.glb.toml` | `block.glb` | Part | material, thermodynamic |
+| `VIncinerator_CatalyticConverter.glb.toml` | `block.glb` | Part | material, thermodynamic |
+| `VIncinerator_CarbonBed.glb.toml` | `block.glb` | Part | material, thermodynamic |
+| `VIncinerator_WetScrubber.glb.toml` | `cylinder.glb` | Part | material, thermodynamic |
 | `VIncinerator_ExhaustStack.glb.toml` | `cylinder.glb` | Part | — |
-| `VIncinerator_AshHopper.glb.toml` | `block.glb` | AdvancedPart | material, thermodynamic |
+| `VIncinerator_AshHopper.glb.toml` | `block.glb` | Part | material, thermodynamic |
 | `VIncinerator_WasteFeed.glb.toml` | `block.glb` | Part | — |
 | `VIncinerator_ControlModule.glb.toml` | `block.glb` | Part | — |
 | `VIncinerator_StatusArray.glb.toml` | `ball.glb` | Part | — |
@@ -515,7 +515,7 @@ enable_fracture = true
 ### Pre-Launch Checks
 
 - [ ] All 13 `.glb.toml` files parse without errors
-- [ ] All `AdvancedPart` entities have `[material]` and `[thermodynamic]` sections
+- [ ] All `Part` entities have `[material]` and `[thermodynamic]` sections
 - [ ] No `[electrochemical]` sections present (V-Incinerator is thermal, not electrochemical)
 - [ ] All positions in meters, Y-up coordinate system
 - [ ] All material values in SI units

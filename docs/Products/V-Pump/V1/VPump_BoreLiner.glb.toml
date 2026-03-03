@@ -11,7 +11,7 @@ scale = [1.2, 1.2, 4.0]
 
 [properties]
 name = "VPump_BoreLiner"
-class_name = "AdvancedPart"
+class_name = "Part"
 color = [0.25, 0.25, 0.28, 1.0]
 transparency = 0.0
 cast_shadow = true
@@ -19,7 +19,7 @@ can_collide = true
 anchored = true
 
 [metadata]
-class_name = "AdvancedPart"
+class_name = "Part"
 archivable = true
 created = "2026-02-25T00:00:00Z"
 last_modified = "2026-02-25T00:00:00Z"

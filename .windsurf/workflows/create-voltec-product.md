@@ -514,7 +514,7 @@ scene = "Scene0"
 
 > Primitives are unit meshes — `[transform] scale` in meters gives real-world dimensions.
 
-### Template for AdvancedPart (with realism)
+### Template for Part (with realism)
 
 ```toml
 # {ProductName} {ComponentName} — {MaterialName}
@@ -538,7 +538,7 @@ cast_shadow = true
 reflectance = 0.0
 
 [metadata]
-class_name = "AdvancedPart"
+class_name = "Part"
 archivable = true
 created = "{ISO 8601 date}"
 last_modified = "{ISO 8601 date}"
@@ -710,7 +710,7 @@ After all files are created, verify:
 - [ ] `V1/` has one `.glb.toml` per physical component with correct naming
 - [ ] All `.glb.toml` `[asset]` sections point to custom meshes from Step 5 (or fallback primitives)
 - [ ] All `.glb.toml` files use flat `[material]` (not `[material.name]`)
-- [ ] All `AdvancedPart` instances have `[material]` + `[thermodynamic]`, and `[electrochemical]` only where applicable
+- [ ] All `Part` instances have `[material]` + `[thermodynamic]`, and `[electrochemical]` only where applicable
 - [ ] Every `[material.custom]` has a `role` tag
 - [ ] No references to deprecated `.eustressengine` RON/JSON format anywhere
 

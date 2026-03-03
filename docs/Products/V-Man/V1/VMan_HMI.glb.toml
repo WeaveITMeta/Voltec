@@ -1,0 +1,61 @@
+# V-Man HMI — Gorilla Glass / Aluminum
+# 15.6" industrial touchscreen, IP65, 1000 nits, remote web interface
+
+[asset]
+mesh = "assets/meshes/products/V-Man/VMan_HMI.glb"
+scene = "Scene0"
+
+[transform]
+position = [-1.1, 1.50, -4.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [1.0, 1.0, 1.0]
+
+[properties]
+color = [0.04, 0.04, 0.04, 1.0]
+transparency = 0.0
+anchored = true
+can_collide = true
+cast_shadow = true
+reflectance = 0.0
+
+[metadata]
+class_name = "Part"
+archivable = true
+created = "2026-03-02T00:00:00Z"
+last_modified = "2026-03-02T00:00:00Z"
+
+[material]
+name = "Gorilla Glass / Aluminum"
+young_modulus = 70.0e9
+poisson_ratio = 0.22
+yield_strength = 400.0e6
+ultimate_strength = 500.0e6
+fracture_toughness = 0.7e6
+hardness = 600.0
+thermal_conductivity = 1.0
+specific_heat = 840.0
+thermal_expansion = 7.0e-6
+melting_point = 1873.0
+density = 2500.0
+friction_static = 0.40
+friction_kinetic = 0.30
+restitution = 0.30
+
+[material.custom]
+role = "human_machine_interface"
+screen_size_in = 15.6
+resolution = "1920x1080"
+touch_type = "capacitive"
+ip_rating = "IP65"
+brightness_nits = 1000.0
+operating_temp_min_c = 0.0
+operating_temp_max_c = 50.0
+
+[thermodynamic]
+temperature = 298.15
+pressure = 101325.0
+volume = 0.001
+internal_energy = 0.0
+entropy = 0.0
+enthalpy = 0.0
+moles = 1.0

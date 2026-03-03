@@ -443,7 +443,7 @@ Active material → Al hex lattice → Al housing wall → AlN thermal pad → B
 
 ## 14. Manufacturing Process {#14-manufacturing-process}
 
-### 14.1 Dry Electrode Process (V-Fab)
+### 14.1 Dry Electrode Process (V-Man)
 
 Unlike conventional wet-process lithium-ion manufacturing:
 
@@ -477,7 +477,7 @@ Unlike conventional wet-process lithium-ion manufacturing:
 | Cells/day | 1,000 | 50,000 | 500,000 |
 | Cost/kWh | $85 | $45 | $25 |
 | Yield | 85% | 95% | 99% |
-| Line | Single | V-Fab 1 | V-Fab 1-5 |
+| Line | Single | V-Man 1 | V-Man 1-5 |
 
 ---
 

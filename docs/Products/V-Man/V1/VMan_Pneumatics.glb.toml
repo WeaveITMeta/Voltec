@@ -1,0 +1,60 @@
+# V-Man Pneumatics — Aluminum 6061-T6
+# Compact compressor, air receiver, filter/regulator, manifold for end-effector actuation
+
+[asset]
+mesh = "assets/meshes/products/V-Man/VMan_Pneumatics.glb"
+scene = "Scene0"
+
+[transform]
+position = [1.0, 0.30, 4.5]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [1.0, 1.0, 1.0]
+
+[properties]
+color = [0.75, 0.78, 0.80, 1.0]
+transparency = 0.0
+anchored = true
+can_collide = true
+cast_shadow = true
+reflectance = 0.0
+
+[metadata]
+class_name = "Part"
+archivable = true
+created = "2026-03-02T00:00:00Z"
+last_modified = "2026-03-02T00:00:00Z"
+
+[material]
+name = "Aluminum 6061-T6"
+young_modulus = 68.9e9
+poisson_ratio = 0.33
+yield_strength = 276.0e6
+ultimate_strength = 310.0e6
+fracture_toughness = 29.0e6
+hardness = 95.0
+thermal_conductivity = 167.0
+specific_heat = 896.0
+thermal_expansion = 23.6e-6
+melting_point = 855.0
+density = 2700.0
+friction_static = 0.42
+friction_kinetic = 0.30
+restitution = 0.30
+
+[material.custom]
+role = "pneumatics_module"
+operating_pressure_bar = 6.0
+compressor_power_kw = 1.5
+tank_volume_l = 50.0
+flow_rate_l_per_min = 200.0
+filtration_um = 5.0
+dew_point_c = -20.0
+
+[thermodynamic]
+temperature = 298.15
+pressure = 101325.0
+volume = 0.05
+internal_energy = 0.0
+entropy = 0.0
+enthalpy = 0.0
+moles = 1.0

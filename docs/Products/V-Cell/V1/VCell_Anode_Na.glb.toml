@@ -6,13 +6,13 @@
 mesh = "meshes/VCell_Anode.glb"
 
 [transform]
-position = [0.0, 0.003, 0.0]
+position = [0.0, -0.0060, 0.0]
 rotation = [0.0, 0.0, 0.0, 1.0]
 scale = [1.0, 1.0, 1.0]
 
 [properties]
 name = "VCell_Anode"
-class_name = "AdvancedPart"
+class_name = "Part"
 color = [0.85, 0.88, 0.90, 1.0]
 transparency = 0.0
 cast_shadow = true
@@ -20,7 +20,7 @@ can_collide = true
 anchored = false
 
 [metadata]
-class_name = "AdvancedPart"
+class_name = "Part"
 archivable = true
 created = "2026-02-26T00:00:00Z"
 last_modified = "2026-02-26T00:00:00Z"

@@ -19,18 +19,18 @@ Workspace/             ← Per-instance .glb.toml files (one file = one entity)
 - **Mesh assets** are reusable GLB files in `assets/meshes/`
 - **Instance files** define transform, color, material class, and realism data
 - The engine's `instance_loader` scans `Workspace/` and spawns each `.glb.toml` as an ECS entity
-- `AdvancedPart` class entities get `MaterialProperties`, `ThermodynamicState`, and `ElectrochemicalState` components attached automatically
+- `Part` class entities get `MaterialProperties`, `ThermodynamicState`, and `ElectrochemicalState` components attached automatically
 
 ## Instance Files
 
 | File | Mesh | Class | Realism Sections |
 |------|------|-------|------------------|
-| `VCell_Housing.glb.toml` | `block.glb` | AdvancedPart | `[material]` `[thermodynamic]` |
-| `VCell_Anode_Na.glb.toml` | `block.glb` | AdvancedPart | `[material]` `[thermodynamic]` `[electrochemical]` |
-| `VCell_Electrolyte_ScNASICON.glb.toml` | `block.glb` | AdvancedPart | `[material]` `[thermodynamic]` `[electrochemical]` |
-| `VCell_Cathode_SulfurVACNT.glb.toml` | `block.glb` | AdvancedPart | `[material]` `[thermodynamic]` `[electrochemical]` |
-| `VCell_AlHexLattice.glb.toml` | `block.glb` | AdvancedPart | `[material]` `[thermodynamic]` |
-| `VCell_ThermalPad_AlN.glb.toml` | `block.glb` | AdvancedPart | `[material]` `[thermodynamic]` |
+| `VCell_Housing.glb.toml` | `block.glb` | Part | `[material]` `[thermodynamic]` |
+| `VCell_Anode_Na.glb.toml` | `block.glb` | Part | `[material]` `[thermodynamic]` `[electrochemical]` |
+| `VCell_Electrolyte_ScNASICON.glb.toml` | `block.glb` | Part | `[material]` `[thermodynamic]` `[electrochemical]` |
+| `VCell_Cathode_SulfurVACNT.glb.toml` | `block.glb` | Part | `[material]` `[thermodynamic]` `[electrochemical]` |
+| `VCell_AlHexLattice.glb.toml` | `block.glb` | Part | `[material]` `[thermodynamic]` |
+| `VCell_ThermalPad_AlN.glb.toml` | `block.glb` | Part | `[material]` `[thermodynamic]` |
 | `VCell_Terminal_Positive.glb.toml` | `cylinder.glb` | Part | — |
 | `VCell_Terminal_Negative.glb.toml` | `cylinder.glb` | Part | — |
 | `VCell_StatusLED.glb.toml` | `ball.glb` | Part | — |
@@ -80,12 +80,12 @@ let entity = instance_loader::spawn_instance(
 
 ```
 Workspace/
-├── VCell_Housing.glb.toml          (AdvancedPart/Block — Al 6061-T6)
-├── VCell_Anode_Na.glb.toml         (AdvancedPart/Block — Sodium metal)
-├── VCell_Electrolyte_ScNASICON.glb.toml  (AdvancedPart/Block — Sc-NASICON ceramic)
-├── VCell_Cathode_SulfurVACNT.glb.toml    (AdvancedPart/Block — S@VACNT composite)
-├── VCell_AlHexLattice.glb.toml     (AdvancedPart/Block — Al hex lattice 92% porosity)
-├── VCell_ThermalPad_AlN.glb.toml   (AdvancedPart/Block — AlN thermal pad)
+├── VCell_Housing.glb.toml          (Part/Block — Al 6061-T6)
+├── VCell_Anode_Na.glb.toml         (Part/Block — Sodium metal)
+├── VCell_Electrolyte_ScNASICON.glb.toml  (Part/Block — Sc-NASICON ceramic)
+├── VCell_Cathode_SulfurVACNT.glb.toml    (Part/Block — S@VACNT composite)
+├── VCell_AlHexLattice.glb.toml     (Part/Block — Al hex lattice 92% porosity)
+├── VCell_ThermalPad_AlN.glb.toml   (Part/Block — AlN thermal pad)
 ├── VCell_Terminal_Positive.glb.toml (Part/Cylinder — Red terminal)
 ├── VCell_Terminal_Negative.glb.toml (Part/Cylinder — Black terminal)
 └── VCell_StatusLED.glb.toml        (Part/Ball — Neon green status indicator)
@@ -93,7 +93,7 @@ Workspace/
 
 ## Realism Components Attached
 
-For `AdvancedPart` class entities, the instance loader automatically converts TOML sections to ECS components:
+For `Part` class entities, the instance loader automatically converts TOML sections to ECS components:
 
 - **`[material]`** → `MaterialProperties` (14 base fields + `custom` HashMap)
 - **`[thermodynamic]`** → `ThermodynamicState` (temperature, pressure, volume, entropy, ...)

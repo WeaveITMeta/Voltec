@@ -168,7 +168,7 @@ fn Footer() -> impl IntoView {
                             <li><a href="/products" class="footer-link">"V-Cell"</a></li>
                             <li><a href="/products" class="footer-link">"V-Pack"</a></li>
                             <li><a href="/products" class="footer-link">"V-Grid"</a></li>
-                            <li><a href="/products" class="footer-link">"V-Fab"</a></li>
+                            <li><a href="/products" class="footer-link">"V-Man"</a></li>
                             <li><a href="/products" class="footer-link">"V-Shield"</a></li>
                         </ul>
                     </div>
@@ -437,7 +437,7 @@ fn ProductsPage() -> impl IntoView {
                             specs=vec!["Predictive maintenance", "Energy optimization", "Anomaly detection", "Edge inference", "Data network effect"]
                         />
                         <ProductCardFull
-                            name="V-Fab" tagline="Autonomous Manufacturing Cell"
+                            name="V-Man" tagline="Autonomous Manufacturing Cell"
                             specs=vec!["2,000 sq ft modular", "72-hr setup", "10K V-Cells/day", "95% automation", "V-Mind diagnostics"]
                         />
                     </div>
@@ -645,7 +645,7 @@ fn CompanyPage() -> impl IntoView {
                         <JobCard title="Senior Cell Chemist" location="Austin, TX" team="Team V-Cell" />
                         <JobCard title="Embedded Systems Engineer" location="Remote" team="Team V-OS" />
                         <JobCard title="ML Engineer — Predictive Systems" location="Remote" team="Team V-Mind" />
-                        <JobCard title="Robotics Engineer" location="Austin, TX" team="Team V-Fab" />
+                        <JobCard title="Robotics Engineer" location="Austin, TX" team="Team V-Man" />
                         <JobCard title="Radiation Effects Engineer" location="Houston, TX" team="Team V-Shield" />
                     </div>
                 </div>

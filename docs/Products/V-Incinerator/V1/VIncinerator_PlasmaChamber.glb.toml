@@ -1,6 +1,6 @@
 # V-Incinerator Plasma Chamber — Tungsten-lined gasification vessel
 # 3 × 500 kW DC plasma torches, 5,000–7,000°C core
-# AdvancedPart — primary waste destruction zone
+# Part — primary waste destruction zone
 
 [asset]
 mesh = "assets/meshes/products/V-Incinerator/VIncinerator_PlasmaChamber.glb"
@@ -20,7 +20,7 @@ cast_shadow = true
 reflectance = 0.3
 
 [metadata]
-class_name = "AdvancedPart"
+class_name = "Part"
 archivable = true
 created = "2026-02-25T00:00:00Z"
 last_modified = "2026-02-25T17:00:00Z"

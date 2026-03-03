@@ -39,15 +39,15 @@ The V-Pump is a modular inline booster pump unit designed for permanent installa
 
 | # | Component | Material | class_name | .glb KB |
 |---|-----------|----------|------------|---------|
-| 1 | Pump Casing | UNS S32205 Duplex SS | AdvancedPart | 83.0 |
-| 2 | Bore Liner | RBSiC Ceramic | AdvancedPart | 27.6 |
-| 3 | Impeller Assembly | UNS S32750 Super Duplex | AdvancedPart | 53.2 |
-| 4 | Drive Shaft | 17-4 PH SS H900 | AdvancedPart | 28.6 |
-| 5 | Bearing Cartridge | SiC/SiC Ceramic | AdvancedPart | 60.8 |
+| 1 | Pump Casing | UNS S32205 Duplex SS | Part | 83.0 |
+| 2 | Bore Liner | RBSiC Ceramic | Part | 27.6 |
+| 3 | Impeller Assembly | UNS S32750 Super Duplex | Part | 53.2 |
+| 4 | Drive Shaft | 17-4 PH SS H900 | Part | 28.6 |
+| 5 | Bearing Cartridge | SiC/SiC Ceramic | Part | 60.8 |
 | 6 | Vacuum Module | 316L SS + PTFE | Part | 71.0 |
 | 7 | Flange Adapter | A694 F60 Duplex | Part | 51.7 |
 | 8 | Bypass Valve | Duplex + Stellite 6 | Part | 71.0 |
-| 9 | Motor (PMSM) | Steel + NdFeB | AdvancedPart | 248.4 |
+| 9 | Motor (PMSM) | Steel + NdFeB | Part | 248.4 |
 | 10 | Control Module | 316L SS Enclosure | Part | 57.7 |
 | 11 | Status Array | Polycarbonate | Part | 40.0 |
 

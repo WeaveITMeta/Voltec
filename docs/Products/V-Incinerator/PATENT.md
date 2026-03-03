@@ -572,7 +572,7 @@ Waste (8-12 MJ/kg)  +  Plasma (1.5 MW)
 | Preprocessing | Sorting, shredding, drying | None |
 | Residue management | Toxic fly ash (hazardous waste) | Inert vitrified slag (saleable) |
 
-### Production Line (V-Fab)
+### Production Line (V-Man)
 
 1. **Plasma chamber fabrication** — Tungsten liner electron-beam welded, copper cooling channels brazed
 2. **Combustion chamber** — Inconel 718 forged + machined, refractory cast in place
@@ -663,16 +663,16 @@ See `SOTA_VALIDATION.md` for claim verification status.
 
 | Component | `.glb.toml` File | Entity Class | Realism Sections |
 |-----------|-----------------|--------------|------------------|
-| Outer Housing | `VIncinerator_Housing.glb.toml` | AdvancedPart | material, thermodynamic |
-| Plasma Chamber | `VIncinerator_PlasmaChamber.glb.toml` | AdvancedPart | material, thermodynamic |
-| Combustion Chamber | `VIncinerator_CombustionChamber.glb.toml` | AdvancedPart | material, thermodynamic |
-| Heat Exchanger | `VIncinerator_HeatExchanger.glb.toml` | AdvancedPart | material, thermodynamic |
-| HEPA Filter Bank | `VIncinerator_HEPAFilter.glb.toml` | AdvancedPart | material, thermodynamic |
-| Catalytic Converter | `VIncinerator_CatalyticConverter.glb.toml` | AdvancedPart | material, thermodynamic |
-| Activated Carbon Bed | `VIncinerator_CarbonBed.glb.toml` | AdvancedPart | material, thermodynamic |
-| Wet Scrubber | `VIncinerator_WetScrubber.glb.toml` | AdvancedPart | material, thermodynamic |
+| Outer Housing | `VIncinerator_Housing.glb.toml` | Part | material, thermodynamic |
+| Plasma Chamber | `VIncinerator_PlasmaChamber.glb.toml` | Part | material, thermodynamic |
+| Combustion Chamber | `VIncinerator_CombustionChamber.glb.toml` | Part | material, thermodynamic |
+| Heat Exchanger | `VIncinerator_HeatExchanger.glb.toml` | Part | material, thermodynamic |
+| HEPA Filter Bank | `VIncinerator_HEPAFilter.glb.toml` | Part | material, thermodynamic |
+| Catalytic Converter | `VIncinerator_CatalyticConverter.glb.toml` | Part | material, thermodynamic |
+| Activated Carbon Bed | `VIncinerator_CarbonBed.glb.toml` | Part | material, thermodynamic |
+| Wet Scrubber | `VIncinerator_WetScrubber.glb.toml` | Part | material, thermodynamic |
 | Exhaust Stack | `VIncinerator_ExhaustStack.glb.toml` | Part | — |
-| Ash Hopper | `VIncinerator_AshHopper.glb.toml` | AdvancedPart | material, thermodynamic |
+| Ash Hopper | `VIncinerator_AshHopper.glb.toml` | Part | material, thermodynamic |
 | Waste Feed System | `VIncinerator_WasteFeed.glb.toml` | Part | — |
 | Control Module | `VIncinerator_ControlModule.glb.toml` | Part | — |
 | Status Array | `VIncinerator_StatusArray.glb.toml` | Part | — |

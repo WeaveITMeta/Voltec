@@ -1,0 +1,61 @@
+# V-Man SafetyEnclosure — Polycarbonate + Aluminum Extrusion
+# Perimeter fencing with light curtains, interlocked doors, e-stops, ISO 10218-2 compliant
+
+[asset]
+mesh = "assets/meshes/products/V-Man/VMan_SafetyEnclosure.glb"
+scene = "Scene0"
+
+[transform]
+position = [0.0, 1.448, 0.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [1.0, 1.0, 1.0]
+
+[properties]
+color = [0.90, 0.90, 0.10, 0.6]
+transparency = 0.4
+anchored = true
+can_collide = true
+cast_shadow = true
+reflectance = 0.0
+
+[metadata]
+class_name = "Part"
+archivable = true
+created = "2026-03-02T00:00:00Z"
+last_modified = "2026-03-02T00:00:00Z"
+
+[material]
+name = "Polycarbonate"
+young_modulus = 2.4e9
+poisson_ratio = 0.37
+yield_strength = 62.0e6
+ultimate_strength = 72.0e6
+fracture_toughness = 3.5e6
+hardness = 85.0
+thermal_conductivity = 0.20
+specific_heat = 1200.0
+thermal_expansion = 65.0e-6
+melting_point = 540.0
+density = 1200.0
+friction_static = 0.50
+friction_kinetic = 0.38
+restitution = 0.35
+
+[material.custom]
+role = "safety_enclosure"
+ip_rating = "IP65"
+light_curtain_resolution_mm = 14.0
+safety_standard = "ISO 10218-2"
+performance_level = "PLe"
+estop_channels = 4.0
+interlock_type = "electromagnetic"
+transmittance = 0.88
+
+[thermodynamic]
+temperature = 298.15
+pressure = 101325.0
+volume = 0.10
+internal_energy = 0.0
+entropy = 0.0
+enthalpy = 0.0
+moles = 1.0

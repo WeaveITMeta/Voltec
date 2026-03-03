@@ -20,7 +20,7 @@ The fundamental unit. Everything at Voltec is built on V-Cell.
 | Cycle Life | 10,000+ cycles |
 | Thermal Stability | Stable to 300°C |
 | Form Factor | Prismatic, pouch |
-| Manufacturing | Dry electrode, V-Fab automated |
+| Manufacturing | Dry electrode, V-Man automated |
 | Raw Materials | Abundant. No lithium/cobalt dependency. |
 
 **Use Cases**: Industrial storage, EV packs, grid-scale, space-grade (V-Shield variant)
@@ -142,20 +142,29 @@ The brain of the Voltec network. Runs on every V-OS device. Gets smarter with ev
 
 ---
 
-### V-Fab
+### V-Man
 **Autonomous Manufacturing Cell**
 
-Self-configuring robotic factory units. Used internally for V-Cell production, then sold externally.
+Modular, containerized robotic manufacturing cell achieving ≥95% autonomous operation (lights-out / dark factory mode). The entire factory — 4–6 robotic arms, 3D vision, automatic tooling, precision conveyor, edge AI compute, and power distribution — ships inside a single ISO 40-foot high-cube container and deploys to production in ≤72 hours. Rust-native real-time control stack with software-defined manufacturing recipes. Built to manufacture V-Cells internally first, then sold externally as a general-purpose manufacturing platform.
 
 | Spec | Value |
 |------|-------|
-| Footprint | 2,000 sq ft modular unit |
-| Setup Time | 72 hours from delivery to production |
-| Output | 10,000 V-Cells/day per unit |
-| Automation | 95% — human oversight only |
-| Self-Diagnostics | V-Mind integrated, predictive maintenance |
+| Form Factor | ISO 40' high-cube container (12.192 × 2.438 × 2.896 m) |
+| Robotic Arms | 4–6 × 6-axis, 20 kg payload, ±0.02 mm repeatability |
+| Vision System | 3D LIDAR + RGB-D + structured light, AI-accelerated (zero ambient light) |
+| Control Stack | Rust-native, EtherCAT (1 ms cycle), V-Mind edge AI (NVIDIA Jetson AGX Orin) |
+| Tool Magazine | 12 slots, RFID tracking, <5 s pneumatic auto-change, ±0.005 mm repeatability |
+| Conveyor | 10 m precision belt, 0.01–0.50 m/s, ±0.5 mm position accuracy |
+| Power | 400V 3-phase AC, 25 kW peak / 12 kW average, 5 kVA UPS backup |
+| Autonomy | ≥95% lights-out, ≤1 human intervention per shift |
+| Setup Time | ≤72 hours delivery-to-production (container pad + power + data) |
+| Output (V-Cell) | 7,200 cells/day (12 s cycle, 24h), ≥99.2% first-pass yield |
+| Product Changeover | ≤4 hours via software recipe upload (TOML) |
+| Safety | ISO 10218, ISO 13849-1 PLe, IEC 62443 |
+| Cost Target | $1.2M (Year 1) → $500K (Year 5) |
+| Components | 13 subsystems, 462 KB total mesh, 21,741 verts |
 
-**Strategy**: Selling picks during the gold rush. V-Fab makes V-Cells — and then makes V-Cells for your customers too.
+**Strategy**: The Amazon AWS playbook for manufacturing. V-Man's first customer is Voltec itself (V-Cell production). External sales begin only after internal validation. Every unit generates production data that makes V-Mind smarter — the manufacturing data flywheel.
 
 ---
 

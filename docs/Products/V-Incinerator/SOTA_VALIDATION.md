@@ -172,7 +172,7 @@ Activated carbon injection/adsorption for Hg, Pb, and Cd removal is BACT (Best A
 
 - **Tungsten**: 82% sourced from China. Mitigation: Strategic stockpile, recycled tungsten from carbide tools (~30% of supply), alternative liners (hafnium carbide — ASPIRATIONAL)
 - **Platinum/Palladium**: Price-volatile PGMs. Mitigation: Catalyst loading is small (3 g/L total in ~0.5 m³ volume = ~1.5 kg PGM per unit); recycling at end of catalyst life recovers >95%. Total PGM cost per unit: ~$75,000 (1% of unit cost)
-- **Inconel alloys**: Long lead times (16–24 weeks). Mitigation: V-Fab stockpile program; forward contracts with Special Metals Corp (Huntington Alloys)
+- **Inconel alloys**: Long lead times (16–24 weeks). Mitigation: V-Man stockpile program; forward contracts with Special Metals Corp (Huntington Alloys)
 
 ---
 
@@ -188,7 +188,7 @@ Activated carbon injection/adsorption for Hg, Pb, and Cd removal is BACT (Best A
 | Catalyst manufacture | Haldor Topsøe, BASF, Johnson Matthey | VERIFIED |
 | Hastelloy C-276 fabrication | Standard chemical process welding (AWS) | VERIFIED |
 | V-OS control integration | In-house (Voltec Team V-OS) | PROJECTED |
-| Modular assembly at V-Fab | Requires new assembly line design | PROJECTED |
+| Modular assembly at V-Man | Requires new assembly line design | PROJECTED |
 | Full system integration test | Not yet performed | ASPIRATIONAL |
 
 **Manufacturing Readiness Level**: MRL 5 (Production-relevant environment; components validated individually; system integration pending)
@@ -226,7 +226,7 @@ Activated carbon injection/adsorption for Hg, Pb, and Cd removal is BACT (Best A
 
 ### Phase 2: Pilot Deployment (Q1 2028 – Q4 2028)
 
-- [ ] First full-scale V-Incinerator unit assembled at V-Fab
+- [ ] First full-scale V-Incinerator unit assembled at V-Man
 - [ ] 72-hour Factory Acceptance Test on reference waste blend
 - [ ] Pilot deployment at partner municipality (target: Los Angeles, Houston, or New York)
 - [ ] 6-month continuous operation with CEMS data logging
@@ -237,7 +237,7 @@ Activated carbon injection/adsorption for Hg, Pb, and Cd removal is BACT (Best A
 
 ### Phase 3: Commercial Production (Q1 2029 – Ongoing)
 
-- [ ] V-Fab assembly line commissioned for V-Incinerator (5 units/year Year 1)
+- [ ] V-Man assembly line commissioned for V-Incinerator (5 units/year Year 1)
 - [ ] First 3 commercial units deployed to US cities
 - [ ] Scale to 50 units/year by Year 3
 - [ ] International certification (EU, Japan METI)

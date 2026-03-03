@@ -1,0 +1,61 @@
+# V-Man ToolMagazine — Aluminum 6061-T6
+# 12-slot end-effector storage rack with RFID tracking, pneumatic quick-change, kinematic pin alignment
+
+[asset]
+mesh = "assets/meshes/products/V-Man/VMan_ToolMagazine.glb"
+scene = "Scene0"
+
+[transform]
+position = [0.0, 1.20, 4.5]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [1.0, 1.0, 1.0]
+
+[properties]
+color = [0.75, 0.78, 0.80, 1.0]
+transparency = 0.0
+anchored = true
+can_collide = true
+cast_shadow = true
+reflectance = 0.0
+
+[metadata]
+class_name = "AdvancedPart"
+archivable = true
+created = "2026-03-02T00:00:00Z"
+last_modified = "2026-03-02T00:00:00Z"
+
+[material]
+name = "Aluminum 6061-T6"
+young_modulus = 68.9e9
+poisson_ratio = 0.33
+yield_strength = 276.0e6
+ultimate_strength = 310.0e6
+fracture_toughness = 29.0e6
+hardness = 95.0
+thermal_conductivity = 167.0
+specific_heat = 896.0
+thermal_expansion = 23.6e-6
+melting_point = 855.0
+density = 2700.0
+friction_static = 0.42
+friction_kinetic = 0.30
+restitution = 0.30
+
+[material.custom]
+role = "tool_magazine"
+capacity_slots = 12.0
+tool_change_time_s = 5.0
+coupling_type = "ISO 9409-1 + kinematic pin"
+locking_mechanism = "pneumatic 6 bar fail-safe"
+rfid_standard = "ISO 14443A"
+position_repeatability_mm = 0.005
+max_tool_weight_kg = 8.0
+
+[thermodynamic]
+temperature = 298.15
+pressure = 101325.0
+volume = 0.045
+internal_energy = 0.0
+entropy = 0.0
+enthalpy = 0.0
+moles = 1.0

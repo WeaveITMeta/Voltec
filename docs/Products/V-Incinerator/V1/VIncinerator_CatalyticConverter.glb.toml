@@ -1,6 +1,6 @@
 # V-Incinerator Catalytic Converter — Pt-Pd on γ-Alumina in Inconel 625 housing
 # Dioxin/furan destruction ≥99.9%, PAH ≥99.5%, NOₓ ≥90%
-# AdvancedPart — second stage of exhaust purification
+# Part — second stage of exhaust purification
 
 [asset]
 mesh = "assets/meshes/products/V-Incinerator/VIncinerator_CatalyticConverter.glb"
@@ -20,7 +20,7 @@ cast_shadow = true
 reflectance = 0.25
 
 [metadata]
-class_name = "AdvancedPart"
+class_name = "Part"
 archivable = true
 created = "2026-02-25T00:00:00Z"
 last_modified = "2026-02-25T17:00:00Z"

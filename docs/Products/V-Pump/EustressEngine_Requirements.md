@@ -338,15 +338,15 @@ role = "status_array"
 
 | File | Entity | class_name |
 |------|--------|------------|
-| `VPump_PumpCasing.glb.toml` | Pressure casing (structural backbone) | AdvancedPart |
-| `VPump_BoreLiner.glb.toml` | RBSiC internal wear surface | AdvancedPart |
-| `VPump_ImpellerAssembly.glb.toml` | 3-stage axial-flow rotor + guide vanes | AdvancedPart |
-| `VPump_DriveShaft.glb.toml` | Torque transmission shaft | AdvancedPart |
-| `VPump_BearingCartridge.glb.toml` | SiC/SiC journal bearings (×2) | AdvancedPart |
+| `VPump_PumpCasing.glb.toml` | Pressure casing (structural backbone) | Part |
+| `VPump_BoreLiner.glb.toml` | RBSiC internal wear surface | Part |
+| `VPump_ImpellerAssembly.glb.toml` | 3-stage axial-flow rotor + guide vanes | Part |
+| `VPump_DriveShaft.glb.toml` | Torque transmission shaft | Part |
+| `VPump_BearingCartridge.glb.toml` | SiC/SiC journal bearings (×2) | Part |
 | `VPump_VacuumModule.glb.toml` | Rotary vane vacuum-assist priming | Part |
 | `VPump_FlangeAdapter.glb.toml` | Modular inlet/outlet reducer rings | Part |
 | `VPump_BypassValve.glb.toml` | Automatic butterfly bypass | Part |
-| `VPump_Motor.glb.toml` | PMSM direct-drive motor | AdvancedPart |
+| `VPump_Motor.glb.toml` | PMSM direct-drive motor | Part |
 | `VPump_ControlModule.glb.toml` | V-Mind AI + PLC enclosure | Part |
 | `VPump_StatusArray.glb.toml` | IP68 LED indicator panel | Part |
 
@@ -555,7 +555,7 @@ Target: V1/ (stays in Voltec locally)
 | All .glb files exist | `ls V1/meshes/*.glb` | 11 files |
 | All .glb.toml files exist | `ls V1/*.glb.toml` | 11 files |
 | Mesh references valid | grep `mesh =` in each .toml | Path matches actual .glb filename |
-| class_name correct | grep `class_name` | "AdvancedPart" or "Part" per §3.1 |
+| class_name correct | grep `class_name` | "Part" or "Part" per §3.1 |
 | Positions in meters | grep `position` | All values in reasonable meter range |
 | Colors in linear RGBA | grep `color` | All values 0.0-1.0 |
 | SI units in material | grep `young_modulus` | Values in Pa (10⁹ range for metals) |

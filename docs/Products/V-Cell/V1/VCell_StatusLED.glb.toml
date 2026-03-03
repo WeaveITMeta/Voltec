@@ -5,7 +5,7 @@
 mesh = "meshes/VCell_StatusLED.glb"
 
 [transform]
-position = [0.130, 0.012, -0.030]
+position = [0.130, 0.0075, -0.030]
 rotation = [0.0, 0.0, 0.0, 1.0]
 scale = [1.0, 1.0, 1.0]
 

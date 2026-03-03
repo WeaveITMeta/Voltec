@@ -1,6 +1,6 @@
 # V-Incinerator Housing — 316L Stainless Steel outer containment shell
 # 6.0m × 4.0m × 3.0m modular industrial enclosure
-# AdvancedPart with thermal realism
+# Part with thermal realism
 
 [asset]
 mesh = "assets/meshes/products/V-Incinerator/VIncinerator_Housing.glb"
@@ -20,7 +20,7 @@ cast_shadow = true
 reflectance = 0.4
 
 [metadata]
-class_name = "AdvancedPart"
+class_name = "Part"
 archivable = true
 created = "2026-02-25T00:00:00Z"
 last_modified = "2026-02-25T17:00:00Z"
