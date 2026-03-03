@@ -6,7 +6,7 @@
 mesh = "meshes/VCell_TerminalPositive.glb"
 
 [transform]
-position = [0.1425, 0.0075, 0.020]
+position = [0.1425, 0.006, 0.020]
 rotation = [0.0, 0.0, 0.0, 1.0]
 scale = [1.0, 1.0, 1.0]
 
