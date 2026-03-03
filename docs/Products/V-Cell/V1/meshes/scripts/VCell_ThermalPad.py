@@ -57,8 +57,8 @@ def bool_op(target, cutter, operation="DIFFERENCE"):
     bpy.data.objects.remove(cutter, do_unlink=True)
 
 def create_geometry(mat):
-    # --- Position offset (inside housing, bottom of interior stack) ---
-    Y_OFF = -0.004  # Y offset inside housing
+    # --- Position offset (inside housing, bottom of tightly stacked interior) ---
+    Y_OFF = -0.00024  # Y offset: center of thermal pad layer
     
     # --- Main AlN slab ---
     slab = add_box("aln_slab", L, W, T, loc=(0, Y_OFF, 0))

@@ -74,8 +74,8 @@ def join_objects(objs):
     return bpy.context.active_object
 
 def create_geometry(mat_al, mat_cnt, mat_s):
-    # --- Position offset (inside housing, lower-middle of interior stack) ---
-    Y_OFF = 0.0015  # Y offset inside housing
+    # --- Position offset (inside housing, third layer of tightly stacked interior) ---
+    Y_OFF = -0.00009  # Y offset: center of cathode layer
     base_z = 0.0
 
     # --- Al hex lattice substrate ---

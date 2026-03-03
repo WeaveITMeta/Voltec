@@ -47,8 +47,8 @@ def add_box(name, sx, sy, sz, loc=(0,0,0)):
     return obj
 
 def create_geometry(mat):
-    # --- Position offset (inside housing, middle of interior stack) ---
-    Y_OFF = 0.003  # Y offset inside housing
+    # --- Position offset (inside housing, second layer of tightly stacked interior) ---
+    Y_OFF = 0.000065  # Y offset: center of electrolyte layer
     
     # --- Main electrolyte slab ---
     slab = add_box("elyte_slab", L, W, T, loc=(0, Y_OFF, 0))
