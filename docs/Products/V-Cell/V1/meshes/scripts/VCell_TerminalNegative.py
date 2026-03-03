@@ -69,22 +69,27 @@ def bool_op(target, cutter, operation="DIFFERENCE"):
     bpy.data.objects.remove(cutter, do_unlink=True)
 
 def create_geometry(mat):
+    # --- Position offset (top left corner of housing) ---
+    X_OFF = -0.1425  # X offset to left corner
+    Y_OFF = 0.006    # Y offset (on housing top surface)
+    Z_OFF = 0.020    # Z offset to side
+    
     # --- Base terminal plate ---
-    plate = add_box("term_plate_neg", PLATE_L, PLATE_W, PLATE_T, loc=(0, 0, 0))
+    plate = add_box("term_plate_neg", PLATE_L, PLATE_W, PLATE_T, loc=(X_OFF, Y_OFF, Z_OFF))
 
     # --- Raised bus-bar contact pad ---
     pad = add_box("contact_pad_neg", PAD_L, PAD_W, PAD_T,
-                  loc=(0, 0, PLATE_T/2 + PAD_T/2))
+                  loc=(X_OFF, Y_OFF, Z_OFF + PLATE_T/2 + PAD_T/2))
     bool_op(plate, pad, "UNION")
 
     # --- Bolt hole ---
     hole = add_cylinder("bolt_hole_neg", HOLE_R, PLATE_T * 2,
-                        loc=(0, HOLE_OFF, 0))
+                        loc=(X_OFF, Y_OFF + HOLE_OFF, Z_OFF))
     bool_op(plate, hole, "DIFFERENCE")
 
     # --- Polarity marker (minus sign: elongated recess on top face) ---
     minus_bar = add_box("minus_mark", MARK_R * 2, MARK_R * 0.4, MARK_T * 2,
-                        loc=(0, -HOLE_OFF, PLATE_T/2 + PAD_T))
+                        loc=(X_OFF, Y_OFF - HOLE_OFF, Z_OFF + PLATE_T/2 + PAD_T))
     bool_op(plate, minus_bar, "DIFFERENCE")
 
     plate.name = OBJ_NAME
