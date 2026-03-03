@@ -1,0 +1,71 @@
+# V-Cell — Complete 40-Layer Electrochemical Stack Assembly
+# Anode-Electrolyte-Cathode sandwich repeated 40 times in parallel
+# 296mm × 96mm × 6.8mm (40 cycles × 0.48mm + 0.2mm thermal pad)
+# Patent ref: US9929432B2, EP3168914A1, US20100273062A1
+
+[asset]
+mesh = "meshes/VCell_Assembly_40Layer.glb"
+
+[transform]
+position = [0.0, 0.0, 0.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [1.0, 1.0, 1.0]
+
+[properties]
+name = "VCell_Assembly_40Layer"
+class_name = "AdvancedPart"
+color = [0.80, 0.80, 0.80, 1.0]
+transparency = 0.0
+cast_shadow = true
+can_collide = true
+anchored = true
+
+[metadata]
+class_name = "AdvancedPart"
+archivable = true
+created = "2026-03-02T20:17:00Z"
+last_modified = "2026-03-02T20:17:00Z"
+
+[material]
+name = "V-Cell 40-Layer Stack (Mixed Materials)"
+young_modulus = 50000000000.0
+poisson_ratio = 0.30
+yield_strength = 100000000.0
+ultimate_strength = 150000000.0
+fracture_toughness = 5000000.0
+hardness = 200.0
+thermal_conductivity = 50.0
+specific_heat = 800.0
+thermal_expansion = 0.00003
+melting_point = 1200.0
+density = 2000.0
+friction_static = 0.40
+friction_kinetic = 0.30
+restitution = 0.5
+
+[material.custom]
+stack_configuration = "40x_anode_electrolyte_cathode_parallel"
+total_layers = 40
+anode_count = 40
+electrolyte_count = 40
+cathode_count = 40
+thermal_pad_count = 1
+total_stack_height_mm = 6.8
+role = "complete_electrochemical_stack"
+
+[thermodynamic]
+temperature = 298.15
+pressure = 101325.0
+volume = 0.00283
+internal_energy = 0.0
+entropy = 0.0
+enthalpy = 0.0
+moles = 18.0
+
+[electrochemical]
+open_circuit_voltage = 2.23
+state_of_charge = 1.0
+capacity_ah = 8100.0
+internal_resistance = 0.00001
+cycle_count = 0
+coulombic_efficiency = 0.999
