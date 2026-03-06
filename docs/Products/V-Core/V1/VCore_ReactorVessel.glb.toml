@@ -1,0 +1,61 @@
+# V-Core ReactorVessel — 316L Stainless Steel
+# Primary containment pressure boundary, cylindrical with flanged head
+
+[asset]
+mesh = "meshes/VCore_ReactorVessel.glb"
+
+[transform]
+position = [0.0, 0.0, 0.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [1.0, 1.0, 1.0]
+
+[properties]
+name = "VCore_ReactorVessel"
+class_name = "Part"
+color = [0.60, 0.61, 0.63, 1.0]
+transparency = 0.0
+cast_shadow = true
+can_collide = true
+anchored = true
+
+[metadata]
+class_name = "Part"
+archivable = true
+created = "2026-03-06T00:00:00Z"
+last_modified = "2026-03-06T00:00:00Z"
+
+[material]
+name = "316L Stainless Steel"
+young_modulus = 193000000000.0
+poisson_ratio = 0.30
+yield_strength = 170000000.0
+ultimate_strength = 485000000.0
+fracture_toughness = 112000000.0
+hardness = 217.0
+thermal_conductivity = 14.6
+specific_heat = 500.0
+thermal_expansion = 0.0000159
+melting_point = 1673.0
+density = 7990.0
+friction_static = 0.40
+friction_kinetic = 0.30
+restitution = 0.4
+
+[material.custom]
+role = "reactor_vessel"
+asme_code = "Section_III_Division_5"
+pressure_boundary = true
+fracture_critical = true
+fatigue_monitored = true
+wall_thickness_mm = 8.0
+inner_diameter_mm = 300.0
+height_mm = 500.0
+
+[thermodynamic]
+temperature = 773.0
+pressure = 200000.0
+volume = 0.0353
+internal_energy = 0.0
+entropy = 0.0
+enthalpy = 0.0
+moles = 0.0

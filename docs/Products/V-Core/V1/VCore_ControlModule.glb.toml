@@ -1,0 +1,51 @@
+# V-Core ControlModule — 316L SS enclosure + NVIDIA Orin
+# V-Mind AI controller, NRC telemetry, load-following
+
+[asset]
+mesh = "meshes/VCore_ControlModule.glb"
+
+[transform]
+position = [0.0, 0.0, 0.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [1.0, 1.0, 1.0]
+
+[properties]
+name = "VCore_ControlModule"
+class_name = "Part"
+color = [0.60, 0.61, 0.63, 1.0]
+transparency = 0.0
+cast_shadow = true
+can_collide = true
+anchored = true
+
+[metadata]
+class_name = "Part"
+archivable = true
+created = "2026-03-06T00:00:00Z"
+last_modified = "2026-03-06T00:00:00Z"
+
+[material]
+name = "316L Stainless Steel"
+young_modulus = 193000000000.0
+poisson_ratio = 0.30
+yield_strength = 170000000.0
+ultimate_strength = 485000000.0
+fracture_toughness = 112000000.0
+hardness = 217.0
+thermal_conductivity = 14.6
+specific_heat = 500.0
+thermal_expansion = 0.0000159
+melting_point = 1673.0
+density = 7990.0
+friction_static = 0.40
+friction_kinetic = 0.30
+restitution = 0.4
+
+[material.custom]
+role = "control_module"
+processor = "NVIDIA_Jetson_Orin"
+ai_system = "V-Mind"
+nrc_telemetry = true
+ethernet = true
+wifi = false
+air_gapped_safety = true

@@ -1,0 +1,72 @@
+# V-Core FuelAssembly — U-ZrH1.6 (Uranium Zirconium Hydride)
+# 37 fuel rods in triangular lattice, nuclear fuel + moderator
+
+[asset]
+mesh = "meshes/VCore_FuelAssembly.glb"
+
+[transform]
+position = [0.0, 0.0, 0.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [1.0, 1.0, 1.0]
+
+[properties]
+name = "VCore_FuelAssembly"
+class_name = "Part"
+color = [0.45, 0.45, 0.40, 1.0]
+transparency = 0.0
+cast_shadow = true
+can_collide = true
+anchored = true
+
+[metadata]
+class_name = "Part"
+archivable = true
+created = "2026-03-06T00:00:00Z"
+last_modified = "2026-03-06T00:00:00Z"
+
+[material]
+name = "U-ZrH1.6 (Uranium Zirconium Hydride)"
+young_modulus = 130000000000.0
+poisson_ratio = 0.32
+yield_strength = 300000000.0
+ultimate_strength = 450000000.0
+fracture_toughness = 15000000.0
+hardness = 250.0
+thermal_conductivity = 18.0
+specific_heat = 350.0
+thermal_expansion = 0.000007
+melting_point = 1023.0
+density = 7300.0
+friction_static = 0.40
+friction_kinetic = 0.30
+restitution = 0.3
+
+[material.custom]
+role = "nuclear_fuel"
+enrichment_pct = 19.75
+u235_mass_kg = 1.054
+fuel_rods = 37
+rod_diameter_mm = 37.5
+active_length_mm = 380.0
+burnup_target_mwd_thm = 30000.0
+temp_coefficient_dk_per_c = -0.0001
+max_operating_temp_k = 1023.0
+h_dissociation_onset_k = 1073.0
+thermal_power_w = 75000.0
+neutron_flux = 1000000000000.0
+burnup_mwd_thm = 0.0
+control_drum_angle_deg = 90.0
+fuel_temp_k = 923.0
+coolant_temp_k = 873.0
+reactivity_dk = 0.0
+keff = 1.0
+shutdown_margin_dollars = 2.0
+
+[thermodynamic]
+temperature = 923.0
+pressure = 101325.0
+volume = 0.0186
+internal_energy = 0.0
+entropy = 0.0
+enthalpy = 0.0
+moles = 0.0

@@ -1,0 +1,57 @@
+# V-Supreme Status Array — Polycarbonate + LED Array
+# Visor-integrated LED bar with 5 indicator domes, mounting clips, connector pins
+
+[asset]
+mesh = "meshes/VSupreme_StatusArray.glb"
+
+[transform]
+position = [0.0, 0.0, 0.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [1.0, 1.0, 1.0]
+
+[properties]
+name = "VSupreme_StatusArray"
+class_name = "Part"
+color = [0.05, 0.05, 0.05, 0.8]
+transparency = 0.2
+cast_shadow = true
+can_collide = false
+anchored = true
+
+[metadata]
+class_name = "Part"
+archivable = true
+created = "2026-03-06T00:00:00Z"
+last_modified = "2026-03-06T00:00:00Z"
+
+[material]
+name = "Polycarbonate + LED Array"
+young_modulus = 2400000000.0
+poisson_ratio = 0.37
+yield_strength = 62000000.0
+ultimate_strength = 70000000.0
+fracture_toughness = 3200000.0
+hardness = 75.0
+thermal_conductivity = 0.22
+specific_heat = 1200.0
+thermal_expansion = 0.000066
+melting_point = 540.0
+density = 1200.0
+friction_static = 0.35
+friction_kinetic = 0.28
+restitution = 0.4
+
+[material.custom]
+role = "status_display"
+led_count = 5
+led_color = "green"
+emission_strength = 5.0
+
+[thermodynamic]
+temperature = 298.15
+pressure = 101325.0
+volume = 0.0002
+internal_energy = 0.0
+entropy = 0.0
+enthalpy = 0.0
+moles = 0.002

@@ -1,0 +1,59 @@
+# V-Core ReflectorAssembly — Beryllium Oxide (BeO)
+# Annular neutron reflector surrounding fuel assembly
+
+[asset]
+mesh = "meshes/VCore_ReflectorAssembly.glb"
+
+[transform]
+position = [0.0, 0.0, 0.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [1.0, 1.0, 1.0]
+
+[properties]
+name = "VCore_ReflectorAssembly"
+class_name = "Part"
+color = [0.85, 0.85, 0.80, 1.0]
+transparency = 0.0
+cast_shadow = true
+can_collide = true
+anchored = true
+
+[metadata]
+class_name = "Part"
+archivable = true
+created = "2026-03-06T00:00:00Z"
+last_modified = "2026-03-06T00:00:00Z"
+
+[material]
+name = "Beryllium Oxide (BeO)"
+young_modulus = 345000000000.0
+poisson_ratio = 0.26
+yield_strength = 230000000.0
+ultimate_strength = 250000000.0
+fracture_toughness = 3000000.0
+hardness = 1200.0
+thermal_conductivity = 260.0
+specific_heat = 1025.0
+thermal_expansion = 0.0000085
+melting_point = 2780.0
+density = 3010.0
+friction_static = 0.30
+friction_kinetic = 0.20
+restitution = 0.25
+
+[material.custom]
+role = "neutron_reflector"
+neutron_moderating_ratio = 143.0
+toxic_dust_hazard = true
+inner_diameter_mm = 250.0
+outer_diameter_mm = 400.0
+height_mm = 420.0
+
+[thermodynamic]
+temperature = 773.0
+pressure = 101325.0
+volume = 0.0328
+internal_energy = 0.0
+entropy = 0.0
+enthalpy = 0.0
+moles = 0.0

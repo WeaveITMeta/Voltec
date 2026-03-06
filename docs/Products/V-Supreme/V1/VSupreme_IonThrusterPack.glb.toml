@@ -1,0 +1,59 @@
+# V-Supreme Ion Thruster Pack — Mo-47.5Re Alloy (Molybdenum-Rhenium)
+# Back-mounted unit with 2 Hall-effect thruster bells, xenon propellant tank
+
+[asset]
+mesh = "meshes/VSupreme_IonThrusterPack.glb"
+
+[transform]
+position = [0.0, 0.0, 0.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [1.0, 1.0, 1.0]
+
+[properties]
+name = "VSupreme_IonThrusterPack"
+class_name = "Part"
+color = [0.55, 0.56, 0.58, 1.0]
+transparency = 0.0
+cast_shadow = true
+can_collide = true
+anchored = true
+
+[metadata]
+class_name = "Part"
+archivable = true
+created = "2026-03-06T00:00:00Z"
+last_modified = "2026-03-06T00:00:00Z"
+
+[material]
+name = "Mo-47.5Re Alloy (Molybdenum-Rhenium)"
+young_modulus = 360000000000.0
+poisson_ratio = 0.30
+yield_strength = 1100000000.0
+ultimate_strength = 1400000000.0
+fracture_toughness = 20000000.0
+hardness = 350.0
+thermal_conductivity = 50.0
+specific_heat = 250.0
+thermal_expansion = 0.0000055
+melting_point = 2900.0
+density = 14500.0
+friction_static = 0.40
+friction_kinetic = 0.30
+restitution = 0.3
+
+[material.custom]
+role = "ion_thruster_pack"
+thruster_count = 2
+thruster_type = "hall_effect"
+propellant = "xenon"
+thrust_per_bell_n = 2.5
+specific_impulse_s = 1600.0
+
+[thermodynamic]
+temperature = 298.15
+pressure = 101325.0
+volume = 0.0210
+internal_energy = 0.0
+entropy = 0.0
+enthalpy = 0.0
+moles = 1.45

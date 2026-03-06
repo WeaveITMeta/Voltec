@@ -1,0 +1,66 @@
+# V-Supreme V-Cell Buffer Array — V-Cell Na-S Solid State (Sc-NASICON)
+# 6 × V-Cell modules in series-parallel, 50 kWh / 600 V = 83.3 Ah
+
+[asset]
+mesh = "meshes/VSupreme_VCellArray.glb"
+
+[transform]
+position = [0.0, 0.0, 0.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [1.0, 1.0, 1.0]
+
+[properties]
+name = "VSupreme_VCellArray"
+class_name = "Part"
+color = [0.20, 0.40, 0.80, 1.0]
+transparency = 0.0
+cast_shadow = true
+can_collide = true
+anchored = true
+
+[metadata]
+class_name = "Part"
+archivable = true
+created = "2026-03-06T00:00:00Z"
+last_modified = "2026-03-06T00:00:00Z"
+
+[material]
+name = "V-Cell Na-S Solid State (Sc-NASICON)"
+young_modulus = 100000000000.0
+poisson_ratio = 0.25
+yield_strength = 200000000.0
+ultimate_strength = 280000000.0
+fracture_toughness = 2500000.0
+hardness = 650.0
+thermal_conductivity = 3.0
+specific_heat = 800.0
+thermal_expansion = 0.00001
+melting_point = 1800.0
+density = 3200.0
+friction_static = 0.40
+friction_kinetic = 0.30
+restitution = 0.2
+
+[material.custom]
+role = "buffer_array"
+module_count = 6
+total_capacity_kwh = 50.0
+bus_voltage_vdc = 600.0
+max_discharge_rate = "10C"
+
+[thermodynamic]
+temperature = 298.15
+pressure = 101325.0
+volume = 0.0120
+internal_energy = 0.0
+entropy = 0.0
+enthalpy = 0.0
+moles = 12.0
+
+[electrochemical]
+open_circuit_voltage = 600.0
+state_of_charge = 1.0
+capacity_ah = 83.3
+internal_resistance = 0.005
+cycle_count = 0
+coulombic_efficiency = 0.999

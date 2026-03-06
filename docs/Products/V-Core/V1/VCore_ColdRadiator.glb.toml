@@ -1,0 +1,60 @@
+# V-Core ColdRadiator — Aluminum 6061-T6 + copper tubing
+# Finned radiator for 50 kW heat rejection, CHP water loop capable
+
+[asset]
+mesh = "meshes/VCore_ColdRadiator.glb"
+
+[transform]
+position = [0.0, 0.0, 0.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [1.0, 1.0, 1.0]
+
+[properties]
+name = "VCore_ColdRadiator"
+class_name = "Part"
+color = [0.75, 0.78, 0.80, 1.0]
+transparency = 0.0
+cast_shadow = true
+can_collide = true
+anchored = true
+
+[metadata]
+class_name = "Part"
+archivable = true
+created = "2026-03-06T00:00:00Z"
+last_modified = "2026-03-06T00:00:00Z"
+
+[material]
+name = "Aluminum 6061-T6"
+young_modulus = 68900000000.0
+poisson_ratio = 0.33
+yield_strength = 276000000.0
+ultimate_strength = 310000000.0
+fracture_toughness = 29000000.0
+hardness = 107.0
+thermal_conductivity = 167.0
+specific_heat = 896.0
+thermal_expansion = 0.0000236
+melting_point = 855.0
+density = 2700.0
+friction_static = 0.35
+friction_kinetic = 0.25
+restitution = 0.4
+
+[material.custom]
+role = "cold_side_radiator"
+heat_rejection_kw = 50.0
+fin_count = 15
+chp_water_loop = true
+air_cooled_backup = true
+fan_noise_db = 35.0
+cold_side_temp_k = 333.0
+
+[thermodynamic]
+temperature = 333.0
+pressure = 101325.0
+volume = 0.012
+internal_energy = 0.0
+entropy = 0.0
+enthalpy = 0.0
+moles = 0.0

@@ -1,0 +1,65 @@
+# V-Core HeatPipeBundle — Inconel 718 + sodium working fluid
+# 12 sealed heat pipes for passive core-to-HX thermal transport
+
+[asset]
+mesh = "meshes/VCore_HeatPipeBundle.glb"
+
+[transform]
+position = [0.0, 0.0, 0.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [1.0, 1.0, 1.0]
+
+[properties]
+name = "VCore_HeatPipeBundle"
+class_name = "Part"
+color = [0.65, 0.65, 0.60, 1.0]
+transparency = 0.0
+cast_shadow = true
+can_collide = true
+anchored = true
+
+[metadata]
+class_name = "Part"
+archivable = true
+created = "2026-03-06T00:00:00Z"
+last_modified = "2026-03-06T00:00:00Z"
+
+[material]
+name = "Inconel 718"
+young_modulus = 200000000000.0
+poisson_ratio = 0.29
+yield_strength = 1034000000.0
+ultimate_strength = 1241000000.0
+fracture_toughness = 95000000.0
+hardness = 388.0
+thermal_conductivity = 11.4
+specific_heat = 435.0
+thermal_expansion = 0.000013
+melting_point = 1609.0
+density = 8190.0
+friction_static = 0.40
+friction_kinetic = 0.30
+restitution = 0.35
+
+[material.custom]
+role = "heat_pipe_envelope"
+working_fluid = "sodium"
+pipe_count = 12
+pipe_od_mm = 15.9
+wall_thickness_mm = 1.5
+wick_type = "sintered_nickel"
+wick_porosity = 0.60
+heat_per_pipe_kw = 6.25
+total_heat_transport_kw = 75.0
+evaporator_length_mm = 380.0
+condenser_length_mm = 200.0
+design_life_hr = 100000
+
+[thermodynamic]
+temperature = 873.0
+pressure = 100000.0
+volume = 0.00129
+internal_energy = 0.0
+entropy = 0.0
+enthalpy = 0.0
+moles = 0.0

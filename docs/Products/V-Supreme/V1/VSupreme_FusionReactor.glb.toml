@@ -1,0 +1,69 @@
+# V-Supreme Fusion Reactor Core — W-25Re Alloy (Tungsten-Rhenium)
+# Aneutronic p-B11 compact fusion reactor, 500 kW output, 600 VDC bus
+
+[asset]
+mesh = "meshes/VSupreme_FusionReactor.glb"
+
+[transform]
+position = [0.0, 0.0, 0.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [1.0, 1.0, 1.0]
+
+[properties]
+name = "VSupreme_FusionReactor"
+class_name = "Part"
+color = [0.90, 0.85, 0.70, 1.0]
+transparency = 0.0
+cast_shadow = true
+can_collide = true
+anchored = true
+
+[metadata]
+class_name = "Part"
+archivable = true
+created = "2026-03-06T00:00:00Z"
+last_modified = "2026-03-06T00:00:00Z"
+
+[material]
+name = "W-25Re Alloy (Tungsten-Rhenium)"
+young_modulus = 400000000000.0
+poisson_ratio = 0.29
+yield_strength = 1400000000.0
+ultimate_strength = 1800000000.0
+fracture_toughness = 25000000.0
+hardness = 450.0
+thermal_conductivity = 65.0
+specific_heat = 140.0
+thermal_expansion = 0.0000052
+melting_point = 3350.0
+density = 20600.0
+friction_static = 0.45
+friction_kinetic = 0.35
+restitution = 0.3
+
+[material.custom]
+role = "fusion_reactor_core"
+reactor_type = "aneutronic_p_b11"
+power_output_kw = 500.0
+bus_voltage_vdc = 600.0
+conversion_efficiency = 0.70
+fracture_critical = true
+fatigue_monitored = true
+strain_gauges = 2
+
+[thermodynamic]
+temperature = 300.0
+pressure = 101325.0
+volume = 0.0147
+internal_energy = 0.0
+entropy = 0.0
+enthalpy = 0.0
+moles = 14.7
+
+[electrochemical]
+open_circuit_voltage = 600.0
+state_of_charge = 1.0
+capacity_ah = 833.3
+internal_resistance = 0.001
+cycle_count = 0
+coulombic_efficiency = 0.70

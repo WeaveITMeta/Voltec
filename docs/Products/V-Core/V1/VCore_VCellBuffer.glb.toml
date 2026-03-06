@@ -1,0 +1,73 @@
+# V-Core VCellBuffer — Na-S Solid State (V-Cell)
+# 2 × V-Cell modules, 16.7 kWh buffer for startup/transient/blackstart
+
+[asset]
+mesh = "meshes/VCore_VCellBuffer.glb"
+
+[transform]
+position = [0.0, 0.0, 0.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [1.0, 1.0, 1.0]
+
+[properties]
+name = "VCore_VCellBuffer"
+class_name = "Part"
+color = [0.04, 0.04, 0.04, 1.0]
+transparency = 0.0
+cast_shadow = true
+can_collide = true
+anchored = true
+
+[metadata]
+class_name = "Part"
+archivable = true
+created = "2026-03-06T00:00:00Z"
+last_modified = "2026-03-06T00:00:00Z"
+
+[material]
+name = "Na-S Solid State (V-Cell)"
+young_modulus = 40000000000.0
+poisson_ratio = 0.30
+yield_strength = 100000000.0
+ultimate_strength = 150000000.0
+fracture_toughness = 5000000.0
+hardness = 120.0
+thermal_conductivity = 1.5
+specific_heat = 800.0
+thermal_expansion = 0.000012
+melting_point = 570.0
+density = 2800.0
+friction_static = 0.35
+friction_kinetic = 0.25
+restitution = 0.3
+
+[material.custom]
+role = "energy_buffer"
+module_count = 2
+module_capacity_kwh = 8.33
+total_capacity_kwh = 16.67
+energy_density_wh_kg = 900.0
+nominal_voltage_vdc = 600.0
+
+[thermodynamic]
+temperature = 298.15
+pressure = 101325.0
+volume = 0.0048
+internal_energy = 0.0
+entropy = 0.0
+enthalpy = 0.0
+moles = 0.0
+
+[electrochemical]
+voltage = 600.0
+terminal_voltage = 600.0
+capacity_ah = 27.8
+soc = 1.0
+current = 0.0
+internal_resistance = 0.015
+ionic_conductivity = 0.01
+cycle_count = 0
+c_rate = 0.0
+capacity_retention = 1.0
+heat_generation = 0.0
+dendrite_risk = 0.0

@@ -1,0 +1,57 @@
+# V-Supreme Helmet — Ti-6Al-4V (Grade 5 Titanium)
+# Compound-curve mecha helmet with visor slot, chin guard, neck ring, sensor dome
+
+[asset]
+mesh = "meshes/VSupreme_Helmet.glb"
+
+[transform]
+position = [0.0, 2.05, 0.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [1.0, 1.0, 1.0]
+
+[properties]
+name = "VSupreme_Helmet"
+class_name = "Part"
+color = [1.0, 1.0, 1.0, 1.0]
+transparency = 0.0
+cast_shadow = true
+can_collide = true
+anchored = true
+
+[metadata]
+class_name = "Part"
+archivable = true
+created = "2026-03-06T00:00:00Z"
+last_modified = "2026-03-06T00:00:00Z"
+
+[material]
+name = "Ti-6Al-4V (Grade 5 Titanium)"
+young_modulus = 113800000000.0
+poisson_ratio = 0.342
+yield_strength = 880000000.0
+ultimate_strength = 950000000.0
+fracture_toughness = 75000000.0
+hardness = 349.0
+thermal_conductivity = 6.7
+specific_heat = 526.0
+thermal_expansion = 0.0000086
+melting_point = 1933.0
+density = 4430.0
+friction_static = 0.36
+friction_kinetic = 0.30
+restitution = 0.4
+
+[material.custom]
+role = "head_protection"
+armor_rating = "NIJ_Level_IIIA"
+visor_material = "polycarbonate_coated"
+sensor_dome = true
+
+[thermodynamic]
+temperature = 298.15
+pressure = 101325.0
+volume = 0.0024
+internal_energy = 0.0
+entropy = 0.0
+enthalpy = 0.0
+moles = 0.20

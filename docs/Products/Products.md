@@ -199,6 +199,66 @@ V-Shield cells assembled into orbital-qualified power systems for satellite buse
 
 ---
 
+## Tier 3: Horizon — Near-Term Advanced Systems
+
+### V-Core
+**Residential Micro-Nuclear Reactor**
+
+Passively safe micro-fission reactor producing 25 kW electrical and 75 kW thermal continuous power from a sealed TRIGA-heritage uranium zirconium hydride (U-ZrH₁.₆) fuel core with a 10-year refueling interval. Sodium heat pipe passive thermal transport to free-piston Stirling engines. Factory-sealed, truck-delivered, installed on a concrete pad. V-Mind AI provides autonomous monitoring, load-following, and NRC telemetry compliance. Zero fuel deliveries, zero emissions, zero operator intervention for a decade.
+
+| Spec | Value |
+|------|-------|
+| Core Technology | U-ZrH₁.₆ fission fuel (TRIGA heritage, 19.75% LEU) |
+| Electrical Output | 25 kW continuous (240 VAC split-phase, IEEE 1547 grid-tie) |
+| Thermal Output | 75 kW (50 kW recoverable CHP for hot water/space heating) |
+| Efficiency | 33.3% electrical, >90% CHP |
+| Fuel Lifetime | 10 years (87,600 hours), factory-return refueling |
+| Form Factor | Egg-shaped prolate ellipsoid, 800 × 600 × 500 mm |
+| Dry Mass | ~693 kg (280 kg biological shield, 413 kg reactor + power systems) |
+| Heat Transport | 12 × sodium heat pipes (Inconel 718, passive, zero moving parts) |
+| Power Conversion | 2 × free-piston Stirling engines (Maraging 350, balanced opposed) |
+| Reactivity Control | 6 × B₄C rotating control drums (gravity fail-safe) |
+| Shielding | Lead-polyethylene-boron composite, <0.25 mR/hr at 1 meter |
+| Buffer | 16.7 kWh V-Cell Na-S solid state (blackstart <5 minutes) |
+| AI Control | V-Mind (NVIDIA Orin), NRC telemetry, autonomous load-following |
+| Noise | <40 dB at 1 meter |
+| Components | 14 subsystems, 14 materials, Draco-compressed GLB meshes |
+| Validation Tier | PROJECTED — all subsystems proven individually; integration at residential scale is first-of-kind |
+
+**Use Cases**: Off-grid residential, remote communities, military forward operating bases, disaster relief, light commercial, data center backup, island/microgrid anchor
+
+---
+
+## Tier 4: Beyond — Research & Development
+
+### V-Supreme
+**Fusion-Powered Full-Body Mecha Platform**
+
+Full-body powered exoskeleton platform for extreme-environment industrial, defense, and space operations. Aneutronic proton-boron-11 compact fusion reactor provides 500 kW continuous power. 42 degrees of freedom articulated joint architecture with 1 kHz closed-loop control. Integrated directed energy systems and Hall-effect ion thrusters. V-Cell Na-S solid state buffer array provides 50 kWh burst capacity. V-Mind AI handles balance control, inverse kinematics, and operator intent prediction. The suit that makes the impossible routine.
+
+| Spec | Value |
+|------|-------|
+| Core Technology | Aneutronic p-B11 compact fusion reactor (YBCO toroidal confinement) |
+| Power Output | 500 kW continuous (600 VDC bus) |
+| Buffer Capacity | 50 kWh (6 × V-Cell Na-S solid state modules) |
+| Standing Height | ~2.2 m |
+| Dry Mass | ~400 kg (339 kg components + 61 kg wiring/fasteners/coolant) |
+| Degrees of Freedom | 42 (neck 3, arms 24, spine 3, legs 12) |
+| Max Joint Torque | 800 N·m (hip/knee cycloidal drives) |
+| Control Loop | 1 kHz EtherCAT, PID + V-Mind motion planning |
+| Primary Structure | Ti-6Al-4V (Grade 5 Titanium) |
+| Reactor Vessel | W-25Re Alloy (Tungsten-Rhenium) |
+| Thruster Pack | Mo-47.5Re Alloy, 2 × Hall-effect (xenon), 1,600 s specific impulse |
+| Directed Energy | Left forearm plasma cutter, right forearm DEP emitter |
+| Weapons Cooling | Dual-loop Therminol HT-55 (2.0 + 1.5 L/s) |
+| AI Control | V-Mind balance, inverse kinematics, operator intent prediction |
+| Components | 23 subsystems, ~762 KB total mesh (placeholder), 5 material systems |
+| Validation Tier | ASPIRATIONAL — requires breakthrough advances in compact fusion |
+
+**Use Cases**: Deep-space extravehicular activity, nuclear decommissioning, deep-sea infrastructure, disaster response in contaminated environments, heavy industrial construction, defense operations
+
+---
+
 ## Accessories & Services
 
 | Item | Description |

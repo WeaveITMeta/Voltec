@@ -1,0 +1,62 @@
+# V-Core BioShield — Lead-Polyethylene-Boron composite
+# Graded biological shield: 50mm Pb + 75mm borated PE + 25mm Pb
+
+[asset]
+mesh = "meshes/VCore_BioShield.glb"
+
+[transform]
+position = [0.0, 0.0, 0.0]
+rotation = [0.0, 0.0, 0.0, 1.0]
+scale = [1.0, 1.0, 1.0]
+
+[properties]
+name = "VCore_BioShield"
+class_name = "Part"
+color = [0.35, 0.35, 0.38, 1.0]
+transparency = 0.0
+cast_shadow = true
+can_collide = true
+anchored = true
+
+[metadata]
+class_name = "Part"
+archivable = true
+created = "2026-03-06T00:00:00Z"
+last_modified = "2026-03-06T00:00:00Z"
+
+[material]
+name = "Lead-Polyethylene-Boron Composite"
+young_modulus = 16000000000.0
+poisson_ratio = 0.44
+yield_strength = 11000000.0
+ultimate_strength = 17000000.0
+fracture_toughness = 15000000.0
+hardness = 5.0
+thermal_conductivity = 35.0
+specific_heat = 129.0
+thermal_expansion = 0.000029
+melting_point = 600.0
+density = 11340.0
+friction_static = 0.40
+friction_kinetic = 0.30
+restitution = 0.15
+
+[material.custom]
+role = "biological_shield"
+inner_lead_mm = 50.0
+borated_pe_mm = 75.0
+outer_lead_mm = 25.0
+total_radial_mm = 150.0
+b4c_weight_pct = 5.0
+surface_dose_mR_hr = 1.0
+dose_1m_mR_hr = 0.25
+pe_max_temp_k = 393.0
+
+[thermodynamic]
+temperature = 373.0
+pressure = 101325.0
+volume = 0.0620
+internal_energy = 0.0
+entropy = 0.0
+enthalpy = 0.0
+moles = 0.0
