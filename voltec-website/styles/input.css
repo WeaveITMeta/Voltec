@@ -5,20 +5,44 @@
 /* ============================================
    VOLTEC HIGH-TECH THEME STYLES
    Clean Industrial White + Blue Xenon Accents
+   Layered dark surfaces, editorial data typography
    ============================================ */
 
 @layer base {
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     @apply bg-voltec-white text-voltec-black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Headlines read tighter and more optical at large sizes */
+  h1, h2 {
+    text-wrap: balance;
+  }
+
+  /* Every number on this site is data: keep columns from dancing */
+  .font-mono, code, pre, table {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1, "zero" 1;
   }
 
   ::selection {
     @apply bg-voltec-blue text-white;
   }
+
+  :focus-visible {
+    outline: 2px solid #00BFFF;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* Dark-section scrollbars, so overflow panes stop looking like a bug */
+  .no-scrollbar { scrollbar-width: none; }
 }
 
 @layer components {
@@ -27,31 +51,65 @@
     @apply transition-all duration-300;
     text-shadow: 0 0 5px transparent;
   }
-  
+
   .xenon-glow:hover {
     text-shadow: 0 0 10px #00BFFF, 0 0 20px #00BFFF;
   }
 
+  /* Section eyebrow: the small tracked-out label above every headline */
+  .eyebrow {
+    @apply text-voltec-blue text-[11px] font-mono font-medium uppercase mb-4;
+    letter-spacing: 0.32em;
+  }
+
   /* Button Styles */
   .btn-primary {
-    @apply bg-voltec-blue text-white px-8 py-3 rounded-sm font-semibold uppercase tracking-wider;
+    @apply relative bg-voltec-blue text-white px-8 py-3 rounded-sm font-semibold uppercase tracking-wider;
     @apply transition-all duration-300 ease-out;
-    @apply hover:bg-voltec-blue-light hover:shadow-[0_0_30px_rgba(0,191,255,0.5)];
-    @apply active:scale-95;
+    @apply hover:bg-voltec-blue-light hover:shadow-[0_0_36px_rgba(0,191,255,0.45)];
+    @apply active:scale-[0.98];
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 6px 20px -8px rgba(0, 191, 255, 0.6);
   }
 
   .btn-outline {
-    @apply border-2 border-voltec-blue text-voltec-blue px-8 py-3 rounded-sm font-semibold uppercase tracking-wider;
-    @apply transition-all duration-300 ease-out bg-transparent;
-    @apply hover:bg-voltec-blue hover:text-white hover:shadow-[0_0_30px_rgba(0,191,255,0.5)];
-    @apply active:scale-95;
+    @apply border border-voltec-blue/60 text-voltec-blue px-8 py-3 rounded-sm font-semibold uppercase tracking-wider;
+    @apply transition-all duration-300 ease-out bg-voltec-blue/5;
+    @apply hover:bg-voltec-blue hover:text-white hover:border-voltec-blue hover:shadow-[0_0_36px_rgba(0,191,255,0.4)];
+    @apply active:scale-[0.98];
   }
 
-  /* Card Styles */
+  /* Card Styles: light surface with a hairline top highlight and a real lift */
   .card-tech {
-    @apply bg-white border border-voltec-gray-light p-6 rounded-sm;
-    @apply transition-all duration-300;
-    @apply hover:border-voltec-blue hover:shadow-[0_0_20px_rgba(0,191,255,0.2)];
+    @apply relative bg-white border border-voltec-gray-light p-6 rounded-sm;
+    @apply transition-all duration-300 ease-out;
+    box-shadow: 0 1px 2px rgba(10, 10, 10, 0.04);
+  }
+
+  .card-tech::before {
+    content: '';
+    @apply absolute inset-x-0 top-0 h-px opacity-0 transition-opacity duration-300;
+    background: linear-gradient(90deg, transparent, rgba(0, 191, 255, 0.7), transparent);
+  }
+
+  .card-tech:hover {
+    @apply border-voltec-blue/50 -translate-y-0.5;
+    box-shadow: 0 10px 34px -18px rgba(0, 191, 255, 0.55), 0 2px 6px rgba(10, 10, 10, 0.05);
+  }
+
+  .card-tech:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Card on dark sections */
+  .card-dark {
+    @apply relative rounded-sm p-6 transition-all duration-300 ease-out;
+    @apply border border-white/10 bg-voltec-surface/70;
+    backdrop-filter: blur(6px);
+  }
+
+  .card-dark:hover {
+    @apply border-voltec-blue/45 -translate-y-0.5 bg-voltec-elevated/80;
+    box-shadow: 0 14px 40px -22px rgba(0, 191, 255, 0.65);
   }
 
   /* Navigation Link */
@@ -63,7 +121,7 @@
 
   .nav-link::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-voltec-blue;
+    @apply absolute -bottom-1 left-0 w-0 h-px bg-voltec-blue;
     @apply transition-all duration-300;
   }
 
@@ -73,17 +131,79 @@
 
   /* Section Headers */
   .section-title {
-    @apply text-4xl md:text-5xl font-display font-bold tracking-tight;
-    @apply bg-gradient-to-r from-voltec-black to-voltec-gray bg-clip-text;
+    @apply text-4xl md:text-5xl font-display font-bold tracking-tightest text-voltec-black;
+  }
+
+  .section-title-dark {
+    @apply text-4xl md:text-5xl font-display font-bold tracking-tightest text-white;
   }
 
   .section-subtitle {
-    @apply text-lg text-voltec-gray/70 max-w-2xl;
+    @apply text-lg text-voltec-gray/70 max-w-2xl leading-relaxed;
   }
 
-  /* Grid Background */
+  /* Data table: editorial hairline rules, no heavy boxes */
+  .data-table {
+    @apply w-full border-collapse text-sm;
+  }
+
+  .data-table th {
+    @apply text-[10.5px] font-mono font-medium uppercase text-white/35 text-left align-bottom;
+    @apply px-5 py-3 border-b border-white/15;
+    letter-spacing: 0.18em;
+  }
+
+  /* Out-specifies the `.data-table th` rule above, which a bare
+     `text-right` utility cannot (class+element beats class). */
+  .data-table th.th-right {
+    @apply text-right;
+  }
+
+  .data-table td {
+    @apply px-5 py-4 border-b border-white/[0.07] text-white/70 align-middle;
+  }
+
+  .data-table tr:last-child td {
+    @apply border-b-0;
+  }
+
+  .data-table tr {
+    @apply transition-colors duration-200;
+  }
+
+  .data-table tbody tr:hover td {
+    background-color: rgba(0, 191, 255, 0.04);
+  }
+
+  /* The column that carries the claim */
+  .data-table .col-hero {
+    @apply text-white font-mono font-medium text-right whitespace-nowrap;
+  }
+
+  .data-table .col-ref {
+    @apply text-white/40 font-mono text-right whitespace-nowrap;
+  }
+
+  .data-table .col-delta {
+    @apply text-voltec-blue font-mono font-medium text-right whitespace-nowrap;
+  }
+
+  /* Grid Background: fades out instead of stopping dead */
   .grid-bg {
     @apply bg-grid-pattern bg-grid;
+    -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 40%, #000 0%, transparent 100%);
+    mask-image: radial-gradient(ellipse 90% 70% at 50% 40%, #000 0%, transparent 100%);
+  }
+
+  .grid-bg-fine {
+    @apply bg-grid-fine bg-grid-sm;
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, #000 0%, transparent 100%);
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, #000 0%, transparent 100%);
+  }
+
+  /* Hairline rule with a lit centre */
+  .rule-glow {
+    @apply h-px w-full bg-hairline;
   }
 
   /* Scan Line Effect */
@@ -109,15 +229,15 @@
 
   /* Footer Link */
   .footer-link {
-    @apply text-voltec-white/70 hover:text-voltec-blue transition-colors duration-300;
+    @apply text-voltec-white/60 hover:text-voltec-blue transition-colors duration-300;
   }
 
   /* Social Icon */
   .social-icon {
     @apply w-10 h-10 flex items-center justify-center rounded-sm;
-    @apply border border-voltec-blue/30 text-voltec-blue;
+    @apply border border-voltec-blue/25 text-voltec-blue bg-voltec-blue/5;
     @apply transition-all duration-300;
-    @apply hover:bg-voltec-blue hover:text-white hover:shadow-[0_0_15px_rgba(0,191,255,0.5)];
+    @apply hover:bg-voltec-blue hover:text-white hover:border-voltec-blue hover:shadow-[0_0_18px_rgba(0,191,255,0.45)];
   }
 }
 
@@ -127,16 +247,28 @@
     @apply bg-gradient-to-r from-voltec-blue to-voltec-blue-light bg-clip-text text-transparent;
   }
 
+  /* Headline with a soft luminous falloff, for dark hero type */
+  .text-lumen {
+    background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 55%, #9FB4C4 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
   /* Glassmorphism */
   .glass {
     @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .tnum {
+    font-variant-numeric: tabular-nums;
   }
 
   /* Hide scrollbar */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
-  
+
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;

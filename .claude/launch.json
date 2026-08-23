@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "voltec-website",
+      "runtimeExecutable": "trunk",
+      "runtimeArgs": ["serve", "--config", "voltec-website/Trunk.toml", "--port", "3002"],
+      "port": 3002,
+      "autoPort": false
+    }
+  ]
+}

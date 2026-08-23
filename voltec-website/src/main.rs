@@ -4,7 +4,7 @@ use wasm_bindgen::prelude::*;
 use web_sys::{CanvasRenderingContext2d, HtmlCanvasElement};
 
 /* ============================================
-   VOLTEC — THE ENERGY OPERATING SYSTEM
+   VOLTEC / THE ENERGY OPERATING SYSTEM
    Table of Contents:
    1. Main Entry Point
    2. App Component (Router)
@@ -12,7 +12,7 @@ use web_sys::{CanvasRenderingContext2d, HtmlCanvasElement};
    4. Footer
    5. Home Page (Hero + Flywheel + Products + Stats + CTA)
    6. Products Page (V-Series Catalog)
-   7. Platform Page (V-OS + V-Mind + Developer)
+   7. Platform Page (V-OS + Vortex + Developer)
    8. Solutions Page (Customer Segments)
    9. Company Page (Mission + Team + Careers)
    10. Resources Page
@@ -86,9 +86,9 @@ fn Nav() -> impl IntoView {
             <div class="max-w-7xl mx-auto flex justify-between items-center">
                 <A href="/" class="flex items-center gap-3 group">
                     <div class="w-9 h-9 border border-voltec-blue rounded-sm flex items-center justify-center group-hover:bg-voltec-blue/10 transition-all duration-300">
-                        <span class="font-display font-bold text-sm text-voltec-blue">"V"</span>
+                        <span class="font-brand font-bold text-sm text-voltec-blue">"V"</span>
                     </div>
-                    <span class="text-xl font-display font-bold tracking-widest hover:text-voltec-blue transition-colors">
+                    <span class="text-xl font-brand font-bold tracking-widest hover:text-voltec-blue transition-colors">
                         "VOLTEC"
                     </span>
                 </A>
@@ -146,19 +146,19 @@ fn Footer() -> impl IntoView {
                     <div class="md:col-span-2">
                         <div class="flex items-center gap-3 mb-4">
                             <div class="w-8 h-8 border border-voltec-blue rounded-sm flex items-center justify-center">
-                                <span class="font-display font-bold text-xs text-voltec-blue">"V"</span>
+                                <span class="font-brand font-bold text-xs text-voltec-blue">"V"</span>
                             </div>
-                            <span class="text-lg font-display font-bold tracking-widest">"VOLTEC"</span>
+                            <span class="text-lg font-brand font-bold tracking-widest">"VOLTEC"</span>
                         </div>
                         <p class="text-voltec-white/40 text-sm leading-relaxed mb-6 max-w-xs">
                             "The Energy Operating System. Every device is a node in the world's largest industrial intelligence network."
                         </p>
                         <div class="flex space-x-3">
-                            <SocialIcon href="https://x.com/voltec" icon_type="x" />
-                            <SocialIcon href="https://linkedin.com/company/voltec" icon_type="linkedin" />
-                            <SocialIcon href="https://github.com/voltec" icon_type="github" />
-                            <SocialIcon href="https://youtube.com/@voltec" icon_type="youtube" />
-                            <SocialIcon href="https://discord.gg/voltec" icon_type="discord" />
+                            <SocialIcon href="https://x.com/VoltecAF" icon_type="x" label="Voltec on X" />
+                            <SocialIcon href="https://www.linkedin.com/in/mckale-olson-b9b1a4149/" icon_type="linkedin" label="McKale Olson on LinkedIn" />
+                            <SocialIcon href="https://github.com/WeaveITMeta/Voltec" icon_type="github" label="Voltec on GitHub" />
+                            <SocialIcon href="https://www.youtube.com/@Simbuilder" icon_type="youtube" label="Simbuilder on YouTube" />
+                            <SocialIcon href="https://discord.gg/FztQJJacbw" icon_type="discord" label="Discord: Eustress Partner" />
                         </div>
                     </div>
 
@@ -177,7 +177,7 @@ fn Footer() -> impl IntoView {
                         <h4 class="text-xs font-semibold uppercase tracking-widest text-voltec-blue mb-4">"Platform"</h4>
                         <ul class="space-y-2 text-sm">
                             <li><a href="/platform" class="footer-link">"V-OS"</a></li>
-                            <li><a href="/platform" class="footer-link">"V-Mind"</a></li>
+                            <li><a href="/platform" class="footer-link">"Vortex"</a></li>
                             <li><a href="/platform" class="footer-link">"V-Store"</a></li>
                             <li><a href="/platform" class="footer-link">"Developer SDK"</a></li>
                             <li><a href="/platform" class="footer-link">"API Docs"</a></li>
@@ -226,20 +226,20 @@ fn HomePage() -> impl IntoView {
     view! {
         <div>
             // HERO
-            <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-voltec-black">
+            <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-voltec-ink">
                 <div class="absolute inset-0 grid-bg opacity-40"></div>
                 <div class="absolute inset-0 bg-radial-glow"></div>
                 <ParticleBackground />
 
                 <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
-                    <p class="text-voltec-blue text-xs md:text-sm font-mono tracking-[0.3em] mb-6 uppercase">
+                    <p class="eyebrow text-xs md:text-[13px] mb-7">
                         "The Energy Operating System"
                     </p>
-                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-8 tracking-tight leading-none">
+                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-8 tracking-tightest leading-[0.95] text-lumen">
                         "Every device."<br />"One network."
                     </h1>
                     <p class="text-voltec-white/60 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
-                        "Voltec builds the intelligent energy cells, autonomous platforms, and industrial OS that power the next generation of infrastructure — on Earth and off it."
+                        "Voltec builds the intelligent energy cells, autonomous platforms, and industrial OS that power the next generation of infrastructure, on Earth and off it."
                     </p>
 
                     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -269,7 +269,7 @@ fn HomePage() -> impl IntoView {
             <section class="py-24 bg-voltec-white">
                 <div class="max-w-7xl mx-auto px-6">
                     <div class="text-center mb-16">
-                        <p class="text-voltec-blue text-xs font-mono tracking-[0.3em] uppercase mb-3">"Tier 1 — Foundation"</p>
+                        <p class="eyebrow">"Tier 1 / Foundation"</p>
                         <h2 class="section-title mb-4">"The V-Series"</h2>
                         <p class="section-subtitle mx-auto">
                             "Three products. One breakthrough chemistry. An intelligent energy stack from cell to grid."
@@ -279,21 +279,21 @@ fn HomePage() -> impl IntoView {
                     <div class="grid md:grid-cols-3 gap-8">
                         <ProductCardHome
                             name="V-Cell"
-                            tagline="Solid-State Energy Cell"
-                            spec="900 Wh/kg • 10,000+ cycles"
-                            description="The fundamental unit. 3x energy density. No lithium dependency. Everything is built on V-Cell."
+                            tagline="Anode-Free Li–S Bipolar Cell"
+                            spec="1,072 Wh/kg • 1,260 Wh/L • 1,223 V"
+                            description="569 bipolar layers in one 300 × 100 × 100 mm can. 3,779 Wh from 3.525 kg, and 1,223 V without welding a single series link."
                         />
                         <ProductCardHome
                             name="V-Pack"
                             tagline="Modular Battery System"
-                            spec="5 kWh – 5 MWh configurations"
-                            description="Intelligent, self-monitoring packs. V-Mind predicts failures 72 hours out. 99.7% accuracy."
+                            spec="60.5 kWh • 56.4 kg • one 1,223 V bus"
+                            description="16 V-Cells in parallel on a single bus. The series string lives inside the cell, so the module is mostly active material. Vortex monitors every cell on the bus."
                         />
                         <ProductCardHome
                             name="V-Grid"
                             tagline="Distributed Energy Platform"
-                            spec="1 MW – 1 GW • 99.99% uptime"
-                            description="Self-optimizing energy mesh. AI-driven load balancing across thousands of nodes. No human intervention."
+                            spec="18.31 MWh per 20-ft container • 2.93× LFP"
+                            description="A 100 MWh station in 6 containers instead of 16. 26.1 MW continuous at design rate, 3.8 hours of duration, self-optimizing across every node."
                         />
                     </div>
 
@@ -306,22 +306,22 @@ fn HomePage() -> impl IntoView {
             </section>
 
             // FLYWHEEL SECTION
-            <section class="py-24 bg-voltec-black text-white relative overflow-hidden">
+            <section class="py-24 bg-voltec-ink text-white relative overflow-hidden">
                 <div class="absolute inset-0 grid-bg opacity-20"></div>
                 <div class="max-w-7xl mx-auto px-6 relative z-10">
                     <div class="text-center mb-16">
-                        <p class="text-voltec-blue text-xs font-mono tracking-[0.3em] uppercase mb-3">"Network Effect"</p>
-                        <h2 class="text-4xl md:text-5xl font-display font-bold tracking-tight mb-4">"The Voltec Flywheel"</h2>
+                        <p class="eyebrow">"Network Effect"</p>
+                        <h2 class="section-title-dark mb-4">"The Voltec Flywheel"</h2>
                         <p class="text-voltec-white/50 max-w-2xl mx-auto">
                             "Every device deployed makes the network smarter. Every improvement lowers cost. Every cost reduction opens new markets. The cycle never stops."
                         </p>
                     </div>
 
                     <div class="grid md:grid-cols-4 gap-6">
-                        <FlywheelStep number="01" title="Better Cells" description="V-Cell chemistry delivers 3x density at lower cost per kWh." />
+                        <FlywheelStep number="01" title="Better Cells" description="Anode-free Li–S at 1,072 Wh/kg, 2.38× the best cell shipping in volume today." />
                         <FlywheelStep number="02" title="More Deployments" description="Lower cost drives adoption. More V-Packs and V-Grids in the field." />
                         <FlywheelStep number="03" title="More Data" description="Every V-OS device streams telemetry. The network grows smarter." />
-                        <FlywheelStep number="04" title="Smarter AI" description="V-Mind improves with scale. Better predictions, lower costs. Repeat." />
+                        <FlywheelStep number="04" title="Smarter AI" description="Vortex improves with scale. Sharper anomaly detection, lower costs. Repeat." />
                     </div>
                 </div>
             </section>
@@ -330,11 +330,90 @@ fn HomePage() -> impl IntoView {
             <section class="py-20 bg-voltec-white border-y border-voltec-gray-light">
                 <div class="max-w-7xl mx-auto px-6">
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                        <StatBlock number="900" unit="Wh/kg" label="V-Cell Energy Density" />
-                        <StatBlock number="72" unit="hrs" label="Failure Prediction Window" />
-                        <StatBlock number="99.99" unit="%" label="V-Grid Uptime SLA" />
-                        <StatBlock number="10K" unit="+" label="V-Cell Cycle Life" />
+                        <StatBlock number="1,072" unit="Wh/kg" label="V-Cell Specific Energy" />
+                        <StatBlock number="1,223" unit="V" label="One Cell, No Series String" />
+                        <StatBlock number="60.5" unit="kWh" label="V-Pack Module" />
+                        <StatBlock number="18.31" unit="MWh" label="V-Grid 20-ft Container" />
                     </div>
+                </div>
+            </section>
+
+            // VALIDATION
+            <section class="py-28 bg-voltec-ink text-white relative overflow-hidden">
+                <div class="absolute inset-0 grid-bg-fine opacity-70"></div>
+                <div class="absolute inset-x-0 top-0 rule-glow opacity-50"></div>
+                <div class="max-w-5xl mx-auto px-6 relative z-10">
+                    <div class="text-center mb-16">
+                        <p class="eyebrow">"Validation"</p>
+                        <h2 class="section-title-dark mb-5">"The numbers were not asserted."</h2>
+                        <p class="text-white/45 max-w-2xl mx-auto leading-relaxed">
+                            "A closed-form model derives every V-Cell figure from material inputs. A physics engine then integrated a full discharge on its own clock, running Nernst, Butler–Volmer, Bruggeman tortuosity, coulomb counting and a Monroe–Newman dendrite criterion. It was never told what answer to produce."
+                        </p>
+                    </div>
+
+                    <div class="mb-16">
+                        <div class="flex items-baseline justify-between mb-7">
+                            <p class="text-[10.5px] font-mono uppercase text-white/35 tracking-[0.18em]">"Specific energy, cell level"</p>
+                            <p class="text-[10.5px] font-mono uppercase text-white/35 tracking-[0.18em]">"Wh / kg"</p>
+                        </div>
+                        <CompareBar
+                            label="V-Cell" sublabel="anode-free Li–S, integrated result"
+                            value="1,089" unit="Wh/kg" width="100%" primary=true
+                        />
+                        <CompareBar
+                            label="Tesla 4680" sublabel="NCM 811, shipping in volume"
+                            value="265" unit="Wh/kg" width="24.3%" primary=false
+                        />
+                    </div>
+
+                    <div class="overflow-x-auto border border-white/10 rounded-sm bg-voltec-surface/40 mb-14">
+                        <div class="min-w-[620px]">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>"Metric"</th>
+                                        <th class="th-right">"V-Cell"</th>
+                                        <th class="th-right">"Tesla 4680"</th>
+                                        <th class="th-right">"Factor"</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <CompareRow metric="Specific energy" vcell="1,089 Wh/kg" tesla="265 Wh/kg" factor="4.11×" />
+                                    <CompareRow metric="Energy density" vcell="1,260 Wh/L" tesla="730 Wh/L" factor="1.73×" />
+                                    <CompareRow metric="Chemistry" vcell="anode-free Li–S" tesla="NCM 811" factor="·" />
+                                    <CompareRow metric="Status" vcell="simulated" tesla="shipping" factor="·" />
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <p class="eyebrow text-center">"The integrated run"</p>
+                    <div class="grid grid-cols-2 md:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-white/10 border border-white/10 rounded-sm bg-voltec-surface/40 mb-14">
+                        <MeasuredStat value="3,839" unit="Wh" label="Energy" />
+                        <MeasuredStat value="1,755.4" unit="Ah" label="Charge" />
+                        <MeasuredStat value="2.1872" unit="V" label="Mean voltage" />
+                        <MeasuredStat value="0.219" unit="of 1.0" label="Dendrite risk" />
+                        <MeasuredStat value="49" unit="°C" label="Peak temp" />
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-6 mb-14">
+                        <ValidationNote
+                            title="Charge carries the result"
+                            body="The engine's coulomb count agreed with the closed-form model to 0.14%. The energy figure rests on that count and the areal capacity feeding it, not on a voltage assumption."
+                        />
+                        <ValidationNote
+                            title="The margin runs conservative"
+                            body="The engine centres its Nernst curve on the 2.20 V thermodynamic potential. The design is costed at the 2.15 V loaded plateau, so the integrated result lands above the costed design point rather than below it."
+                        />
+                        <ValidationNote
+                            title="No dendrites, no cooling"
+                            body="Peak dendrite risk reached 0.219 of 1.0. The cell settled at 49 °C under free convection with no active cooling of any kind."
+                        />
+                    </div>
+
+                    <p class="text-white/30 text-[11px] font-mono leading-relaxed max-w-3xl mx-auto text-center">
+                        "No V-Cell has been built. Specific energy and the run figures above are integrated from simulation; energy density and format figures are derived in closed form from material inputs. Tesla 4680 values are published manufacturer specifications. Discharge integrated at 0.250C, inside the 0.261C design rate. Revision 1."
+                    </p>
                 </div>
             </section>
 
@@ -343,7 +422,7 @@ fn HomePage() -> impl IntoView {
                 <div class="max-w-7xl mx-auto px-6">
                     <div class="grid md:grid-cols-2 gap-16 items-center">
                         <div>
-                            <p class="text-voltec-blue text-xs font-mono tracking-[0.3em] uppercase mb-3">"Tier 2 — Platform"</p>
+                            <p class="eyebrow">"Tier 2 / Platform"</p>
                             <h2 class="section-title mb-6">"V-OS: The Industrial Operating System"</h2>
                             <p class="text-voltec-gray/70 mb-6 leading-relaxed">
                                 "Every Voltec device runs V-OS. Third-party developers build on it. "
@@ -353,15 +432,15 @@ fn HomePage() -> impl IntoView {
                             <ul class="space-y-3 text-sm text-voltec-gray/60 mb-8">
                                 <li class="flex items-center gap-3">
                                     <span class="w-1.5 h-1.5 bg-voltec-blue rounded-full"></span>
-                                    "Open API Layer — REST + gRPC, full SDK"
+                                    "Open API Layer: REST + gRPC, full SDK"
                                 </li>
                                 <li class="flex items-center gap-3">
                                     <span class="w-1.5 h-1.5 bg-voltec-blue rounded-full"></span>
-                                    "V-Store Marketplace — 80/20 revenue split for developers"
+                                    "V-Store Marketplace: 80/20 revenue split for developers"
                                 </li>
                                 <li class="flex items-center gap-3">
                                     <span class="w-1.5 h-1.5 bg-voltec-blue rounded-full"></span>
-                                    "V-Mind AI — Gets smarter with every connected node"
+                                    "Vortex AI: gets smarter with every connected node"
                                 </li>
                             </ul>
                             <A href="/platform" class="btn-primary text-sm">"Explore the Platform"</A>
@@ -374,7 +453,7 @@ fn HomePage() -> impl IntoView {
             </section>
 
             // CTA
-            <section class="py-24 bg-voltec-black text-white relative overflow-hidden">
+            <section class="py-24 bg-voltec-ink text-white relative overflow-hidden">
                 <div class="absolute inset-0 bg-radial-glow opacity-50"></div>
                 <div class="max-w-3xl mx-auto px-6 text-center relative z-10">
                     <h2 class="text-4xl md:text-5xl font-display font-bold tracking-tight mb-6">
@@ -405,19 +484,19 @@ fn ProductsPage() -> impl IntoView {
             // Tier 1
             <section class="py-20 bg-voltec-white">
                 <div class="max-w-7xl mx-auto px-6">
-                    <TierHeader tier="Tier 1" name="Foundation" status="Shipping Now" />
+                    <TierHeader tier="Tier 1" name="Foundation" status="Simulated / Revision 1" />
                     <div class="grid md:grid-cols-3 gap-8 mt-10">
                         <ProductCardFull
-                            name="V-Cell" tagline="Solid-State Energy Cell"
-                            specs=vec!["900 Wh/kg target", "10,000+ cycles", "Stable to 300°C", "No lithium/cobalt", "Dry electrode mfg"]
+                            name="V-Cell" tagline="Anode-Free Li–S Bipolar Cell"
+                            specs=vec!["1,072 Wh/kg · 1,260 Wh/L", "1,223 V · 3,779 Wh · 3.525 kg", "569 bipolar layers, 174.3 µm pitch", "Li₆PS₅Cl solid electrolyte", "0.261C design rate · 986 W"]
                         />
                         <ProductCardFull
                             name="V-Pack" tagline="Modular Battery System"
-                            specs=vec!["5 kWh – 5 MWh", "V-Mind integrated", "72-hr failure prediction", "99.7% accuracy", "Industrial / Defense configs"]
+                            specs=vec!["60.5 kWh · 56.4 kg", "16 cells parallel, one 1,223 V bus", "Vortex integrated", "Continuous per-cell telemetry", "Industrial / Defense configs"]
                         />
                         <ProductCardFull
                             name="V-Grid" tagline="Distributed Energy Platform"
-                            specs=vec!["1 MW – 1 GW scale", "AI load balancing", "Self-healing mesh", "99.99% uptime SLA", "Industrial / Municipal / Defense"]
+                            specs=vec!["18.31 MWh per 20-ft container", "100 MWh in 6 containers, not 16", "26.1 MW · 3.8 h at design rate", "2.93× LFP per container", "Industrial / Municipal / Defense"]
                         />
                     </div>
                 </div>
@@ -433,12 +512,12 @@ fn ProductsPage() -> impl IntoView {
                             specs=vec!["Real-time RTOS", "Open API (REST + gRPC)", "OTA updates", "Zero-trust security", "Developer SDK"]
                         />
                         <ProductCardFull
-                            name="V-Mind" tagline="AI/ML Intelligence Engine"
-                            specs=vec!["Predictive maintenance", "Energy optimization", "Anomaly detection", "Edge inference", "Data network effect"]
+                            name="Vortex" tagline="AI/ML Intelligence Engine"
+                            specs=vec!["Condition monitoring", "Energy optimization", "Anomaly detection", "Edge inference", "Data network effect"]
                         />
                         <ProductCardFull
                             name="V-Man" tagline="Autonomous Manufacturing Cell"
-                            specs=vec!["2,000 sq ft modular", "72-hr setup", "10K V-Cells/day", "95% automation", "V-Mind diagnostics"]
+                            specs=vec!["2,000 sq ft modular", "72-hr setup", "10K V-Cells/day", "95% automation", "Vortex diagnostics"]
                         />
                     </div>
                 </div>
@@ -507,14 +586,14 @@ fn PlatformPage() -> impl IntoView {
             <section class="py-20 bg-voltec-gray-light">
                 <div class="max-w-7xl mx-auto px-6">
                     <div class="text-center mb-12">
-                        <h2 class="section-title mb-4">"V-Mind"</h2>
+                        <h2 class="section-title mb-4">"Vortex"</h2>
                         <p class="section-subtitle mx-auto">"The AI engine. Runs on every node. Gets smarter with scale."</p>
                     </div>
                     <div class="grid md:grid-cols-4 gap-6">
-                        <MindCapability title="Predict" desc="72-hour failure forecasting at 99.7% accuracy." />
-                        <MindCapability title="Optimize" desc="Real-time energy load balancing across distributed nodes." />
-                        <MindCapability title="Detect" desc="Anomaly recognition across millions of sensor streams." />
-                        <MindCapability title="Act" desc="Closed-loop autonomous control. No cloud dependency." />
+                        <VortexCapability title="Monitor" desc="Continuous per-cell telemetry from every node on the network." />
+                        <VortexCapability title="Optimize" desc="Real-time energy load balancing across distributed nodes." />
+                        <VortexCapability title="Detect" desc="Anomaly recognition across millions of sensor streams." />
+                        <VortexCapability title="Act" desc="Closed-loop autonomous control. No cloud dependency." />
                     </div>
                 </div>
             </section>
@@ -560,7 +639,7 @@ fn SolutionsPage() -> impl IntoView {
                     <SolutionRow
                         industry="Manufacturing"
                         pain="Unplanned downtime costs $260K/hour."
-                        solution="V-Pack + V-Mind predicts failures 72 hours in advance. 99.7% accuracy."
+                        solution="V-Pack + Vortex surface cell-level faults the moment they appear, on-device, with no cloud round-trip."
                         product="V-Pack Industrial"
                         cta="Calculate Downtime Savings"
                     />
@@ -611,7 +690,7 @@ fn CompanyPage() -> impl IntoView {
                 <div class="max-w-4xl mx-auto px-6">
                     <h2 class="section-title mb-6">"Mission"</h2>
                     <p class="text-xl text-voltec-gray/80 leading-relaxed mb-8">
-                        "Make the fundamental energy unit that powers everything — on Earth and off it."
+                        "Make the fundamental energy unit that powers everything, on Earth and off it."
                     </p>
                     <p class="text-voltec-gray/60 leading-relaxed mb-12">
                         "Voltec is a deep-tech industrial company building the backbone of next-generation infrastructure. "
@@ -642,11 +721,11 @@ fn CompanyPage() -> impl IntoView {
                     </p>
 
                     <div class="space-y-4">
-                        <JobCard title="Senior Cell Chemist" location="Austin, TX" team="Team V-Cell" />
+                        <JobCard title="Senior Cell Chemist" location="Remote" team="Team V-Cell" />
                         <JobCard title="Embedded Systems Engineer" location="Remote" team="Team V-OS" />
-                        <JobCard title="ML Engineer — Predictive Systems" location="Remote" team="Team V-Mind" />
-                        <JobCard title="Robotics Engineer" location="Austin, TX" team="Team V-Man" />
-                        <JobCard title="Radiation Effects Engineer" location="Houston, TX" team="Team V-Shield" />
+                        <JobCard title="ML Engineer, Anomaly Detection" location="Remote" team="Team Vortex" />
+                        <JobCard title="Robotics Engineer" location="Remote" team="Team V-Man" />
+                        <JobCard title="Radiation Effects Engineer" location="Remote" team="Team V-Shield" />
                     </div>
                 </div>
             </section>
@@ -668,7 +747,7 @@ fn ResourcesPage() -> impl IntoView {
                     <div class="grid md:grid-cols-3 gap-8">
                         <ResourceCard title="Product Datasheets" desc="Full technical specifications for every V-Series product." cta="Download" />
                         <ResourceCard title="V-OS Documentation" desc="API reference, SDK guides, and developer tutorials." cta="Read Docs" />
-                        <ResourceCard title="Whitepapers" desc="Solid-state chemistry, V-Mind architecture, grid optimization research." cta="Access" />
+                        <ResourceCard title="Whitepapers" desc="Solid-state chemistry, Vortex architecture, grid optimization research." cta="Access" />
                         <ResourceCard title="Case Studies" desc="Real-world deployments. ROI data. Customer testimonials." cta="Read" />
                         <ResourceCard title="Benchmark Reports" desc="V-Cell performance vs. lithium-ion. V-Grid vs. legacy storage." cta="Compare" />
                         <ResourceCard title="V-OS Changelog" desc="Release notes, feature updates, and security patches." cta="View" />
@@ -840,11 +919,93 @@ fn ProductCardFull(
     }
 }
 
+// --- Comparison Bar ---
+#[component]
+fn CompareBar(
+    label: &'static str,
+    sublabel: &'static str,
+    value: &'static str,
+    unit: &'static str,
+    width: &'static str,
+    primary: bool,
+) -> impl IntoView {
+    let bar = if primary {
+        "h-full bg-bar-blue origin-left animate-grow-bar"
+    } else {
+        "h-full bg-white/20 origin-left animate-grow-bar"
+    };
+    let num = if primary {
+        "font-mono text-2xl md:text-3xl font-medium text-white tnum"
+    } else {
+        "font-mono text-2xl md:text-3xl font-medium text-white/45 tnum"
+    };
+    view! {
+        <div class="mb-7">
+            <div class="flex items-baseline justify-between gap-4 mb-2.5">
+                <div class="flex items-baseline gap-3 min-w-0">
+                    <span class="font-display font-semibold text-base text-white whitespace-nowrap">{label}</span>
+                    <span class="text-white/35 text-xs truncate">{sublabel}</span>
+                </div>
+                <div class="flex items-baseline gap-1.5 shrink-0">
+                    <span class=num>{value}</span>
+                    <span class="text-voltec-blue/60 font-mono text-[11px]">{unit}</span>
+                </div>
+            </div>
+            <div class="h-2.5 w-full bg-white/[0.06] rounded-[1px] overflow-hidden">
+                <div class=bar style=format!("width:{}", width)></div>
+            </div>
+        </div>
+    }
+}
+
+// --- Comparison Row ---
+#[component]
+fn CompareRow(
+    metric: &'static str,
+    vcell: &'static str,
+    tesla: &'static str,
+    factor: &'static str,
+) -> impl IntoView {
+    view! {
+        <tr>
+            <td>{metric}</td>
+            <td class="col-hero">{vcell}</td>
+            <td class="col-ref">{tesla}</td>
+            <td class="col-delta">{factor}</td>
+        </tr>
+    }
+}
+
+// --- Measured Stat ---
+#[component]
+fn MeasuredStat(value: &'static str, unit: &'static str, label: &'static str) -> impl IntoView {
+    view! {
+        <div class="px-5 py-5">
+            <div class="flex items-baseline gap-1.5">
+                <span class="font-mono text-xl md:text-2xl font-medium text-white tnum">{value}</span>
+                <span class="text-voltec-blue/60 font-mono text-[11px]">{unit}</span>
+            </div>
+            <p class="text-white/30 text-[10.5px] font-mono uppercase mt-2 tracking-[0.16em]">{label}</p>
+        </div>
+    }
+}
+
+// --- Validation Note ---
+#[component]
+fn ValidationNote(title: &'static str, body: &'static str) -> impl IntoView {
+    view! {
+        <div class="card-dark">
+            <h3 class="font-semibold text-base mb-2">{title}</h3>
+            <p class="text-voltec-white/40 text-sm leading-relaxed">{body}</p>
+        </div>
+    }
+}
+
 // --- Flywheel Step ---
 #[component]
 fn FlywheelStep(number: &'static str, title: &'static str, description: &'static str) -> impl IntoView {
     view! {
-        <div class="border border-voltec-blue/20 rounded-sm p-6 hover:border-voltec-blue/50 transition-colors">
+        <div class="card-dark">
             <span class="text-voltec-blue font-mono text-xs">{number}</span>
             <h3 class="font-semibold text-lg mt-2 mb-2">{title}</h3>
             <p class="text-voltec-white/40 text-sm leading-relaxed">{description}</p>
@@ -858,10 +1019,10 @@ fn StatBlock(number: &'static str, unit: &'static str, label: &'static str) -> i
     view! {
         <div>
             <div class="flex items-baseline justify-center gap-1">
-                <span class="text-3xl md:text-4xl font-display font-bold text-voltec-black">{number}</span>
+                <span class="text-3xl md:text-4xl font-mono font-medium text-voltec-black tnum tracking-tight">{number}</span>
                 <span class="text-voltec-blue font-mono text-sm">{unit}</span>
             </div>
-            <p class="text-voltec-gray/40 text-xs uppercase tracking-wider mt-1">{label}</p>
+            <p class="text-voltec-gray/45 text-[10.5px] font-mono uppercase tracking-[0.16em] mt-2">{label}</p>
         </div>
     }
 }
@@ -908,7 +1069,7 @@ fn PlatformFeature(title: &'static str, desc: &'static str) -> impl IntoView {
 
 // --- Mind Capability ---
 #[component]
-fn MindCapability(title: &'static str, desc: &'static str) -> impl IntoView {
+fn VortexCapability(title: &'static str, desc: &'static str) -> impl IntoView {
     view! {
         <div class="card-tech text-center">
             <p class="font-display font-bold text-voltec-blue text-lg mb-2">{title}</p>
@@ -961,14 +1122,14 @@ fn VosTerminal() -> impl IntoView {
                 <p class="text-voltec-white/70 mt-1">"V-OS Network Status"</p>
                 <p class="text-voltec-white/40">"─────────────────────────"</p>
                 <p class="text-voltec-white/60">"Nodes Online:    " <span class="text-voltec-blue">"12,847"</span></p>
-                <p class="text-voltec-white/60">"V-Mind Status:   " <span class="text-green-400">"ACTIVE"</span></p>
+                <p class="text-voltec-white/60">"Vortex Status:   " <span class="text-green-400">"ACTIVE"</span></p>
                 <p class="text-voltec-white/60">"Grid Load:       " <span class="text-voltec-blue">"73.2%"</span></p>
-                <p class="text-voltec-white/60">"Predictions:     " <span class="text-voltec-blue">"2,341 active"</span></p>
+                <p class="text-voltec-white/60">"Anomalies:       " <span class="text-voltec-blue">"0 flagged"</span></p>
                 <p class="text-voltec-white/60">"Uptime:          " <span class="text-voltec-blue">"99.997%"</span></p>
                 <p class="text-voltec-white/40">"─────────────────────────"</p>
                 <p class="text-voltec-blue/60 mt-2">"$ vos deploy --pack v-pack-m --node 847"</p>
                 <p class="text-green-400 mt-1">"✓ V-Pack M deployed to node 847"</p>
-                <p class="text-voltec-white/40">"  V-Mind calibrating... done (1.2s)"</p>
+                <p class="text-voltec-white/40">"  Vortex calibrating... done (1.2s)"</p>
                 <p class="text-voltec-blue/60 mt-2">"$ _"</p>
             </div>
         </div>
@@ -1031,7 +1192,7 @@ fn ParticleBackground() -> impl IntoView {
 
 // --- Social Icon ---
 #[component]
-fn SocialIcon(href: &'static str, icon_type: &'static str) -> impl IntoView {
+fn SocialIcon(href: &'static str, icon_type: &'static str, label: &'static str) -> impl IntoView {
     let icon_svg = match icon_type {
         "x" => view! {
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -1066,7 +1227,8 @@ fn SocialIcon(href: &'static str, icon_type: &'static str) -> impl IntoView {
     };
 
     view! {
-        <a href=href target="_blank" rel="noopener noreferrer" class="social-icon">
+        <a href=href target="_blank" rel="noopener noreferrer" class="social-icon"
+           aria-label=label title=label>
             {icon_svg}
         </a>
     }
