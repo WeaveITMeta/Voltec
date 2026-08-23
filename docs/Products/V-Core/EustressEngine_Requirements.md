@@ -376,7 +376,7 @@ Uses same base material as §2.1 with different `[material.custom]`:
 [material.custom]
 role = "control_module"
 processor = "NVIDIA_Jetson_Orin"
-ai_system = "V-Mind"
+ai_system = "Vortex"
 nrc_telemetry = true
 ethernet = true
 wifi = false

@@ -1,5 +1,5 @@
 # V-Pump — Control Module (316L SS NEMA 4X Enclosure)
-# V-Mind AI + IEC 61131-3 PLC, fiber optic + 4G/5G
+# Vortex AI + IEC 61131-3 PLC, fiber optic + 4G/5G
 
 [asset]
 mesh = "meshes/VPump_ControlModule.glb"

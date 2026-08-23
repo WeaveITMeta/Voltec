@@ -347,7 +347,7 @@ role = "status_array"
 | `VPump_FlangeAdapter.glb.toml` | Modular inlet/outlet reducer rings | Part |
 | `VPump_BypassValve.glb.toml` | Automatic butterfly bypass | Part |
 | `VPump_Motor.glb.toml` | PMSM direct-drive motor | Part |
-| `VPump_ControlModule.glb.toml` | V-Mind AI + PLC enclosure | Part |
+| `VPump_ControlModule.glb.toml` | Vortex AI + PLC enclosure | Part |
 | `VPump_StatusArray.glb.toml` | IP68 LED indicator panel | Part |
 
 ### 3.2 Transform Layout (VP-M Frame — DN1200)

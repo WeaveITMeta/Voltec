@@ -48,7 +48,7 @@ A table-sized micro-nuclear fission reactor producing 25 kW electrical and 75 kW
 4. **Boron carbide (B₄C) rotating control drums** for reactivity management — fail-safe by gravity to shutdown position
 5. **Lead-polyethylene-boron composite shielding** reducing surface dose rate to <0.25 mR/hr (below residential background) at 1 meter
 
-The V-Core is designed to be factory-sealed, truck-delivered, and installed on a concrete pad with no on-site nuclear assembly. Spent fuel is returned to the factory in the sealed vessel after the 10-year fuel cycle. V-Mind AI provides continuous autonomous monitoring, load-following, and NRC telemetry compliance.
+The V-Core is designed to be factory-sealed, truck-delivered, and installed on a concrete pad with no on-site nuclear assembly. Spent fuel is returned to the factory in the sealed vessel after the 10-year fuel cycle. Vortex AI provides continuous autonomous monitoring, load-following, and NRC telemetry compliance.
 
 ---
 
@@ -95,7 +95,7 @@ V-Core achieves this by combining three proven technologies at residential scale
 - **Sodium heat pipes** (Kilopower/KRUSTY heritage, successfully tested by NASA/LANL in 2018) provide passive, zero-moving-part thermal transport from core to power conversion
 - **Free-piston Stirling engines** (Sunpower/Infinia heritage, 100,000+ hour demonstrated life) convert heat to electricity with no rotating shafts, no lubricants, and no wear surfaces
 
-No individual technology is new. The innovation is the integrated residential package with factory-sealed construction, V-Mind autonomous monitoring, and a regulatory pathway targeting NRC 10 CFR Part 53 (advanced reactor licensing).
+No individual technology is new. The innovation is the integrated residential package with factory-sealed construction, Vortex autonomous monitoring, and a regulatory pathway targeting NRC 10 CFR Part 53 (advanced reactor licensing).
 
 ---
 
@@ -116,7 +116,7 @@ No individual technology is new. The innovation is the integrated residential pa
 | 9 | Biological Shield | Lead-polyethylene-boron composite | 280.0 | Gamma + neutron shielding to <0.25 mR/hr |
 | 10 | Outer Casing | 304 Stainless Steel | 45.0 | Structural enclosure, seismic restraint |
 | 11 | V-Cell Buffer | Na-S solid state (2 × V-Cell modules) | 18.5 | 16.7 kWh buffer, startup/transient/blackstart |
-| 12 | Control Module | 316L SS enclosure + NVIDIA Orin | 8.0 | V-Mind AI, NRC telemetry, load-following |
+| 12 | Control Module | 316L SS enclosure + NVIDIA Orin | 8.0 | Vortex AI, NRC telemetry, load-following |
 | 13 | Electrical Converter | SiC inverter + transformer | 22.0 | DC → 240 VAC split-phase, grid tie/island |
 | 14 | Status Array | Polycarbonate + LED array | 0.5 | External status indicators |
 | | **TOTAL** | | **~693 kg** | *Egg-shaped, table-sized form factor* |
@@ -125,7 +125,7 @@ No individual technology is new. The innovation is the integrated residential pa
 
 ```
                     ┌─────────────────┐
-                    │   V-Mind AI     │  NVIDIA Orin, Rust-native
+                    │   Vortex AI     │  NVIDIA Orin, Rust-native
                     │   Control       │  NRC telemetry, load-following
                     └───────┬─────────┘
                             │
@@ -165,7 +165,7 @@ No individual technology is new. The innovation is the integrated residential pa
           ┌─────────────────────┐ ─── Status Array (top)
           │    ░░░░░░░░░░░░░    │
           │  ┌───────────────┐  │ ─── Control Module
-          │  │  V-Mind  SiC  │  │
+          │  │  Vortex  SiC  │  │
           │  └───────────────┘  │
          ╱│                     │╲
         ╱ │  ┌───────────────┐  │ ╲
@@ -651,7 +651,7 @@ CHP Water Loop (domestic hot water / space heating)
 | Islanding | Automatic, <16 ms transfer | — |
 | V-Cell Buffer Capacity | 16.7 | kWh (2 × V-Cell modules) |
 | Blackstart Time | <5 | min (from cold shutdown) |
-| Load Following Range | 5–25 | kW (V-Mind AI, drum rotation) |
+| Load Following Range | 5–25 | kW (Vortex AI, drum rotation) |
 | Annual Energy Production | 219,000 | kWh (at 95% capacity factor) |
 
 ### 14.2 Fuel & Lifetime
@@ -689,7 +689,7 @@ CHP Water Loop (domestic hot water / space heating)
 | Site preparation | 3–5 years, billions $ | Concrete pad, 1 day, $5,000 |
 | Construction | 7–12 years on-site | Factory-built, shipped complete |
 | Fuel loading | On-site, specialized crew | Factory-sealed, never opened |
-| Commissioning | 1–2 years | V-Mind auto-commission, 4 hours |
+| Commissioning | 1–2 years | Vortex auto-commission, 4 hours |
 | Refueling | 30-day outage, every 18 months | Swap entire unit, every 10 years |
 | Decommissioning | 10–20 years, billions $ | Return to factory, vessel recycled |
 
@@ -702,9 +702,9 @@ CHP Water Loop (domestic hot water / space heating)
 5. **Reactor Vessel Assembly** — 316L vessel machined, fuel assembly + heat pipes + reflector inserted, vessel head welded, helium leak-tested, pressure-tested (2× design)
 6. **Power Conversion Integration** — 2 × Stirling engines mated to hot-side heat exchanger, cold-side radiator connected, helium charged
 7. **Shield Assembly** — Lead inner shell cast, borated PE middle layer molded, outer lead shell cast, all assembled around vessel
-8. **Electrical Integration** — V-Cell buffer installed, SiC inverter connected, V-Mind control module installed, wiring harness completed
+8. **Electrical Integration** — V-Cell buffer installed, SiC inverter connected, Vortex control module installed, wiring harness completed
 9. **Outer Casing** — 304 SS egg-shaped casing welded, seismic mounting points installed, status array mounted
-10. **Factory Acceptance Test** — Subcritical neutron source test, control drum function test, Stirling engine run-in (electric heater), full electrical integration test, V-Mind commissioning
+10. **Factory Acceptance Test** — Subcritical neutron source test, control drum function test, Stirling engine run-in (electric heater), full electrical integration test, Vortex commissioning
 
 ### 15.3 Production Targets
 
@@ -732,7 +732,7 @@ CHP Water Loop (domestic hot water / space heating)
 
 **Claim 7**: The reactor of Claim 1, wherein said Stirling engine is a free-piston type with helium working gas at 4–8 MPa mean pressure, producing 10–15 kW electrical per engine at 30–36% thermal-to-electric efficiency.
 
-**Claim 8**: The reactor of Claim 1, further comprising: a solid-state battery buffer (V-Cell) providing 10–25 kWh of electrical storage for transient load-following and blackstart capability; and an AI control system (V-Mind) providing autonomous monitoring, load-following via control drum rotation, and real-time telemetry to a regulatory monitoring facility.
+**Claim 8**: The reactor of Claim 1, further comprising: a solid-state battery buffer (V-Cell) providing 10–25 kWh of electrical storage for transient load-following and blackstart capability; and an AI control system (Vortex) providing autonomous monitoring, load-following via control drum rotation, and real-time telemetry to a regulatory monitoring facility.
 
 **Claim 9**: The reactor of Claim 1, wherein the overall form factor has a height not exceeding 1,000 mm, a width not exceeding 700 mm, and a total mass not exceeding 800 kg.
 

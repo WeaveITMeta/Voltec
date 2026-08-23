@@ -59,7 +59,7 @@ A solid-state energy cell with target 3x the energy density of current lithium-i
 | Product | What It Is | Customer Pain It Solves |
 |---------|-----------|----------------------|
 | **V-Cell** | Solid-state energy cell | The fundamental unit. Everything is built on this. |
-| **V-Pack** | Modular battery packs (V-Cells assembled) | Industrial: unplanned downtime costs $260K/hr. V-Pack + V-Mind predicts failures 72 hrs in advance. |
+| **V-Pack** | Modular battery packs (V-Cells assembled) | Industrial: unplanned downtime costs $260K/hr. V-Pack + Vortex predicts failures 72 hrs in advance. |
 | **V-Grid** | Distributed energy platform networking V-Packs | Grid operators: renewable intermittency creates instability. V-Grid self-optimizes across thousands of nodes. |
 
 ### Tier 2: Platform (Ship in 18 months → Moat)
@@ -90,7 +90,7 @@ More customers deploy V-Packs & V-Grid
             ↓
 More devices running V-OS = more data
             ↓
-V-Mind AI models improve (data network effect)
+Vortex AI models improve (data network effect)
             ↓
 V-OS becomes more valuable → attracts developers
             ↓
@@ -113,7 +113,7 @@ New markets open: Space, Defense, Data Centers
 
 | Customer | Their Problem | Voltec Solution | Beachhead Product |
 |----------|--------------|----------------|-------------------|
-| **Factory Operator** | Unplanned downtime: $260K/hr. Can't predict failures. | V-Pack + V-Mind: predicts failures 72 hrs out, 99.7% accuracy | V-Pack Industrial |
+| **Factory Operator** | Unplanned downtime: $260K/hr. Can't predict failures. | V-Pack + Vortex: predicts failures 72 hrs out, 99.7% accuracy | V-Pack Industrial |
 | **Grid Operator** | Renewable intermittency. Storage is expensive and dumb. | V-Grid: AI-optimized distributed storage, self-balancing | V-Grid Municipal |
 | **Defense Contractor** | Foreign supply chain dependency for critical components. | V-Cell + V-Shield: domestic, vertically integrated, rad-hardened | V-Pack Defense |
 | **Data Center Operator** | Power = 40% of OpEx. Cooling = 20%. | V-Pack + V-Grid: 50% power cost reduction, solid-state (no cooling) | V-Grid Data Center |
@@ -146,7 +146,7 @@ Voltec owns the stack:
 3. **Pack Assembly** → In-house BMS, thermal management, housing.
 4. **Firmware & V-OS** → All software written internally.
 5. **Deployment** → Direct sales + certified integrator network.
-6. **Monitoring** → V-Mind telemetry on every deployed unit.
+6. **Monitoring** → Vortex telemetry on every deployed unit.
 
 **V-Man units are used internally first**, then sold to partners — the same way Amazon built AWS for itself, then sold it to the world.
 
@@ -159,7 +159,7 @@ Voltec owns the stack:
 | **Team V-Cell** | Chemistry, manufacturing, testing | Single-threaded: cell performance |
 | **Team V-Pack** | Pack design, BMS, thermal | Single-threaded: pack reliability |
 | **Team V-Grid** | Software platform, networking | Single-threaded: grid uptime |
-| **Team V-Mind** | AI/ML, data pipeline | Single-threaded: prediction accuracy |
+| **Team Vortex** | AI/ML, data pipeline | Single-threaded: prediction accuracy |
 | **Team V-OS** | Platform kernel, APIs, SDK | Single-threaded: developer experience |
 | **Team V-Man** | Factory automation, robotics | Single-threaded: cost per cell |
 | **Team V-Shield** | Space qualification, rad-hardening | Single-threaded: space readiness |
@@ -216,11 +216,11 @@ Not a brochure. A **funnel + platform + community**.
 |-----------|-------------|-----------------|
 | **Tesla Energy** | Powerwall, Megapack | V-Cell chemistry (no lithium dependency), V-OS platform, data flywheel |
 | **Siemens** | Industrial automation | V-OS is open platform vs. proprietary; startup speed vs. corporate inertia |
-| **ABB** | Grid infrastructure | AI-native from Day 1; V-Mind is embedded, not bolted on |
+| **ABB** | Grid infrastructure | AI-native from Day 1; Vortex is embedded, not bolted on |
 | **Northrop Grumman** | Space/defense hardware | 10x cost advantage on space-grade components; commercial speed |
-| **Nvidia (Jetson)** | Edge AI compute | V-Mind is purpose-built for energy/industrial; not general-purpose |
+| **Nvidia (Jetson)** | Edge AI compute | Vortex is purpose-built for energy/industrial; not general-purpose |
 
-**Voltec's moat is not any single product. It's the flywheel: V-Cell cost leadership → V-OS platform → V-Mind data network effect. Competitors can copy a product. They can't copy the network.**
+**Voltec's moat is not any single product. It's the flywheel: V-Cell cost leadership → V-OS platform → Vortex data network effect. Competitors can copy a product. They can't copy the network.**
 
 ---
 

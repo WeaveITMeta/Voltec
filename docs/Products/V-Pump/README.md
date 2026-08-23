@@ -30,7 +30,7 @@ The V-Pump is a modular inline booster pump unit designed for permanent installa
 | Bearing Replacement | 50-100 years |
 | Priming | Integrated vacuum-assist (oil-free rotary vane) |
 | Bypass | Automatic butterfly valve (fail-open) |
-| AI Telemetry | V-Mind real-time optimization |
+| AI Telemetry | Vortex real-time optimization |
 | Fluid Mechanics Library | `garbongus` ≥0.2.1 |
 
 ---
@@ -153,7 +153,7 @@ Get-ChildItem "V1\meshes\scripts\*.py" | ForEach-Object {
 2. **1000-Year Design** — Casing and bore liner outlast civilizations
 3. **Field-Replaceable Cartridges** — Impeller, bearings, motor swap without pipeline cut
 4. **Automatic Bypass** — Zero-downtime relay chains via fail-open butterfly valve
-5. **AI-Optimized** — V-Mind manages hydraulic grade line across entire pipeline
+5. **AI-Optimized** — Vortex manages hydraulic grade line across entire pipeline
 6. **Made-to-Order** — Universal frame + custom flange adapters for any pipe diameter
 7. **garbongus-Validated** — Every hydraulic calculation traceable to physics library
 

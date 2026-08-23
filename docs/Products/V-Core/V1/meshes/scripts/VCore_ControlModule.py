@@ -1,7 +1,7 @@
 """
 Blender Headless Mesh Generator
 Product: V-Core  |  Component: ControlModule
-Material: 316L SS enclosure + NVIDIA Orin — V-Mind AI, NRC telemetry
+Material: 316L SS enclosure + NVIDIA Orin — Vortex AI, NRC telemetry
 Run: blender --background --python this_script.py
 """
 import bpy, bmesh, math, os

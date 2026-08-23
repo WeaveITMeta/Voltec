@@ -8,7 +8,7 @@
 
 ## 2. Abstract
 
-A full-body powered exoskeletal mecha platform ("V-Supreme") comprising a compact aneutronic proton-boron-11 (p-¹¹B) fusion reactor core generating 500 kW continuous electrical power, a 50 kWh solid-state sodium-sulfur V-Cell buffer array, 42 degrees of freedom matching human joint kinematics, 300 kg payload augmentation capacity, directed energy weapon systems including a plasma cutter/torch, directed energy pulse emitter, and electromagnetic pulse burst generator, and a future-ready ion thruster flight system. The platform accommodates operators ranging from 1.75 m / 75 kg to 1.83 m / 120 kg through adjustable fitment mechanisms. The Rust-native real-time control stack with V-Mind artificial intelligence achieves sub-millisecond servo loops across all 42 actuated joints via EtherCAT fieldbus. Total system mass is approximately 400 kg with a suited height of 2.2 m. Primary applications include construction augmentation, hazardous material handling, nuclear facility operations, space extravehicular activity, disaster response, and deep-sea operations.
+A full-body powered exoskeletal mecha platform ("V-Supreme") comprising a compact aneutronic proton-boron-11 (p-¹¹B) fusion reactor core generating 500 kW continuous electrical power, a 50 kWh solid-state sodium-sulfur V-Cell buffer array, 42 degrees of freedom matching human joint kinematics, 300 kg payload augmentation capacity, directed energy weapon systems including a plasma cutter/torch, directed energy pulse emitter, and electromagnetic pulse burst generator, and a future-ready ion thruster flight system. The platform accommodates operators ranging from 1.75 m / 75 kg to 1.83 m / 120 kg through adjustable fitment mechanisms. The Rust-native real-time control stack with Vortex artificial intelligence achieves sub-millisecond servo loops across all 42 actuated joints via EtherCAT fieldbus. Total system mass is approximately 400 kg with a suited height of 2.2 m. Primary applications include construction augmentation, hazardous material handling, nuclear facility operations, space extravehicular activity, disaster response, and deep-sea operations.
 
 ---
 
@@ -90,7 +90,7 @@ The V-Supreme solves all three constraints simultaneously:
 
 ```
                     ┌─────────────────┐
-                    │   V-Mind AI     │  Rust-native, NVIDIA Orin
+                    │   Vortex AI     │  Rust-native, NVIDIA Orin
                     │  Control Stack  │  <1 ms loop, 42 DOF
                     └────────┬────────┘
                              │ EtherCAT
@@ -792,7 +792,7 @@ The V-Supreme accommodates operators from 1.75 m / 75 kg (5'9" female) to 1.83 m
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│                    V-Mind AI Core                    │
+│                    Vortex AI Core                    │
 │            NVIDIA Jetson AGX Orin (275 TOPS)         │
 │                                                     │
 │  ┌──────────┐  ┌──────────┐  ┌──────────────────┐  │
@@ -844,7 +844,7 @@ The V-Supreme accommodates operators from 1.75 m / 75 kg (5'9" female) to 1.83 m
 | Electronics | COTS boards + harnesses | Custom SoM (Orin), EtherCAT backbone |
 | Power | Battery pack | Fusion reactor + V-Cell array |
 | Assembly | Manual, 200+ hr | V-Man cell, 48 hr (target) |
-| Testing | Functional check | Full dynamic test suite (V-Mind supervised) |
+| Testing | Functional check | Full dynamic test suite (Vortex supervised) |
 
 ### 16.2 Production Steps
 
@@ -858,7 +858,7 @@ The V-Supreme accommodates operators from 1.75 m / 75 kg (5'9" female) to 1.83 m
 8. Fusion reactor core integration (clean room, helium leak test)
 9. V-Cell buffer array installation and commissioning
 10. Final assembly — all subsystems bolted to spine, harness fitted
-11. Software load — V-Mind AI, joint calibration, operator profile enrollment
+11. Software load — Vortex AI, joint calibration, operator profile enrollment
 12. Dynamic test suite — 200+ test cases, full motion envelope, load testing
 13. Environmental seal verification — IP68 pressure test (200 m equivalent)
 
@@ -936,7 +936,7 @@ said environmental sealing enabling the same platform frame to operate in atmosp
 The platform of Claim 1, wherein the real-time control system comprises:
 - a Rust-native software stack executing on an embedded compute module with at least 200 TOPS AI inference capability;
 - an EtherCAT fieldbus connecting all actuator servo drives with a cycle time of 1 ms;
-- a V-Mind AI engine performing real-time motion planning, threat assessment, and power management;
+- a Vortex AI engine performing real-time motion planning, threat assessment, and power management;
 - 20-bit absolute encoders on all revolute joints and 1 μm linear encoders on all tendon-driven hand actuators.
 
 ### Claim 8

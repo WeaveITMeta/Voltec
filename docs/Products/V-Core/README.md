@@ -133,7 +133,7 @@ V-Core/
 | Noise | <40 dB at 1 m |
 | Grid Connection | 240 VAC split-phase, IEEE 1547 |
 | Buffer | 16.7 kWh V-Cell (blackstart <5 min) |
-| AI Control | V-Mind (NVIDIA Orin), NRC telemetry |
+| AI Control | Vortex (NVIDIA Orin), NRC telemetry |
 | Seismic | Zone 4 (0.4 g horizontal) |
 | Flood | Watertight to 2 m submersion |
 
@@ -190,7 +190,7 @@ All 14 meshes are PLACEHOLDER quality (boolean primitives with EXACT solver). Th
 5. BeO neutron reflector
 6. Graded lead-PE-boron biological shield
 7. Free-piston Stirling engine specifications
-8. V-Cell battery buffer + V-Mind AI control integration
+8. V-Cell battery buffer + Vortex AI control integration
 9. Form factor constraints (height ≤1,000 mm, mass ≤800 kg)
 10. Minimum fuel burnup and operational lifetime
 11. Method of residential power via factory-sealed autonomous reactor

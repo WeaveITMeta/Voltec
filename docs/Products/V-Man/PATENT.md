@@ -44,7 +44,7 @@ A self-contained, containerized robotic manufacturing cell achieving ≥95% auto
 
 1. **Multi-arm robotic manipulation** — 4–6 six-axis industrial arms with automatic tool changers arranged in a U-cell layout within an ISO 40-foot high-cube container
 2. **3D perception fusion** — LIDAR + machine vision + force/torque sensing providing sub-millimeter part localization and real-time defect detection without ambient lighting
-3. **Rust-based real-time control stack** — Deterministic sub-millisecond control loops with zero-copy message passing, formal memory safety guarantees, and V-Mind edge AI integration for adaptive process optimization
+3. **Rust-based real-time control stack** — Deterministic sub-millisecond control loops with zero-copy message passing, formal memory safety guarantees, and Vortex edge AI integration for adaptive process optimization
 4. **Automatic tool magazine** — RFID-tagged end-effector library with pneumatic quick-change, supporting ≥10 tool types per cell for multi-process capability
 
 The cell ships as a complete factory unit in a single ISO 40-foot high-cube container, deploys to production in ≤72 hours, and self-configures for new product lines via software-defined manufacturing recipes. Initially deployed for V-Cell battery production, the architecture generalizes to any discrete manufacturing process. No permanent foundation, cleanroom infrastructure, or specialized building required.
@@ -92,7 +92,7 @@ V-Man achieves this through four simultaneous innovations:
 1. **ISO container form factor** — The entire manufacturing cell, including robots, vision, tooling, conveyors, compute, and power distribution, fits inside a standard ISO 40-foot high-cube shipping container. Deploy anywhere a container can be placed. No foundation, no building permit, no cleanroom.
 2. **Rust-native real-time control** — The entire control stack, from servo loops to task planning to AI inference, runs on Rust with `no_std` capable inner loops. Zero garbage collection pauses. Memory safety enforced at compile time. Formal verification of safety-critical paths via `unsafe` audit.
 3. **Software-defined manufacturing** — Product recipes are declarative TOML/RON configuration files specifying assembly sequences, quality gates, and tool paths. Changing products requires uploading a new recipe, not rewiring a PLC.
-4. **V-Mind edge AI** — Convolutional neural networks for visual inspection, reinforcement learning for grasp optimization, and transformer-based anomaly detection run on-device. The cell improves with every part it builds.
+4. **Vortex edge AI** — Convolutional neural networks for visual inspection, reinforcement learning for grasp optimization, and transformer-based anomaly detection run on-device. The cell improves with every part it builds.
 
 ### 4.4 Prior Art
 
@@ -704,7 +704,7 @@ Optional: Closed-loop liquid cooling for GPU (tropical deployments)
 | First Pass Yield | ≥99.2% | With in-line inspection |
 | Defect Detection Rate | ≥99.9% | AI vision + F/T sensing |
 | Product Changeover Time | ≤4 | hours |
-| Unplanned Downtime | <2% | V-Mind predictive maintenance |
+| Unplanned Downtime | <2% | Vortex predictive maintenance |
 | Mean Time Between Failures | 5,000+ | hours |
 | Mean Time to Repair | <2 | hours |
 
@@ -715,7 +715,7 @@ Optional: Closed-loop liquid cooling for GPU (tropical deployments)
 | Autonomous Operation | ≥95% | Of all production hours |
 | Human Intervention Frequency | <1 per shift | Material loading, exception handling |
 | Dark Factory Duration | ≥72 hours | Without any human presence |
-| Remote Monitoring | 24/7 | V-Mind telemetry to cloud |
+| Remote Monitoring | 24/7 | Vortex telemetry to cloud |
 | Self-Diagnostics | Every 60 s | Arm health, vision calibration, tool wear |
 | Predictive Maintenance Accuracy | ≥95% | 48-hour failure prediction |
 
@@ -805,7 +805,7 @@ The cell of Claim 1 wherein the chassis includes vibration-dampening mounts achi
 The cell of Claim 1 wherein each robotic arm achieves payload capacity ≥20 kg, positional repeatability ≤±0.02 mm, and communicates via EtherCAT fieldbus at ≤1 ms cycle time.
 
 ### Claim 6
-The cell of Claim 1 further comprising an edge AI subsystem (V-Mind) running on-device neural networks for predictive maintenance (≥95% accuracy at 48-hour prediction horizon), anomaly detection, and reinforcement-learning-based grasp optimization, wherein the AI models improve continuously from production data without cloud dependency.
+The cell of Claim 1 further comprising an edge AI subsystem (Vortex) running on-device neural networks for predictive maintenance (≥95% accuracy at 48-hour prediction horizon), anomaly detection, and reinforcement-learning-based grasp optimization, wherein the AI models improve continuously from production data without cloud dependency.
 
 ### Claim 7
 The cell of Claim 1 configured as a V-Cell battery assembly station producing ≥7,200 cells per day with ≥99.2% first-pass yield, and reconfigurable via software recipe for alternative discrete manufacturing products.

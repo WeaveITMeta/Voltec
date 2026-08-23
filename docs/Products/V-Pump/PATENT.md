@@ -21,7 +21,7 @@
 9. [Modular Flange Adapter System](#9-modular-flange-adapter-system)
 10. [Structural Reinforcement & 1000-Year Design Life](#10-structural-reinforcement)
 11. [Thermal Management & Bearing System](#11-thermal-management)
-12. [V-Mind Control & Telemetry](#12-v-mind-control)
+12. [Vortex Control & Telemetry](#12-vortex-control)
 13. [Performance Specifications](#13-performance-specifications)
 14. [Manufacturing Process](#14-manufacturing-process)
 15. [Claims](#15-claims)
@@ -44,7 +44,7 @@ A modular inline pump unit designed for permanent installation in large-scale wa
 1. **Multi-stage axial-flow impeller** with vacuum-assist priming that eliminates cavitation at any altitude or suction condition
 2. **Universal flange adapter system** accepting pipe diameters from DN300 (12") to DN16000 (630") through a modular reducer/expander ring set
 3. **Duplex stainless steel pressure casing** with ceramic-lined bore, designed for 1,000-year continuous service under sustained hydraulic loads
-4. **V-Mind AI telemetry** providing real-time pump curve optimization, predictive bearing replacement, and network-wide hydraulic grade line management
+4. **Vortex AI telemetry** providing real-time pump curve optimization, predictive bearing replacement, and network-wide hydraulic grade line management
 
 The pump operates as a self-contained inline booster unit with automatic bypass on failure, enabling N+1 redundancy in relay chains. Each unit is made to order, sized to the pipeline diameter and flow requirements using the `garbongus` fluid mechanics library for exact hydraulic calculations.
 
@@ -88,7 +88,7 @@ Moving water over 990 km against terrain requires overcoming:
 | Priming method | External priming pump | **Integrated vacuum-assist** |
 | Bypass on failure | Manual valve operation | **Automatic butterfly bypass** |
 | Modularity | Fixed diameter | **Universal DN300-DN16000** |
-| AI telemetry | None / basic SCADA | **V-Mind real-time optimization** |
+| AI telemetry | None / basic SCADA | **Vortex real-time optimization** |
 | Cavitation protection | Operator-dependent | **Autonomous vacuum headroom** |
 
 No existing inline pump product simultaneously achieves:
@@ -115,7 +115,7 @@ With vacuum-assist, the suction side is pre-evacuated to ~5 kPa absolute, provid
 
 3. **Duplex stainless steel + ceramic bore** — The pressure casing uses UNS S32205 duplex stainless (590 MPa yield, excellent chloride resistance for desalinated water) with a reaction-bonded silicon carbide (RBSiC) bore liner — hardness 2800 HV, virtually zero erosion over millennia.
 
-4. **V-Mind hydraulic network intelligence** — Each V-Pump unit reports real-time discharge pressure, flow rate, vibration spectrum, bearing temperature, and NPSH margin to V-Mind. The AI optimizes VFD speed across the entire relay chain to minimize total energy consumption while maintaining the hydraulic grade line above terrain at every point.
+4. **Vortex hydraulic network intelligence** — Each V-Pump unit reports real-time discharge pressure, flow rate, vibration spectrum, bearing temperature, and NPSH margin to Vortex. The AI optimizes VFD speed across the entire relay chain to minimize total energy consumption while maintaining the hydraulic grade line above terrain at every point.
 
 ---
 
@@ -134,7 +134,7 @@ The V-Pump is a modular inline pipeline booster pump unit comprising:
 | **Flange Adapters** | A694 F60 Duplex Forgings | Modular DN300-DN16000 diameter adaptation |
 | **Bypass Valve** | Duplex Steel + Stellite 6 seats | Automatic butterfly valve for zero-downtime bypass |
 | **Motor** | Permanent Magnet Synchronous (PMSM) | Direct-drive, IP68, VFD-controlled |
-| **Control Module** | V-Mind AI + IEC 61131-3 PLC | Telemetry, optimization, predictive maintenance |
+| **Control Module** | Vortex AI + IEC 61131-3 PLC | Telemetry, optimization, predictive maintenance |
 | **Status Array** | IP68 LED indicators | Visual pump health status |
 
 ---
@@ -317,7 +317,7 @@ This is far beyond the conventional S-N curve knee (10⁸ cycles). The design ad
 1. **Conservative stress ratio** — Peak blade stress ≤ 40% of fatigue limit (σ_max ≤ 112 MPa)
 2. **Shot peening** — Compressive residual stress of -400 MPa on blade surfaces
 3. **Hot isostatic pressing (HIP)** — Eliminates internal porosity from casting
-4. **Field-replaceable impeller cartridge** — Entire rotor assembly slides out axially; replacement interval 50-100 years based on V-Mind vibration trending
+4. **Field-replaceable impeller cartridge** — Entire rotor assembly slides out axially; replacement interval 50-100 years based on Vortex vibration trending
 
 ---
 
@@ -516,7 +516,7 @@ For permanent buried infrastructure, seismic design per ASCE 7-22:
 | Zone 3 (High) | 0.4g | Isolation mounts + expansion joints |
 | Zone 4 (Severe) | 0.6g | Base isolation + seismic shut-off valves |
 
-V-Pump stations include seismic accelerometer input to V-Mind; automatic shutdown if PGA > 0.3g.
+V-Pump stations include seismic accelerometer input to Vortex; automatic shutdown if PGA > 0.3g.
 
 ---
 
@@ -568,7 +568,7 @@ Negligible temperature rise. No external cooling required.
 
 ---
 
-## 12. V-Mind Control & Telemetry {#12-v-mind-control}
+## 12. Vortex Control & Telemetry {#12-vortex-control}
 
 ### 12.1 Per-Unit Sensors
 
@@ -585,7 +585,7 @@ Negligible temperature rise. No external cooling required.
 
 ### 12.2 Network-Wide Optimization
 
-V-Mind connects all V-Pump units in a relay chain and optimizes the **hydraulic grade line** (HGL) across the entire pipeline:
+Vortex connects all V-Pump units in a relay chain and optimizes the **hydraulic grade line** (HGL) across the entire pipeline:
 
 ```
 Objective: Minimize Σ(P_pump_i × Q_i / η_i) subject to:
@@ -607,7 +607,7 @@ Algorithm: Model Predictive Control (MPC) with 15-minute horizon
 | Processor | ARM Cortex-A72, 1.5 GHz |
 | OS | V-OS (real-time, Rust-based) |
 | Communication | Fiber optic + 4G/5G cellular backup |
-| Protocol | Modbus TCP/IP + MQTT for V-Mind cloud |
+| Protocol | Modbus TCP/IP + MQTT for Vortex cloud |
 | Enclosure | IP68, NEMA 4X, 316L stainless |
 | Power | 24 VDC from pump UPS |
 | Display | 7" capacitive touchscreen |
@@ -740,7 +740,7 @@ At IGBWP scale (660 units), the per-unit cost drops to $1.2M — total hardware 
 - (d) an integrated vacuum-assist priming module capable of evacuating the pump casing to less than 5 kPa absolute;
 - (e) a modular flange adapter system comprising removable conical reducer rings enabling connection to pipelines of any diameter from DN300 to DN16000;
 - (f) an automatic butterfly bypass valve enabling pipeline flow continuity during pump shutdown; and
-- (g) an electronic control module running V-Mind AI software providing real-time pump curve optimization and predictive maintenance.
+- (g) an electronic control module running Vortex AI software providing real-time pump curve optimization and predictive maintenance.
 
 **Claim 2**: The pump unit of Claim 1, wherein the pressure casing is manufactured from UNS S32205 duplex stainless steel with a minimum yield strength of 450 MPa and a pitting resistance equivalent number (PREN) of at least 35.
 

@@ -8,7 +8,7 @@
 
 ## Abstract
 
-A waste-to-energy processing system comprising a plasma arc gasification chamber operating at temperatures exceeding 5,000°C, a secondary combustion chamber constructed from nickel-chromium superalloy (Inconel 718) for complete thermal destruction of organic compounds, a copper-nickel alloy heat recovery exchanger capturing ≥85% of thermal energy for steam-turbine electricity generation, and a four-stage exhaust purification train consisting of HEPA filtration (≥99.97% particulate removal at 0.3 μm), catalytic oxidation (platinum-palladium on γ-alumina substrate destroying ≥99.9% of dioxins/furans), activated carbon adsorption for heavy metal and volatile organic compound capture, and a wet scrubber column (Hastelloy C-276) for acid gas neutralization. The system achieves ≥95% waste volume reduction, produces <5 ppm total dioxin/furan emissions, recovers ≥1 MW thermal energy per processing unit, and operates under closed-loop AI control (V-Mind) for real-time combustion optimization. The invention eliminates the need for landfill disposal of municipal solid waste while generating clean electricity, directly addressing the critical overflow of American landfills by adapting and surpassing the waste-to-energy paradigm proven in Japan and Northern Europe.
+A waste-to-energy processing system comprising a plasma arc gasification chamber operating at temperatures exceeding 5,000°C, a secondary combustion chamber constructed from nickel-chromium superalloy (Inconel 718) for complete thermal destruction of organic compounds, a copper-nickel alloy heat recovery exchanger capturing ≥85% of thermal energy for steam-turbine electricity generation, and a four-stage exhaust purification train consisting of HEPA filtration (≥99.97% particulate removal at 0.3 μm), catalytic oxidation (platinum-palladium on γ-alumina substrate destroying ≥99.9% of dioxins/furans), activated carbon adsorption for heavy metal and volatile organic compound capture, and a wet scrubber column (Hastelloy C-276) for acid gas neutralization. The system achieves ≥95% waste volume reduction, produces <5 ppm total dioxin/furan emissions, recovers ≥1 MW thermal energy per processing unit, and operates under closed-loop AI control (Vortex) for real-time combustion optimization. The invention eliminates the need for landfill disposal of municipal solid waste while generating clean electricity, directly addressing the critical overflow of American landfills by adapting and surpassing the waste-to-energy paradigm proven in Japan and Northern Europe.
 
 ---
 
@@ -50,7 +50,7 @@ Japan processes >75% of its MSW through waste-to-energy incineration, maintainin
 
 ### The Breakthrough
 
-V-Incinerator combines plasma arc gasification at 5,000–7,000°C with a four-stage exhaust purification system that exceeds EPA, EU, and Japanese emission standards by 10–100×, while recovering ≥1 MW of thermal energy per unit as clean electricity. V-Mind AI continuously optimizes the plasma arc power, airflow, and combustion parameters in real-time based on waste composition sensing, achieving consistent performance across heterogeneous waste streams with zero preprocessing.
+V-Incinerator combines plasma arc gasification at 5,000–7,000°C with a four-stage exhaust purification system that exceeds EPA, EU, and Japanese emission standards by 10–100×, while recovering ≥1 MW of thermal energy per unit as clean electricity. Vortex AI continuously optimizes the plasma arc power, airflow, and combustion parameters in real-time based on waste composition sensing, achieving consistent performance across heterogeneous waste streams with zero preprocessing.
 
 ---
 
@@ -71,7 +71,7 @@ V-Incinerator combines plasma arc gasification at 5,000–7,000°C with a four-s
 | 9 | Exhaust Stack | 304 Stainless Steel | Clean gas discharge, continuous emissions monitoring |
 | 10 | Ash Collection Hopper | A36 Carbon Steel, refractory-lined | Vitrified slag collection and removal |
 | 11 | Waste Feed System | AR400 Abrasion-Resistant Steel | Ram-fed intake with airlock, accepts unsorted MSW |
-| 12 | Control Module | FR4 PCB + V-OS embedded | AI combustion control, emissions monitoring, V-Mind integration |
+| 12 | Control Module | FR4 PCB + V-OS embedded | AI combustion control, emissions monitoring, Vortex integration |
 | 13 | Status Array | LED indicator panel | Real-time operational status, emission compliance display |
 
 ---
@@ -148,7 +148,7 @@ V-Incinerator combines plasma arc gasification at 5,000–7,000°C with a four-s
 │   6.0m (L) × 3.0m (W) × 4.0m (H) — modular container      │
 │                                                             │
 │  ┌─────────────┐  Embedded: V-OS Control Module             │
-│  │ CONTROL     │  V-Mind AI combustion optimization         │
+│  │ CONTROL     │  Vortex AI combustion optimization         │
 │  │ MODULE      │  Continuous emissions monitoring (CEMS)    │
 │  │ + STATUS    │  Status LED array                          │
 │  └─────────────┘                                            │
@@ -207,7 +207,7 @@ Conventional incineration operates at 850–1,100°C — insufficient to break m
 ```
 
 - **Electrode material**: Thoriated tungsten (W-2%ThO₂) — melting point 3,695 K, excellent arc stability
-- **Plasma gas**: Air + supplemental O₂ (adjustable 21–35% O₂ by V-Mind)
+- **Plasma gas**: Air + supplemental O₂ (adjustable 21–35% O₂ by Vortex)
 - **Arc voltage**: 200–600 V DC, adjustable
 - **Arc current**: 800–2,500 A per torch
 - **Torch lifetime**: ≥2,000 hours between electrode replacements
@@ -264,7 +264,7 @@ The secondary combustion chamber ensures complete destruction of any organic com
 - **Length**: 3.6 m (ensures 2-second dwell at rated gas velocity)
 - **Wall thickness**: 25 mm Inconel 718 + 100 mm refractory lining (alumina-chromia)
 - **Operating temperature**: 1,100–1,400°C gas, 700°C wall
-- **Oxygen injection**: 6 × secondary air nozzles, V-Mind controlled O₂ enrichment
+- **Oxygen injection**: 6 × secondary air nozzles, Vortex controlled O₂ enrichment
 
 ---
 
@@ -568,7 +568,7 @@ Waste (8-12 MJ/kg)  +  Plasma (1.5 MW)
 | Size | 50,000+ m² facility | 72 m² footprint (6×3×4 m) |
 | Permitting | 2–5 years | Accelerated (exceeds all standards) |
 | Capital cost | $200–500M | $8–15M per unit |
-| Operating staff | 40–100 | 2–4 (V-Mind automated) |
+| Operating staff | 40–100 | 2–4 (Vortex automated) |
 | Preprocessing | Sorting, shredding, drying | None |
 | Residue management | Toxic fly ash (hazardous waste) | Inert vitrified slag (saleable) |
 

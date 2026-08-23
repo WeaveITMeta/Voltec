@@ -23,7 +23,7 @@ V-Man is a modular, containerized robotic manufacturing cell achieving ≥95% au
 | Form Factor | ISO 40' HC container (12.192 × 2.438 × 2.896 m) |
 | Robotic Arms | 4–6 × 6-axis, 20 kg payload, ±0.02 mm repeatability |
 | Vision | 3D LIDAR + RGB-D + structured light, AI-accelerated |
-| Control Stack | Rust-native, EtherCAT (1 ms cycle), V-Mind edge AI |
+| Control Stack | Rust-native, EtherCAT (1 ms cycle), Vortex edge AI |
 | Tool Magazine | 12 slots, RFID tracking, <5 s auto-change |
 | Conveyor | 10 m precision belt, variable speed, ±0.5 mm accuracy |
 | Power | 400V 3-phase, 25 kW peak / 12 kW average, UPS backup |

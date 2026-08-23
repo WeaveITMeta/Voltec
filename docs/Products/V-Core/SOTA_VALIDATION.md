@@ -114,7 +114,7 @@ V-Core is designed to be significantly more grounded than V-Supreme. All subsyst
 | Loss of all Stirling engines | Fuel temperature rises to ~800°C | Prompt negative coefficient self-limits; heat dissipates through shield | **Negligible** — this is the design basis event |
 | Single heat pipe failure | Reduced heat transport, local hot spot | System operates at reduced power; 12 pipes provide N+4 redundancy | **Low** |
 | Control drum jamming | Reactivity insertion (if drum stuck in reflective position) | 6 drums with $8 total worth; any 4 can achieve shutdown; gravity fail-safe | **Low** |
-| All control drums fail to rotate | Cannot adjust power | V-Mind detects, initiates shutdown sequence; temperature coefficient self-limits | **Low** |
+| All control drums fail to rotate | Cannot adjust power | Vortex detects, initiates shutdown sequence; temperature coefficient self-limits | **Low** |
 | Seismic event | Mechanical shock to fuel and shield | Seismic restraint bolts; no bulk liquid to slosh; solid-state construction | **Negligible** |
 | External impact (vehicle) | Casing damage, potential shield breach | 304 SS casing + 280 kg shield absorbs impact; NRC-required crash analysis | **Low** |
 | Hydrogen release from U-ZrH | Positive reactivity from moderator loss | Only occurs above 800°C; temperature coefficient ensures this is self-limiting | **Negligible** |
@@ -131,7 +131,7 @@ V-Core is designed to be significantly more grounded than V-Supreme. All subsyst
 | Hydrogen explosion | Risk from Zr-water reaction at >1,200°C | No water in contact with fuel |
 | Containment breach | Large reinforced concrete building required | Factory-sealed steel vessel + shield |
 | Emergency planning zone | 10+ miles | 0 m (site boundary) |
-| Operator staffing | 24/7 licensed operators | Zero — V-Mind autonomous + remote NRC telemetry |
+| Operator staffing | 24/7 licensed operators | Zero — Vortex autonomous + remote NRC telemetry |
 | Refueling | On-site, 30-day outage | Factory-return every 10 years |
 
 ---
@@ -255,7 +255,7 @@ V-Core is designed to be significantly more grounded than V-Supreme. All subsyst
 | R7 | **Competitor (eVinci, Oklo, Radiant) reaches market first** | Medium | Medium (40%) | Market share loss | V-Core targets smaller scale (25 kW vs 200 kW+); different market segment |
 | R8 | **Cost target $150K not achieved** | Medium | Medium (35%) | Price-uncompetitive vs solar+battery | Volume production reduces cost; CHP value proposition (heat + power) improves ROI |
 | R9 | **BeO reflector toxicity concerns in manufacturing** | Low | Low (15%) | Manufacturing overhead increases | Glove box handling standard in nuclear industry; explore MgO alternative |
-| R10 | **Cyberattack on V-Mind control system** | High | Low (15%) | Safety system compromise | Air-gapped nuclear safety systems; V-Mind monitoring is advisory only; physics-based safety (temperature coefficient) is unhackable |
+| R10 | **Cyberattack on Vortex control system** | High | Low (15%) | Safety system compromise | Air-gapped nuclear safety systems; Vortex monitoring is advisory only; physics-based safety (temperature coefficient) is unhackable |
 
 ---
 
@@ -273,7 +273,7 @@ V-Core is designed to be significantly more grounded than V-Supreme. All subsyst
 ### Phase 2: Prototype & Test (2029–2031)
 - Full-scale V-Core prototype assembled (non-nuclear, electric heater substitute)
 - Thermal integration test (Stirling + heat pipe + radiator)
-- V-Mind control system validation (load-following, fault injection)
+- Vortex control system validation (load-following, fault injection)
 - NRC design certification review
 - Nuclear prototype assembly at licensed facility (INL or similar)
 - Subcritical and critical testing

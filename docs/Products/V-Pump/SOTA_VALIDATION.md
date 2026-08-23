@@ -99,15 +99,15 @@ Validated using `garbongus::flow::pump_power(998.0, 595.0, 300.0, 0.85)` for ele
 
 | Failure Mode | Severity | Probability | Consequence | Mitigation |
 |-------------|----------|-------------|-------------|------------|
-| Impeller blade fatigue fracture | High | Very Low | Vibration spike → auto-shutdown | V-Mind vibration trending, 40% stress margin, shot peening |
-| Bearing seizure | High | Low | Shaft lock → motor trip | Water lubrication eliminates oil starvation; V-Mind temperature trending |
+| Impeller blade fatigue fracture | High | Very Low | Vibration spike → auto-shutdown | Vortex vibration trending, 40% stress margin, shot peening |
+| Bearing seizure | High | Low | Shaft lock → motor trip | Water lubrication eliminates oil starvation; Vortex temperature trending |
 | Casing rupture | Critical | Extremely Low | Flood at pump station | 4.7× safety factor, hydrostatic test at 1.5× design pressure |
 | Cavitation damage | Medium | Low | Bore liner pitting | Vacuum-assist ensures NPSH margin ≥ 3m; SiC resist cavitation |
 | Motor winding failure | Medium | Low | Pump offline | Automatic bypass valve opens; N+1 redundancy in bank |
 | Bypass valve stuck closed | High | Very Low | No bypass on pump failure | Redundant actuator (spring-return + hydraulic) |
 | VFD failure | Medium | Low | Pump at fixed speed or offline | Bypass enables flow continuity; VFD is field-replaceable |
 | Seismic event (>0.3g) | Critical | Site-dependent | Pipeline damage | Seismic sensors, auto-shutdown, flexible joints |
-| Cyber attack on V-Mind | High | Low | Loss of optimization | Local PLC fallback, air-gapped option, IEC 62443 compliance |
+| Cyber attack on Vortex | High | Low | Loss of optimization | Local PLC fallback, air-gapped option, IEC 62443 compliance |
 
 ### 3.2 N+1 Redundancy
 
@@ -183,7 +183,7 @@ The VP-XL frame (50-500 MW) exceeds current PMSM technology. **Realistic approac
 | **Manufacturing: SiC bearing scaling** | Medium | Medium | 🟡 HIGH | Partner with Saint-Gobain/Morgan; dual-source qualification |
 | **Manufacturing: Large adapter CNC** | Medium | Low | 🟢 MODERATE | Segmented adapters (bolted sections) for DN>4000 |
 | **Supply: NdFeB magnets** | Medium | Medium | 🟡 HIGH | Evaluate SRM alternative; strategic stockpile |
-| **Competition: Existing pump OEMs** | Medium | High | 🟡 HIGH | Patent protection; V-Mind AI differentiation; 1000-year design moat |
+| **Competition: Existing pump OEMs** | Medium | High | 🟡 HIGH | Patent protection; Vortex AI differentiation; 1000-year design moat |
 | **Regulatory: Water safety approval** | High | Low | 🟢 MODERATE | NSF/ANSI 61 certification for wetted materials (duplex SS + SiC both listed) |
 | **Safety: Seismic vulnerability** | Critical | Site-specific | 🟡 HIGH | Seismic design per ASCE 7-22; auto-shutdown; flexible joints |
 | **Financial: Made-to-order cash flow** | Medium | Medium | 🟡 HIGH | 50% deposit on order; standardized frame sizes reduce inventory risk |
@@ -210,7 +210,7 @@ The VP-XL frame (50-500 MW) exceeds current PMSM technology. **Realistic approac
 |-----------|-------|-------------|
 | NSF/ANSI 61 certification | 12-15 | Wetted materials approved for potable water |
 | First VP-M customer order | 12-14 | Municipal desal plant or water authority |
-| Field installation + commissioning | 15-18 | V-Mind telemetry operational |
+| Field installation + commissioning | 15-18 | Vortex telemetry operational |
 | 6-month field performance report | 18-24 | Efficiency, vibration, bearing condition data |
 | VP-S production start | 18-24 | Smaller frame for irrigation/distribution |
 
@@ -236,7 +236,7 @@ The V-Pump concept is **fundamentally sound**. The core physics (Darcy-Weisbach,
 1. ✅ Modular flange adapter system — simple mechanical innovation, low risk
 2. ✅ Integrated vacuum-assist priming — components exist, integration is new
 3. 🔶 1000-year design life — extrapolation from proven materials, requires validation
-4. 🔶 V-Mind network optimization — software challenge, not physics challenge
+4. 🔶 Vortex network optimization — software challenge, not physics challenge
 5. 🔴 VP-XL single-unit at 500+ MW — unrealistic as single unit; **resolved by parallel VP-L banks**
 
 **Bottom line**: Start with VP-S and VP-M (fully achievable with today's technology), prove the modular concept, then scale to VP-L for continental projects. The VP-XL as a single unit is aspirational — the parallel bank architecture makes it unnecessary.

@@ -83,7 +83,7 @@ Every performance claim in this document is classified into one of three tiers:
 
 The 400 kg system mass is dominated by three heavy subsystems: the fusion reactor (85 kg, 21%), V-Cell buffer (55.6 kg, 14%), and ion thruster pack (45 kg, 11%). Together they account for 46% of dry mass. The structural Ti-6Al-4V frame accounts for ~142 kg (36%), which is consistent with aerospace exoskeleton studies estimating 0.8–1.5 kg per DOF for actuator + structure. At 42 DOF this predicts 34–63 kg for actuators alone, with the remainder in armor plating and load-bearing structure.
 
-The 300 kg payload claim at 400 kg system mass yields a 0.75:1 payload-to-system ratio, or 0.375:1 payload-to-total-operational-mass. This is comparable to a forklift (payload ≈ 0.5–1.0× vehicle mass) and well within the capability envelope of 500 kW continuous power. The limiting factor is not power but **joint torque** — the 800 N·m hip/knee cycloidal drives must sustain 300 kg external load plus 500 kg (suit + operator) through a full gait cycle, requiring ~4,000 N ground reaction force per leg. This is achievable with the specified actuators but demands precise balance control from V-Mind.
+The 300 kg payload claim at 400 kg system mass yields a 0.75:1 payload-to-system ratio, or 0.375:1 payload-to-total-operational-mass. This is comparable to a forklift (payload ≈ 0.5–1.0× vehicle mass) and well within the capability envelope of 500 kW continuous power. The limiting factor is not power but **joint torque** — the 800 N·m hip/knee cycloidal drives must sustain 300 kg external load plus 500 kg (suit + operator) through a full gait cycle, requiring ~4,000 N ground reaction force per leg. This is achievable with the specified actuators but demands precise balance control from Vortex.
 
 ### 2.3 Degrees of Freedom & Control
 
@@ -129,9 +129,9 @@ The 300 kg payload claim at 400 kg system mass yields a 0.75:1 payload-to-system
 
 | Component | Design Life | Failure Mode | Mitigation | Tier |
 |-----------|------------|-------------|------------|------|
-| Ti-6Al-4V frame | 10,000 hr (active duty) | Fatigue cracking at joints | Strain gauges at all 42 joints, V-Mind fatigue tracking | **PROJECTED** |
+| Ti-6Al-4V frame | 10,000 hr (active duty) | Fatigue cracking at joints | Strain gauges at all 42 joints, Vortex fatigue tracking | **PROJECTED** |
 | Harmonic drive gears | 20,000 hr | Flexspline fatigue | Redundant flexspline monitoring, field-replaceable | **VERIFIED** |
-| Cycloidal drive gears | 30,000 hr | Roller pin wear | V-Mind vibration signature analysis | **VERIFIED** |
+| Cycloidal drive gears | 30,000 hr | Roller pin wear | Vortex vibration signature analysis | **VERIFIED** |
 | CFRP secondary structures | 15,000 hr | Delamination, matrix cracking | Acoustic emission monitoring, visual inspection schedule | **PROJECTED** |
 | Multi-layer armor | 1 ballistic event (torso) | Ceramic fracture (single-hit) | Field-replaceable armor cassettes | **VERIFIED** |
 | Cooling system | 10,000 hr MTBF | Pump seal failure | Redundant pumps, bypass capability | **PROJECTED** |
@@ -154,7 +154,7 @@ Frame Fatigue Life (Ti-6Al-4V at joint locations):
   At 1 cycle/s average: ~115 days continuous operation
   At 4 hr/day active duty: ~8 years before fatigue inspection required
 
-  V-Mind predictive maintenance:
+  Vortex predictive maintenance:
     - Strain gauge data at all joints → real-time Miner's rule accumulation
     - Alert at 70% cumulative damage fraction
     - Mandatory inspection at 85%
@@ -171,13 +171,13 @@ Frame Fatigue Life (Ti-6Al-4V at joint locations):
 |-------------|----------|-------------|-------------|------------|
 | Reactor plasma quench | High | Medium | Sudden power loss, thermal shock to vessel | V-Cell buffer instant takeover (<1 ms), plasma dump to quench tank |
 | Reactor runaway | Critical | Very Low | Over-temperature, potential vessel breach | Triple-redundant thermal interlock, magnetic field kill switch (0.1 ms) |
-| Actuator failure (single joint) | Medium | Low | Loss of DOF at that joint | V-Mind compensatory gait/motion, lockout of failed joint |
+| Actuator failure (single joint) | Medium | Low | Loss of DOF at that joint | Vortex compensatory gait/motion, lockout of failed joint |
 | Actuator failure (multiple) | High | Very Low | Partial or total immobilization | Emergency harness release (operator egress in <30 s) |
 | Coolant leak | Medium | Low | Local overheating, reduced thermal capacity | Leak detection sensors, automatic isolation valves, bypass mode |
 | Armor breach (ballistic) | High | Low (env-dependent) | Operator injury risk | Multi-layer design limits spall, UHMWPE catches fragments |
 | EMP self-exposure | Medium | Low | Risk to own electronics from EMP burst | Full Faraday cage (torso plates), hardened electronics (100 krad TID) |
 | Underwater seal failure | Critical | Low | Flooding, electrical short | Bulkhead compartmentalization, automatic buoyancy inflation |
-| Software fault (V-Mind) | High | Low | Erratic motion or freeze | Hardware watchdog timer, safe-stop state (all joints lock) |
+| Software fault (Vortex) | High | Low | Erratic motion or freeze | Hardware watchdog timer, safe-stop state (all joints lock) |
 | Operator medical event | High | Low | Operator incapacitation while suited | Biomedical monitoring, automatic safe-posture + distress beacon |
 
 ### 4.2 Thermal Stability
@@ -276,7 +276,7 @@ Frame Fatigue Life (Ti-6Al-4V at joint locations):
 | Fusion reactor integration | No precedent at this scale | 2 | Conceptual | **ASPIRATIONAL** |
 | Ion thruster miniaturization | Lab-scale demonstrated | 4 | Component-validated | **PROJECTED** |
 | EtherCAT 42-DOF integration | Industrial standard, high count | 7 | Prototype-demonstrated | **PROJECTED** |
-| V-Mind AI for mecha control | Novel application of proven tech | 5 | Component-validated | **PROJECTED** |
+| Vortex AI for mecha control | Novel application of proven tech | 5 | Component-validated | **PROJECTED** |
 | Final assembly (V-Man cell) | V-Man cell exists for V-Cell | 4 | Requires new recipes | **PROJECTED** |
 
 ### 6.2 Equipment Availability
@@ -366,8 +366,8 @@ Frame Fatigue Life (Ti-6Al-4V at joint locations):
 ### Phase 4: Beyond (Year 10+)
 
 - Atmospheric flight module (turbofan/rocket hybrid, separate back-mounted unit)
-- Autonomous mode (no operator, V-Mind AI only)
-- Swarm coordination (multiple V-Supreme units, distributed V-Mind)
+- Autonomous mode (no operator, Vortex AI only)
+- Swarm coordination (multiple V-Supreme units, distributed Vortex)
 - Space colony construction variant (reduced gravity optimization)
 
 ---
@@ -388,7 +388,7 @@ Frame Fatigue Life (Ti-6Al-4V at joint locations):
 - **42-DOF wearable integration** — all components exist, integration at this DOF count in a wearable form is novel but feasible
 - **300 kg payload augmentation** — requires custom high-torque-density actuators (2× current COTS)
 - **IP68 at 200 m** — requires pressure sealing all 42 joints (challenging but achievable with face seals)
-- **V-Mind AI for mecha control** — novel application of proven NVIDIA Orin platform + Rust real-time stack
+- **Vortex AI for mecha control** — novel application of proven NVIDIA Orin platform + Rust real-time stack
 - **Direct energy conversion at 60–70%** — demonstrated at 48% in labs, theoretical path to 70%
 
 ### What Requires Breakthroughs (ASPIRATIONAL)

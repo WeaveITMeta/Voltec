@@ -481,7 +481,7 @@ EN 10025-2 standard grade. Available globally from multiple mills. Zero supply c
 | R6 | **Certification delays** — ISO 10218 / CE / UL takes >12 months | Medium | Medium | Engage notified body early; pre-certification review at design stage | Low |
 | R7 | **Thermal issues in tropical deployment** — Container overheats at >40°C ambient | Low | Low | Optional liquid cooling module; derate arm speed at high temps | Low |
 | R8 | **Software recipe coverage** — TOML recipes can't express all assembly sequences | Medium | Medium | Imperative Rust plugin escape hatch; iterative schema expansion | Low |
-| R9 | **Competitive response** — Large integrators (FANUC, Siemens) launch similar product | High | Low | Speed advantage; Rust differentiation; V-Mind AI moat; V-Cell ecosystem lock-in | Medium |
+| R9 | **Competitive response** — Large integrators (FANUC, Siemens) launch similar product | High | Low | Speed advantage; Rust differentiation; Vortex AI moat; V-Cell ecosystem lock-in | Medium |
 | R10 | **Customer adoption** — Manufacturers reluctant to adopt containerized factory | High | Medium | Deploy internally first (V-Cell production); publish OEE/ROI data; offer lease model | Medium |
 | R11 | **Harmonic drive supply** — Single-source dependency for arm joints | Medium | Low | Dual-source Harmonic Drive AG + Nidec Shimpo; 12-month supply agreement | Low |
 | R12 | **Cybersecurity incident** — Connected cell is attack vector | High | Low | Rust memory safety; network segmentation; IEC 62443 compliance; air-gap option | Low |
@@ -571,11 +571,11 @@ V-Man is a **systems integration play**, not a fundamental technology bet. Every
 1. Containerized packaging for rapid deployment
 2. Rust-based software stack for safety and composability
 3. Software-defined recipes for product flexibility
-4. V-Mind AI for continuous improvement
+4. Vortex AI for continuous improvement
 
 The primary risks are **integration complexity** (R1) and **customer adoption** (R10). Both are mitigated by the Voltec-first strategy: V-Man's first customer is Voltec itself (V-Cell production). External sales begin only after internal validation.
 
-**Bottom line**: V-Man is achievable with existing technology, integrated in a novel way. The trillion-dollar opportunity is not in selling V-Man units — it's in the manufacturing data flywheel: every V-Man unit generates production data that makes V-Mind smarter, which makes every V-Man unit more productive, which lowers the cost of every Voltec product.
+**Bottom line**: V-Man is achievable with existing technology, integrated in a novel way. The trillion-dollar opportunity is not in selling V-Man units — it's in the manufacturing data flywheel: every V-Man unit generates production data that makes Vortex smarter, which makes every V-Man unit more productive, which lowers the cost of every Voltec product.
 
 ---
 

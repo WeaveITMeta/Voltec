@@ -1,5 +1,5 @@
 # ============================================================================
-# VPump_ControlModule.py — V-Mind AI control enclosure with display + cable glands
+# VPump_ControlModule.py — Vortex AI control enclosure with display + cable glands
 # Multi-body: NEMA 4X box + hinged door + display cutout + cable gland ports +
 # ventilation grille + DIN rail brackets + conduit stubs
 # ============================================================================

@@ -69,7 +69,7 @@ HEPA filters (H14 grade, EN 1822) are rated at ≥99.97% efficiency at 0.3 μm M
 **Honest reassessment**: At 8 MJ/kg (low-quality MSW), the system is energy-neutral to slightly negative. At 10–12 MJ/kg (typical US MSW), net positive output of 400–800 kW is achievable. The ≥400 kW claim requires ≥10 MJ/kg average waste calorific value.
 
 - **Risk**: Medium — US MSW averages 10.5 MJ/kg but varies seasonally and regionally
-- **Mitigation**: V-Mind AI adjusts plasma power and air ratios to optimize energy balance; supplemental natural gas co-firing available as backup
+- **Mitigation**: Vortex AI adjusts plasma power and air ratios to optimize energy balance; supplemental natural gas co-firing available as backup
 
 ### Acid Gas Removal: >99% HCl, >97.5% SO₂
 
@@ -124,10 +124,10 @@ Activated carbon injection/adsorption for Hg, Pb, and Cd removal is BACT (Best A
 
 | Failure Mode | Severity | Probability | Detection | Mitigation |
 |--------------|----------|-------------|-----------|------------|
-| Plasma torch failure (single) | Low | Medium (MTBF 2,000 hrs) | V-Mind: arc current anomaly | System operates on 2/3 torches at reduced capacity; auto-shutdown if <2 |
+| Plasma torch failure (single) | Low | Medium (MTBF 2,000 hrs) | Vortex: arc current anomaly | System operates on 2/3 torches at reduced capacity; auto-shutdown if <2 |
 | Refractory failure | High | Low | Thermocouple array on shell | Shell temperature alarm → controlled shutdown; 3× design factor |
 | HEPA filter rupture | Medium | Low | ΔP sudden drop + PM spike | Bypass valve → backup filter bank; CEMS alarm |
-| Catalyst poisoning | Medium | Low-Medium | Outlet dioxin increase | Regeneration cycle; V-Mind adjusts upstream to reduce poison source |
+| Catalyst poisoning | Medium | Low-Medium | Outlet dioxin increase | Regeneration cycle; Vortex adjusts upstream to reduce poison source |
 | Scrubber pump failure | Medium | Low | Flow sensor + pH drift | Redundant pump (N+1); 30-minute NaOH buffer tank |
 | Cooling water loss | Critical | Very Low | Flow + temperature sensors | Emergency plasma shutdown (<100 ms); passive cooling sufficient for safe decay |
 | Control system failure | High | Very Low | Watchdog timer + heartbeat | Fail-safe mode: all systems shutdown to cold, safe state |
@@ -148,7 +148,7 @@ Activated carbon injection/adsorption for Hg, Pb, and Cd removal is BACT (Best A
 | Thermal runaway risk | Medium (bed fires) | None (endothermic) |
 | Dioxin excursion risk | High (startup/shutdown) | Near-zero (4-stage filtration, <1 min startup) |
 | Explosion risk | Medium (syngas accumulation) | Near-zero (immediate combustion) |
-| Operator exposure | Medium | Low (fully enclosed, V-Mind automated) |
+| Operator exposure | Medium | Low (fully enclosed, Vortex automated) |
 | Emergency shutdown time | 2–8 hours | <5 minutes |
 
 ---
@@ -202,11 +202,11 @@ Activated carbon injection/adsorption for Hg, Pb, and Cd removal is BACT (Best A
 | Tungsten supply disruption | High | Medium | **High** | Recycled W sourcing, strategic buffer, alternative liner R&D |
 | PGM price spike | Medium | Medium | **Medium** | Small quantity per unit, catalyst recycling, base-metal catalyst R&D |
 | Plasma torch reliability below spec | Medium | Low | **Low** | N+1 torch redundancy, 2,000-hour electrode life is conservative vendor spec |
-| Net energy balance negative on low-CV waste | Medium | Medium | **Medium** | V-Mind AI optimization, NG co-firing option, waste blending |
+| Net energy balance negative on low-CV waste | Medium | Medium | **Medium** | Vortex AI optimization, NG co-firing option, waste blending |
 | Permitting delays (NIMBY) | High | Medium | **High** | Emissions 10–100× below limits; community engagement; mobile demo unit |
 | Inconel 718 creep failure before 10-year overhaul | High | Low | **Medium** | Annual UT inspection, creep strain monitoring, conservative 700°C wall limit |
 | HEPA filter fire from hot particulate | Medium | Low | **Low** | Pre-cooler (heat exchanger) reduces gas to 200°C; spark arrestor upstream |
-| V-Mind AI misoptimization | Medium | Low | **Low** | Human override, fail-safe limits hard-coded, CEMS alarm independent of AI |
+| Vortex AI misoptimization | Medium | Low | **Low** | Human override, fail-safe limits hard-coded, CEMS alarm independent of AI |
 | Competitor technology leapfrog | Low | Medium | **Low** | First-mover advantage, V-OS data moat, patent portfolio |
 | Regulatory change (stricter limits) | Low | Low | **Very Low** | Already 10–100× below current limits; system exceeds foreseeable standards |
 
@@ -218,7 +218,7 @@ Activated carbon injection/adsorption for Hg, Pb, and Cd removal is BACT (Best A
 
 - [ ] Subscale plasma chamber test (single 500 kW torch) at national lab partnership
 - [ ] HEPA + catalyst + scrubber stack integration test with simulated flue gas
-- [ ] V-Mind combustion optimization algorithm validated on simulation data
+- [ ] Vortex combustion optimization algorithm validated on simulation data
 - [ ] Heat exchanger thermal performance validation
 - [ ] Environmental Impact Assessment for pilot site
 
@@ -251,7 +251,7 @@ The V-Incinerator is built entirely from **VERIFIED** individual technologies �
 
 **What is VERIFIED**: Every component material, every filtration stage, every individual performance metric
 **What is PROJECTED**: Full system integration performance, net energy balance on variable waste, 30-year design life
-**What is ASPIRATIONAL**: Full system integration test, V-Mind AI real-time optimization on live waste, permitting at scale in US cities
+**What is ASPIRATIONAL**: Full system integration test, Vortex AI real-time optimization on live waste, permitting at scale in US cities
 
 The primary risks are **supply chain** (tungsten, PGMs) and **permitting** (public acceptance), not technology. Japan has proven that waste-to-energy at scale is not only possible but essential. The V-Incinerator brings that capability to the US with emissions performance that Japan's existing plants cannot match.
 

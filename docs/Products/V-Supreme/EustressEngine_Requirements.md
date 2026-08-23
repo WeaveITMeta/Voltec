@@ -282,7 +282,7 @@ All positions are relative to the mecha's geometric center at ground level (orig
 ```
 every tick (1 ms):
   1. Read operator input (harness sensors → desired joint_angles)
-  2. V-Mind motion planner:
+  2. Vortex motion planner:
      a. Compute inverse kinematics for desired end-effector pose
      b. Apply force/torque limits per joint
      c. Apply collision avoidance (proximity sensors)
@@ -495,7 +495,7 @@ bus_voltage_vdc = 600.0
 | Status Array | No | No | 0 | Low |
 
 **Priority Notes**:
-- **Critical**: Load-bearing structural members that carry operator + payload weight. Failure = loss of structural integrity. Requires real-time Miner's rule fatigue accumulation via V-Mind.
+- **Critical**: Load-bearing structural members that carry operator + payload weight. Failure = loss of structural integrity. Requires real-time Miner's rule fatigue accumulation via Vortex.
 - **High**: Secondary load-bearing members. Failure = loss of function but not catastrophic.
 - **Medium**: Protective/functional components. Failure = degraded capability.
 - **Low**: Non-structural components. Failure = aesthetic/informational loss only.

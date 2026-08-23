@@ -30,7 +30,7 @@ The fundamental unit. Everything at Voltec is built on V-Cell.
 ### V-Pack
 **Modular Battery System**
 
-V-Cells assembled into intelligent, self-monitoring packs with integrated BMS and V-Mind telemetry.
+V-Cells assembled into intelligent, self-monitoring packs with integrated BMS and Vortex telemetry.
 
 | Configuration | Capacity | Target Customer |
 |--------------|----------|----------------|
@@ -39,7 +39,7 @@ V-Cells assembled into intelligent, self-monitoring packs with integrated BMS an
 | **V-Pack L** | 500 kWh - 5 MWh | Heavy industry, municipal |
 | **V-Pack Defense** | Custom | Military, hardened installations |
 
-**Key Feature**: V-Mind integration predicts failures 72 hours in advance at 99.7% accuracy. Unplanned downtime costs $260K/hr — V-Pack eliminates it.
+**Key Feature**: Vortex integration predicts failures 72 hours in advance at 99.7% accuracy. Unplanned downtime costs $260K/hr — V-Pack eliminates it.
 
 ---
 
@@ -63,7 +63,7 @@ Networks thousands of V-Packs into a self-optimizing energy mesh. The first ener
 ### V-Incinerator
 **High-Efficiency Plasma Gasification Waste-to-Energy System**
 
-Plasma arc gasification at 5,000–7,000°C with four-stage exhaust purification, converting unsorted municipal solid waste to clean electricity and inert vitrified slag. V-Mind AI controls combustion in real-time. Emissions 10–100× below the strictest global standards. Modular 6m × 3m × 4m units ship in two ISO containers and install in under two weeks. Japan proved waste-to-energy works — V-Incinerator brings it to America, cleaner than anyone thought possible.
+Plasma arc gasification at 5,000–7,000°C with four-stage exhaust purification, converting unsorted municipal solid waste to clean electricity and inert vitrified slag. Vortex AI controls combustion in real-time. Emissions 10–100× below the strictest global standards. Modular 6m × 3m × 4m units ship in two ISO containers and install in under two weeks. Japan proved waste-to-energy works — V-Incinerator brings it to America, cleaner than anyone thought possible.
 
 | Spec | Value |
 |------|-------|
@@ -78,7 +78,7 @@ Plasma arc gasification at 5,000–7,000°C with four-stage exhaust purification
 | Footprint | 6.0m × 3.0m × 4.0m (modular) |
 | Exhaust Purification | 4-stage: HEPA + Catalytic + Carbon + Wet Scrubber |
 | Residue | Vitrified slag — TCLP inert, saleable as aggregate |
-| AI Control | V-Mind real-time combustion optimization |
+| AI Control | Vortex real-time combustion optimization |
 
 **Use Cases**: Municipal solid waste processing, industrial waste reduction, medical waste disposal, disaster debris processing, landfill diversion, military forward operating bases
 
@@ -87,7 +87,7 @@ Plasma arc gasification at 5,000–7,000°C with four-stage exhaust purification
 ### V-Pump
 **Modular Inline Vacuum-Assist Pipeline Pump**
 
-Modular inline booster pump for permanent installation in large-scale water transport pipelines. Vacuum-assist priming eliminates cavitation. Universal flange adapters fit DN300–DN16000. Duplex stainless steel casing with RBSiC bore liner designed for 1,000-year continuous service. V-Mind AI optimizes the hydraulic grade line across entire relay chains. Sized per-project using the `garbongus` fluid mechanics library. The pump that refills continents.
+Modular inline booster pump for permanent installation in large-scale water transport pipelines. Vacuum-assist priming eliminates cavitation. Universal flange adapters fit DN300–DN16000. Duplex stainless steel casing with RBSiC bore liner designed for 1,000-year continuous service. Vortex AI optimizes the hydraulic grade line across entire relay chains. Sized per-project using the `garbongus` fluid mechanics library. The pump that refills continents.
 
 | Spec | Value |
 |------|-------|
@@ -100,7 +100,7 @@ Modular inline booster pump for permanent installation in large-scale water tran
 | Design Life (casing) | 1,000 years |
 | Bearings | SiC/SiC ceramic journal, water-lubricated, 50–100 year replacement |
 | Bypass | Automatic butterfly valve (fail-open, zero-downtime) |
-| AI Control | V-Mind real-time hydraulic grade line optimization |
+| AI Control | Vortex real-time hydraulic grade line optimization |
 | Relay Interval | ≤50 km between stations |
 | Sizing Library | `garbongus` ≥0.2.1 (Darcy-Weisbach, vacuum lift, pump power) |
 
@@ -126,7 +126,7 @@ Every Voltec device runs V-OS. Third-party developers build on it. Open-source k
 
 ---
 
-### V-Mind
+### Vortex
 **AI/ML Intelligence Engine**
 
 The brain of the Voltec network. Runs on every V-OS device. Gets smarter with every connected node.
@@ -152,7 +152,7 @@ Modular, containerized robotic manufacturing cell achieving ≥95% autonomous op
 | Form Factor | ISO 40' high-cube container (12.192 × 2.438 × 2.896 m) |
 | Robotic Arms | 4–6 × 6-axis, 20 kg payload, ±0.02 mm repeatability |
 | Vision System | 3D LIDAR + RGB-D + structured light, AI-accelerated (zero ambient light) |
-| Control Stack | Rust-native, EtherCAT (1 ms cycle), V-Mind edge AI (NVIDIA Jetson AGX Orin) |
+| Control Stack | Rust-native, EtherCAT (1 ms cycle), Vortex edge AI (NVIDIA Jetson AGX Orin) |
 | Tool Magazine | 12 slots, RFID tracking, <5 s pneumatic auto-change, ±0.005 mm repeatability |
 | Conveyor | 10 m precision belt, 0.01–0.50 m/s, ±0.5 mm position accuracy |
 | Power | 400V 3-phase AC, 25 kW peak / 12 kW average, 5 kVA UPS backup |
@@ -164,7 +164,7 @@ Modular, containerized robotic manufacturing cell achieving ≥95% autonomous op
 | Cost Target | $1.2M (Year 1) → $500K (Year 5) |
 | Components | 13 subsystems, 462 KB total mesh, 21,741 verts |
 
-**Strategy**: The Amazon AWS playbook for manufacturing. V-Man's first customer is Voltec itself (V-Cell production). External sales begin only after internal validation. Every unit generates production data that makes V-Mind smarter — the manufacturing data flywheel.
+**Strategy**: The Amazon AWS playbook for manufacturing. V-Man's first customer is Voltec itself (V-Cell production). External sales begin only after internal validation. Every unit generates production data that makes Vortex smarter — the manufacturing data flywheel.
 
 ---
 
@@ -204,7 +204,7 @@ V-Shield cells assembled into orbital-qualified power systems for satellite buse
 ### V-Core
 **Residential Micro-Nuclear Reactor**
 
-Passively safe micro-fission reactor producing 25 kW electrical and 75 kW thermal continuous power from a sealed TRIGA-heritage uranium zirconium hydride (U-ZrH₁.₆) fuel core with a 10-year refueling interval. Sodium heat pipe passive thermal transport to free-piston Stirling engines. Factory-sealed, truck-delivered, installed on a concrete pad. V-Mind AI provides autonomous monitoring, load-following, and NRC telemetry compliance. Zero fuel deliveries, zero emissions, zero operator intervention for a decade.
+Passively safe micro-fission reactor producing 25 kW electrical and 75 kW thermal continuous power from a sealed TRIGA-heritage uranium zirconium hydride (U-ZrH₁.₆) fuel core with a 10-year refueling interval. Sodium heat pipe passive thermal transport to free-piston Stirling engines. Factory-sealed, truck-delivered, installed on a concrete pad. Vortex AI provides autonomous monitoring, load-following, and NRC telemetry compliance. Zero fuel deliveries, zero emissions, zero operator intervention for a decade.
 
 | Spec | Value |
 |------|-------|
@@ -220,7 +220,7 @@ Passively safe micro-fission reactor producing 25 kW electrical and 75 kW therma
 | Reactivity Control | 6 × B₄C rotating control drums (gravity fail-safe) |
 | Shielding | Lead-polyethylene-boron composite, <0.25 mR/hr at 1 meter |
 | Buffer | 16.7 kWh V-Cell Na-S solid state (blackstart <5 minutes) |
-| AI Control | V-Mind (NVIDIA Orin), NRC telemetry, autonomous load-following |
+| AI Control | Vortex (NVIDIA Orin), NRC telemetry, autonomous load-following |
 | Noise | <40 dB at 1 meter |
 | Components | 14 subsystems, 14 materials, Draco-compressed GLB meshes |
 | Validation Tier | PROJECTED — all subsystems proven individually; integration at residential scale is first-of-kind |
@@ -234,7 +234,7 @@ Passively safe micro-fission reactor producing 25 kW electrical and 75 kW therma
 ### V-Supreme
 **Fusion-Powered Full-Body Mecha Platform**
 
-Full-body powered exoskeleton platform for extreme-environment industrial, defense, and space operations. Aneutronic proton-boron-11 compact fusion reactor provides 500 kW continuous power. 42 degrees of freedom articulated joint architecture with 1 kHz closed-loop control. Integrated directed energy systems and Hall-effect ion thrusters. V-Cell Na-S solid state buffer array provides 50 kWh burst capacity. V-Mind AI handles balance control, inverse kinematics, and operator intent prediction. The suit that makes the impossible routine.
+Full-body powered exoskeleton platform for extreme-environment industrial, defense, and space operations. Aneutronic proton-boron-11 compact fusion reactor provides 500 kW continuous power. 42 degrees of freedom articulated joint architecture with 1 kHz closed-loop control. Integrated directed energy systems and Hall-effect ion thrusters. V-Cell Na-S solid state buffer array provides 50 kWh burst capacity. Vortex AI handles balance control, inverse kinematics, and operator intent prediction. The suit that makes the impossible routine.
 
 | Spec | Value |
 |------|-------|
@@ -245,13 +245,13 @@ Full-body powered exoskeleton platform for extreme-environment industrial, defen
 | Dry Mass | ~400 kg (339 kg components + 61 kg wiring/fasteners/coolant) |
 | Degrees of Freedom | 42 (neck 3, arms 24, spine 3, legs 12) |
 | Max Joint Torque | 800 N·m (hip/knee cycloidal drives) |
-| Control Loop | 1 kHz EtherCAT, PID + V-Mind motion planning |
+| Control Loop | 1 kHz EtherCAT, PID + Vortex motion planning |
 | Primary Structure | Ti-6Al-4V (Grade 5 Titanium) |
 | Reactor Vessel | W-25Re Alloy (Tungsten-Rhenium) |
 | Thruster Pack | Mo-47.5Re Alloy, 2 × Hall-effect (xenon), 1,600 s specific impulse |
 | Directed Energy | Left forearm plasma cutter, right forearm DEP emitter |
 | Weapons Cooling | Dual-loop Therminol HT-55 (2.0 + 1.5 L/s) |
-| AI Control | V-Mind balance, inverse kinematics, operator intent prediction |
+| AI Control | Vortex balance, inverse kinematics, operator intent prediction |
 | Components | 23 subsystems, ~762 KB total mesh (placeholder), 5 material systems |
 | Validation Tier | ASPIRATIONAL — requires breakthrough advances in compact fusion |
 
@@ -264,7 +264,7 @@ Full-body powered exoskeleton platform for extreme-environment industrial, defen
 | Item | Description |
 |------|-------------|
 | **V-Link** | Mesh communication module. Low-latency, jamming-resistant. Connects V-OS devices. |
-| **V-Sense** | Multi-modal sensor array (thermal, vibration, electrical). Feeds V-Mind. |
+| **V-Sense** | Multi-modal sensor array (thermal, vibration, electrical). Feeds Vortex. |
 | **V-Dock** | Charging and diagnostic station for V-Pack maintenance. |
 | **Deployment Services** | Site survey, installation, integration, commissioning. |
 | **V-Care** | Ongoing monitoring, predictive maintenance, guaranteed uptime SLAs. |
