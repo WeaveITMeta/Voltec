@@ -85,9 +85,7 @@ fn Nav() -> impl IntoView {
         <nav class="bg-voltec-black text-voltec-white px-6 py-4 sticky top-0 z-50 border-b border-voltec-blue/20">
             <div class="max-w-7xl mx-auto flex justify-between items-center">
                 <A href="/" class="flex items-center gap-3 group">
-                    <div class="w-9 h-9 border border-voltec-blue rounded-sm flex items-center justify-center group-hover:bg-voltec-blue/10 transition-all duration-300">
-                        <span class="font-brand font-bold text-sm text-voltec-blue">"V"</span>
-                    </div>
+                    <LogoMark size="w-10 h-10" chip=false />
                     <span class="text-xl font-brand font-bold tracking-widest hover:text-voltec-blue transition-colors">
                         "VOLTEC"
                     </span>
@@ -145,9 +143,7 @@ fn Footer() -> impl IntoView {
                 <div class="grid md:grid-cols-5 gap-10">
                     <div class="md:col-span-2">
                         <div class="flex items-center gap-3 mb-4">
-                            <div class="w-8 h-8 border border-voltec-blue rounded-sm flex items-center justify-center">
-                                <span class="font-brand font-bold text-xs text-voltec-blue">"V"</span>
-                            </div>
+                            <LogoMark size="w-9 h-9" chip=false />
                             <span class="text-lg font-brand font-bold tracking-widest">"VOLTEC"</span>
                         </div>
                         <p class="text-voltec-white/40 text-sm leading-relaxed mb-6 max-w-xs">
@@ -882,9 +878,7 @@ fn ProductCardHome(
     view! {
         <div class="card-tech group">
             <div class="flex items-center gap-3 mb-4">
-                <span class="w-8 h-8 border border-voltec-blue/30 rounded-sm flex items-center justify-center text-voltec-blue font-display font-bold text-xs group-hover:bg-voltec-blue/10 transition-colors">
-                    "V"
-                </span>
+                <LogoMark size="w-10 h-10" chip=true />
                 <div>
                     <p class="font-semibold text-lg">{name}</p>
                     <p class="text-voltec-gray/50 text-xs">{tagline}</p>
@@ -916,6 +910,28 @@ fn ProductCardFull(
                 }).collect_view()}
             </ul>
         </div>
+    }
+}
+
+// --- Logo Mark ---
+#[component]
+fn LogoMark(size: &'static str, chip: bool) -> impl IntoView {
+    let wrap = if chip {
+        format!("{} shrink-0 rounded-sm bg-voltec-ink ring-1 ring-voltec-blue/20 p-1.5 flex items-center justify-center transition-all duration-300 group-hover:ring-voltec-blue/45", size)
+    } else {
+        format!("{} shrink-0 flex items-center justify-center transition-all duration-300", size)
+    };
+    view! {
+        <span class=wrap>
+            <picture>
+                <source srcset="/assets/icons/voltec-mark.webp" type="image/webp" />
+                <img
+                    src="/assets/icons/voltec-mark.png"
+                    alt="" width="256" height="256" draggable="false"
+                    class="w-full h-full object-contain select-none transition-transform duration-300 group-hover:scale-[1.06]"
+                />
+            </picture>
+        </span>
     }
 }
 
